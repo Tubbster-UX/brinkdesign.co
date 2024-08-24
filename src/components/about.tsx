@@ -8,7 +8,7 @@ export default function About() {
             <section className="max-w-4xl mx-auto p-8">
                 <div className="mb-8">
                     <h2 className="text-3xl font-bold mb-4">Who I Am</h2>
-                    <p className="text-lg pl-4">As a solo designer and developer, I bring a personal touch to every project. With a passion for both creativity and technology, I’m dedicated to delivering solutions that reflect your unique vision.</p>
+                    <p className="text-lg pl-4">I'm a solo developer and designer based in Rapid City, South Dakota, bringing a personal touch to every project. With 4 years of experience in React and Next.js, plus growing expertise in Flutter and Supabase, I blend creativity and technology to craft unique digital solutions.My passion lies in translating your vision into reality, whether through elegant web applications or innovative mobile experiences. As your dedicated partner, I offer a blend of seasoned skills and fresh perspectives to deliver tailored results that stand out in the digital landscape.</p>
                 </div>
 
                 <div className="mb-8">

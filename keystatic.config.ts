@@ -8,7 +8,7 @@ export default config({
     project: collection({
       label: 'Project',
       slugField: 'title',
-      path: 'src/content/project/*',
+      path: '/content/project/*',
       format: { contentField: 'description' },
       schema: {
         title: fields.slug({ name: { label: 'Title' } }),

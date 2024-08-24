@@ -1,11 +1,10 @@
-import { createReader } from "@keystatic/core/reader";
-import React from "react";
+import { DocumentRenderer } from '@keystatic/core/renderer';
+import { notFound } from 'next/navigation';
+import { reader } from '@/lib/reader';
+import Image from 'next/image';
+import Link from 'next/link';
 import Markdoc from "@markdoc/markdoc";
-import keystaticConfig from "../../../../keystatic.config";
-import Link from "next/link";
-import Image from "next/image";
-
-const reader = createReader(process.cwd(), keystaticConfig);
+import React from 'react';
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   try {
@@ -32,19 +31,17 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function Project({ params }: { params: { slug: string } }) {
-  try {
-    const project = await reader.collections.project.read(params.slug);
-    if (!project) {
-      console.error(`Project with slug ${params.slug} not found`);
-      return <div className="container mx-auto p-4 text-center text-red-500">No Project Found</div>;
-    }
+  const { slug } = params
+  const project = await reader.collections.project.read(slug)
+
+  if (!project) notFound()
     const { node } = await project.description();
-    const errors = Markdoc.validate(node);
-    if (errors.length) {
-      console.error("Markdoc validation errors:", errors);
-      throw new Error('Invalid content');
-    }
-    const renderable = Markdoc.transform(node);
+  const errors = Markdoc.validate(node);
+  if (errors.length) {
+    console.error(errors);
+    throw new Error('Invalid content');
+  }
+  const renderable = Markdoc.transform(node);
     return (
       <div className="container mx-auto">
         <div className="p-10">
@@ -69,8 +66,4 @@ export default async function Project({ params }: { params: { slug: string } }) 
         </div>
       </div>
     );
-  } catch (error) {
-    console.error("Error rendering project page:", error);
-    return <div className="container mx-auto p-4 text-center text-red-500">An error occurred while fetching the project data.</div>;
-  }
 }

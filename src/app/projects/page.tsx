@@ -4,12 +4,11 @@ import keystaticConfig from '../../../keystatic.config';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import PaginationControls from '@/components/PaginationControls';
 import { ReactElement, JSXElementConstructor, ReactNode, AwaitedReactNode, Key } from 'react';
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
-async function fetchProjects(page: number, pageSize: number) {
+async function fetchProjects() {
   try {
     console.log('Fetching projects...');
     const allProjects = await reader.collections.project.all();
@@ -17,20 +16,14 @@ async function fetchProjects(page: number, pageSize: number) {
 
     if (!allProjects || allProjects.length === 0) {
       console.warn('No projects found.');
-      return { projects: [], page, totalPages: 0 };
+      return [];
     }
 
     // Sort projects by published date in descending order
     allProjects.sort((a, b) => new Date(b.entry.published).getTime() - new Date(a.entry.published).getTime());
 
-    // Calculate pagination
-    const totalProjects = allProjects.length;
-    const totalPages = Math.ceil(totalProjects / pageSize);
-    const projects = allProjects.slice((page - 1) * pageSize, page * pageSize);
-
-    console.log('Paginated projects:', projects);
-    console.log(`Page: ${page}, PageSize: ${pageSize}, TotalPages: ${totalPages}, TotalProjects: ${totalProjects}`);
-    return { projects, page, totalPages };
+    console.log('Sorted projects:', allProjects);
+    return allProjects;
   } catch (error) {
     console.error('Error fetching projects:', error);
     throw new Error('Failed to fetch projects');
@@ -42,12 +35,9 @@ export const metadata: Metadata = {
   description: "Explore our portfolio of projects at Brink Design Co. Discover our innovative web design, logo design, and app development projects.",
 };
 
-export default async function Page({ searchParams }: { searchParams: { page?: string, pageSize?: string } }) {
-  const page = parseInt(searchParams.page as string) || 1;
-  const pageSize = parseInt(searchParams.pageSize as string) || 6;
-
+export default async function Page() {
   try {
-    const { projects, totalPages } = await fetchProjects(page, pageSize);
+    const projects = await fetchProjects();
     console.log('Projects:', projects);
 
     return (
@@ -84,7 +74,6 @@ export default async function Page({ searchParams }: { searchParams: { page?: st
               </Link>
             ))}
           </div>
-          <PaginationControls page={page} totalPages={totalPages} />
         </div>
       </div>
     );

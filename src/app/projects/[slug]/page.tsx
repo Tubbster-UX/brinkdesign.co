@@ -31,39 +31,44 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function Project({ params }: { params: { slug: string } }) {
-  const { slug } = params
-  const project = await reader.collections.project.read(slug)
+  const { slug } = params;
+  const project = await reader.collections.project.read(slug);
 
-  if (!project) notFound()
-    const { node } = await project.description();
+  if (!project) {
+    console.error(`Project with slug ${slug} not found`);
+    notFound();
+  }
+
+  const { node } = await project.description();
   const errors = Markdoc.validate(node);
   if (errors.length) {
     console.error(errors);
     throw new Error('Invalid content');
   }
   const renderable = Markdoc.transform(node);
-    return (
-      <div className="container mx-auto">
-        <div className="p-10">
-          <nav className="text-sm mb-4">
-            <Link href="/projects">
-              <span className="text-blue-500 hover:underline">Projects</span>
-            </Link>
-            <span className="mx-2">/</span>
-            <span>{project.title}</span>
-          </nav>
-          <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-            <h1 className="text-3xl font-bold mb-4 md:mb-0">{project.title}</h1>
-            <Image src={project.image || "/images/placeholder.png"} alt={project.title} width={450} height={400} />
-          </div>
-          <div className="prose max-w-none">
-            {Markdoc.renderers.react(renderable, React)}
-          </div>
-          <hr className="my-6" />
+
+  return (
+    <div className="container mx-auto">
+      <div className="p-10">
+        <nav className="text-sm mb-4">
           <Link href="/projects">
-            <span className="text-blue-500 hover:underline">Back to Projects</span>
+            <span className="text-blue-500 hover:underline">Projects</span>
           </Link>
+          <span className="mx-2">/</span>
+          <span>{project.title}</span>
+        </nav>
+        <div className="flex flex-col md:flex-row justify-between items-center mb-6">
+          <h1 className="text-3xl font-bold mb-4 md:mb-0">{project.title}</h1>
+          <Image src={project.image || "/images/placeholder.png"} alt={project.title} width={450} height={400} />
         </div>
+        <div className="prose max-w-none">
+          {Markdoc.renderers.react(renderable, React)}
+        </div>
+        <hr className="my-6" />
+        <Link href="/projects">
+          <span className="text-blue-500 hover:underline">Back to Projects</span>
+        </Link>
       </div>
-    );
+    </div>
+  );
 }

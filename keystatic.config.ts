@@ -20,8 +20,8 @@ export default config({
           label: 'Description',
           options: {
             image: {
-              directory: 'public/images/projects', // Directory to store images
-              publicPath: '/images/projects', // Public path to access images
+              directory: 'public/images/projects',
+              publicPath: '/images/projects',
             },
           },
         }),

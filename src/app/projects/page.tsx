@@ -8,7 +8,7 @@ import { ReactElement, JSXElementConstructor, ReactNode, AwaitedReactNode, Key }
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
-async function fetchProjects(page: number, limit: number) {
+async function fetchProjects() {
   try {
     console.log('Fetching projects...');
     const allProjects = await reader.collections.project.all();
@@ -16,18 +16,14 @@ async function fetchProjects(page: number, limit: number) {
 
     if (!allProjects || allProjects.length === 0) {
       console.warn('No projects found.');
-      return { projects: [], total: 0 };
+      return [];
     }
 
     // Sort projects by published date in descending order
     allProjects.sort((a, b) => new Date(b.entry.published).getTime() - new Date(a.entry.published).getTime());
 
-    // Implement pagination
-    const start = (page - 1) * limit;
-    const paginatedProjects = allProjects.slice(start, start + limit);
-
-    console.log('Sorted projects:', paginatedProjects);
-    return { projects: paginatedProjects, total: allProjects.length };
+    console.log('Sorted projects:', allProjects);
+    return allProjects;
   } catch (error) {
     console.error('Error fetching projects:', error);
     throw new Error('Failed to fetch projects');
@@ -39,15 +35,10 @@ export const metadata: Metadata = {
   description: "Explore our portfolio of projects at Brink Design Co. Discover our innovative web design, logo design, and app development projects.",
 };
 
-export default async function Page({ searchParams }: { searchParams: { page?: string } }) {
-  const page = parseInt(searchParams.page || '1', 10);
-  const limit = 10; // Number of projects per page
-
+export default async function Page() {
   try {
-    const { projects, total } = await fetchProjects(page, limit);
+    const projects = await fetchProjects();
     console.log('Projects:', projects);
-
-    const totalPages = Math.ceil(total / limit);
 
     return (
       <div>
@@ -83,16 +74,6 @@ export default async function Page({ searchParams }: { searchParams: { page?: st
               </Link>
             ))}
           </div>
-          {totalPages > 1 && (
-            <div className="flex justify-center mt-8">
-              <Link href={`/projects?page=${page - 1}`} className={`px-4 py-2 mx-2 bg-gray-200 rounded ${page === 1 ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}`}>
-                Previous
-              </Link>
-              <Link href={`/projects?page=${page + 1}`} className={`px-4 py-2 mx-2 bg-gray-200 rounded ${page >= totalPages ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}`}>
-                Next
-              </Link>
-            </div>
-          )}
         </div>
       </div>
     );

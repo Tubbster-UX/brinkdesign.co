@@ -12,7 +12,6 @@ const Footer: React.FC = () => {
                     <h2 className="text-xl font-bold mb-4">Quick Links</h2>
                     <ul>
                         <li className="mb-2"><a href="/" className="text-gray-400 hover:text-white">Home</a></li>
-                        <li className="mb-2"><a href="/#about" className="text-gray-400 hover:text-white">About</a></li>
                         <li className="mb-2"><a href="/services" className="text-gray-400 hover:text-white">Services</a></li>
                         <li className="mb-2"><a href="/projects" className="text-gray-400 hover:text-white">Projects</a></li>
                         <li className="mb-2"><a href="/contact" className="text-gray-400 hover:text-white">Contact</a></li>

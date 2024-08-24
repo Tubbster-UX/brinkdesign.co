@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 
 const services = [
@@ -46,7 +47,7 @@ export default function Page() {
                     {services.map((service, index) => (
                         <Card key={index} className="shadow-lg rounded-lg overflow-hidden group hover:bg-neutral-100 transition-all transform hover:scale-105">
                             <CardHeader className="flex items-center space-x-4 p-4">
-                                <img src={service.icon} alt={service.title} className="w-16 h-16 transition-transform duration-300 group-hover:scale-110" />
+                                <Image src={service.icon} alt={service.title} width={100} height={100} className="w-16 h-16 transition-transform duration-300 group-hover:scale-110" />
                                 <CardTitle className="text-2xl font-bold">{service.title}</CardTitle>
                             </CardHeader>
                             <CardContent className="p-4">

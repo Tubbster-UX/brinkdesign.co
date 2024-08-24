@@ -1,11 +1,9 @@
-import type { Metadata } from 'next'
 import { createReader } from "@keystatic/core/reader";
 import React from "react";
 import Markdoc from "@markdoc/markdoc";
 import keystaticConfig from "../../../../keystatic.config";
 import Link from "next/link";
 import Image from "next/image";
-import { Head } from "next/document";
 
 const reader = createReader(process.cwd(), keystaticConfig);
 

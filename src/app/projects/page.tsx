@@ -11,7 +11,9 @@ const reader = createReader(process.cwd(), keystaticConfig);
 
 async function fetchProjects(page: number, pageSize: number) {
   try {
+    console.log('Fetching projects...');
     const allProjects = await reader.collections.project.all();
+    console.log('Fetched projects:', allProjects);
 
     // Sort projects by published date in descending order
     allProjects.sort((a, b) => new Date(b.entry.published).getTime() - new Date(a.entry.published).getTime());
@@ -21,12 +23,14 @@ async function fetchProjects(page: number, pageSize: number) {
     const totalPages = Math.ceil(totalProjects / pageSize);
     const projects = allProjects.slice((page - 1) * pageSize, page * pageSize);
 
+    console.log('Paginated projects:', projects);
     return { projects, page, totalPages };
   } catch (error) {
     console.error('Error fetching projects:', error);
     throw new Error('Failed to fetch projects');
   }
 }
+
 export const metadata: Metadata = {
   title: "Projects - Brink Design Co.",
   description: "Explore our portfolio of projects at Brink Design Co. Discover our innovative web design, logo design, and app development projects.",
@@ -38,6 +42,7 @@ export default async function Page({ searchParams }: { searchParams: { page?: st
 
   try {
     const { projects, totalPages } = await fetchProjects(page, pageSize);
+    console.log('Projects:', projects);
 
     return (
       <div>

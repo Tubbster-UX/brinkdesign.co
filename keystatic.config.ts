@@ -33,5 +33,38 @@ export default config({
         }),
       },
     }),
+    testimonials: collection({
+      label: 'Testimonials',
+      slugField: 'author',
+      path: '/src/content/testimonials/*',
+      format: { contentField: 'content' },
+      schema: {
+        author: fields.slug({ name: { label: 'Author' } }),
+        content: fields.markdoc({
+          label: 'Content',
+          options: {
+            image: {
+              directory: 'public/images/testimonials',
+              publicPath: '/images/testimonials',
+            },
+          },
+        }),
+        authorImage: fields.image({ label: 'Author Image', directory: 'public/images/testimonials', publicPath: '/images/testimonials' }),
+        published: fields.date({
+          label: 'Published Date',
+          validation: {
+            isRequired: true
+          }
+        }),
+        rating: fields.number({
+          label: 'Rating',
+          validation: {
+            isRequired: true,
+            min: 1,
+            max: 5
+          }
+        }),
+      },
+    }),
   },
 });

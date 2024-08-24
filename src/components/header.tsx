@@ -11,7 +11,7 @@ export default function Header() {
     const path = usePathname();
 
     useEffect(() => {
-        setIsProjectsPage(path === '/projects');
+        setIsProjectsPage(path === '/keystatic');
     }, [path]);
 
     const toggleMobileMenu = () => {
@@ -19,7 +19,7 @@ export default function Header() {
     };
 
     return (
-        <nav className={`top-0 relative left-0 w-full z-50 py-5 border-gray-200 ${IsProjectsPage ? 'bg-transparent fixed' : 'bg-white'}`}>
+        <nav className={`top-0 relative left-0 w-full z-50 py-5 border-gray-200 ${IsProjectsPage ? 'hidden' : 'bg-white'}`}>
             <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="/" className="flex items-center">
                     <Logo className="h-14 mr-3 sm:h-20" />
@@ -43,11 +43,6 @@ export default function Header() {
                 </div>
                 <div className={`items-center justify-between w-full lg:flex lg:w-auto lg:order-1 ${isMobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu-2">
                     <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                        <li>
-                            <Link href="/#about" className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                                About
-                            </Link>
-                        </li>
                         <li>
                             <Link href="/services" className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
                                 Services

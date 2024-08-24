@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link id="favicon" rel="icon" href="/favicon-light.png" />
+        <link id="favicon" rel="icon" href="/favicon/favicon-light.png" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

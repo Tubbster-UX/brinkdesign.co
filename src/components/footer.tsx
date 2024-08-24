@@ -20,6 +20,7 @@ const Footer: React.FC = () => {
                 <div>
                     <h2 className="text-xl font-bold mb-4">Contact Us</h2>
                     <p className="text-gray-400">alexavierb@brinkdesign.co</p>
+                    <p className="text-gray-400">Based in South Dakota</p>
                 </div>
             </div>
             <div className="text-center text-gray-400 mt-8">

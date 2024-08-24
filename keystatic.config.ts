@@ -69,4 +69,24 @@ export default config({
       },
     }),
   },
+  singletons: {
+    about: collection({
+      label: 'About',
+      slugField: 'title',
+      path: '/src/content/singletons/about.mdoc',
+      format: { contentField: 'content' },
+      schema: {
+        title: fields.text({ label: 'Title' }),
+        content: fields.markdoc({
+          label: 'Content',
+          options: {
+            image: {
+              directory: 'public/images/about',
+              publicPath: '/images/about',
+            },
+          },
+        }),
+      },
+    }),
+  }
 });

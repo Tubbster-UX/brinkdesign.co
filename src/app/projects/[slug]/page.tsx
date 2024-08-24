@@ -30,13 +30,29 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
+async function fetchProjectWithRetry(slug: string, retries = 3, delay = 1000): Promise<any> {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const project = await reader.collections.project.read(slug);
+      if (project) {
+        return project;
+      }
+      console.warn(`Attempt ${i + 1} - Project with slug ${slug} not found`);
+    } catch (error) {
+      console.error(`Attempt ${i + 1} - Error fetching project with slug ${slug}:`, error);
+    }
+    await new Promise(resolve => setTimeout(resolve, delay));
+  }
+  return null;
+}
+
 export default async function Project({ params }: { params: { slug: string } }) {
   const { slug } = params;
-  const project = await reader.collections.project.read(slug);
+  const project = await fetchProjectWithRetry(slug);
 
   if (!project) {
-    console.error(`Project with slug ${slug} not found`);
-    notFound();
+    console.error(`Project with slug ${slug} not found after retries`);
+    return notFound();
   }
 
   const { node } = await project.description();

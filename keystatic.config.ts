@@ -65,6 +65,7 @@ export default config({
             max: 5
           }
         }),
+        website: fields.url({ label: 'Website' }),
       },
     }),
   },

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
@@ -20,6 +21,11 @@ const services = [
         icon: '/icons/app-development.png',
     },
 ];
+
+export const metadata: Metadata = {
+    title: "Our Services - Brink Design Co.",
+    description: "Discover our range of services including logo design, website development, and app development to help your business grow and succeed.",
+};
 
 export default function Page() {
     return (

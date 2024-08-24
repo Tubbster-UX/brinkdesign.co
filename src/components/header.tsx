@@ -19,7 +19,7 @@ export default function Header() {
     };
 
     return (
-        <nav className={`top-0 relative left-0 w-full z-50 py-2.5 border-gray-200 ${IsProjectsPage ? 'bg-transparent fixed' : 'bg-white'}`}>
+        <nav className={`top-0 relative left-0 w-full z-50 py-5 border-gray-200 ${IsProjectsPage ? 'bg-transparent fixed' : 'bg-white'}`}>
             <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="/" className="flex items-center">
                     <Logo className="h-14 mr-3 sm:h-20" />

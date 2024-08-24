@@ -1,11 +1,25 @@
+import type { Metadata } from 'next'
 import { createReader } from "@keystatic/core/reader";
 import React from "react";
 import Markdoc from "@markdoc/markdoc";
 import keystaticConfig from "../../../../keystatic.config";
 import Link from "next/link";
 import Image from "next/image";
+import { Head } from "next/document";
 
 const reader = createReader(process.cwd(), keystaticConfig);
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const project = await reader.collections.project.read(params.slug);
+  if (!project) {
+    return <div className="container mx-auto p-4 text-center text-red-500">No Project Found</div>;
+  }
+  return {
+    title: `${project.title} - Brink Design Co.`,
+    description: `${project.title} - Explore our innovative web design, logo design, and app development projects at Brink Design Co. Tailored solutions that elevate your brand.`,
+    image: project.image,
+  }
+}
 
 export default async function Project({ params }: { params: { slug: string } }) {
   const project = await reader.collections.project.read(params.slug);

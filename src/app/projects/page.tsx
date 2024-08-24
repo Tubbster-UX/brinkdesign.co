@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { createReader } from '@keystatic/core/reader';
 import keystaticConfig from '../../../keystatic.config';
 import Link from 'next/link';
@@ -26,6 +27,10 @@ async function fetchProjects(page: number, pageSize: number) {
     throw new Error('Failed to fetch projects');
   }
 }
+export const metadata: Metadata = {
+  title: "Projects - Brink Design Co.",
+  description: "Explore our portfolio of projects at Brink Design Co. Discover our innovative web design, logo design, and app development projects.",
+};
 
 export default async function Page({ searchParams }: { searchParams: { page?: string, pageSize?: string } }) {
   const page = parseInt(searchParams.page as string) || 1;

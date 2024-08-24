@@ -54,7 +54,8 @@ export default config({
           label: 'Published Date',
           validation: {
             isRequired: true
-          }
+          },
+          defaultValue: new Date().toISOString().split('T')[0] // Set default to current date in YYYY-MM-DD format
         }),
         rating: fields.number({
           label: 'Rating',

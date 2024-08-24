@@ -13,7 +13,12 @@ async function fetchProjects(page: number, pageSize: number) {
   try {
     console.log('Fetching projects...');
     const allProjects = await reader.collections.project.all();
-    console.log('Fetched projects:', allProjects);
+    console.log('Raw fetched projects:', allProjects);
+
+    if (!allProjects || allProjects.length === 0) {
+      console.warn('No projects found.');
+      return { projects: [], page, totalPages: 0 };
+    }
 
     // Sort projects by published date in descending order
     allProjects.sort((a, b) => new Date(b.entry.published).getTime() - new Date(a.entry.published).getTime());
@@ -24,6 +29,7 @@ async function fetchProjects(page: number, pageSize: number) {
     const projects = allProjects.slice((page - 1) * pageSize, page * pageSize);
 
     console.log('Paginated projects:', projects);
+    console.log(`Page: ${page}, PageSize: ${pageSize}, TotalPages: ${totalPages}, TotalProjects: ${totalProjects}`);
     return { projects, page, totalPages };
   } catch (error) {
     console.error('Error fetching projects:', error);

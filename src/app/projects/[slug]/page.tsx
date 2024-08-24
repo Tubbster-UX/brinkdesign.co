@@ -16,8 +16,30 @@ export async function generateStaticParams() {
   }));
 }
 
-// Multiple versions of this page will be statically generated
-// using the `params` returned by `generateStaticParams`
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  try {
+    const project = await reader.collections.project.read(params.slug);
+    if (!project) {
+      console.error(`Project with slug ${params.slug} not found`);
+      return {
+        title: "Project Not Found - Brink Design Co.",
+        description: "The requested project could not be found.",
+      };
+    }
+    return {
+      title: `${project.title} - Brink Design Co.`,
+      description: `${project.title} - Explore our innovative web design, logo design, and app development projects at Brink Design Co. Tailored solutions that elevate your brand.`,
+      image: project.image,
+    };
+  } catch (error) {
+    console.error("Error generating metadata:", error);
+    return {
+      title: "Error - Brink Design Co.",
+      description: "An error occurred while fetching the project data.",
+    };
+  }
+}
+
 export default async function Project({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const project = await reader.collections.project.read(slug);

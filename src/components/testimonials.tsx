@@ -44,7 +44,7 @@ export default async function Testimonials() {
                 <h2 className="text-3xl font-bold text-center mb-8">Testimonials</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {validTestimonials.map((testimonial) => (
-                        <Card className="shadow-lg rounded-lg overflow-hidden group hover:bg-neutral-100 transition-all transform hover:scale-105">
+                        <Card key={testimonial.slug} className="shadow-lg rounded-lg overflow-hidden group hover:bg-neutral-100 transition-all transform hover:scale-105">
                             <CardContent className="p-0 pt-4">
                                 <Image
                                     src={testimonial.authorImage || '/images/placeholder.png'}

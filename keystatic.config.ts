@@ -1,7 +1,5 @@
 import { config, fields, collection } from '@keystatic/core';
 
-export const showAdminUI = process.env.NODE_ENV === "development"
-
 export default config({
   storage: {
     kind: 'local',

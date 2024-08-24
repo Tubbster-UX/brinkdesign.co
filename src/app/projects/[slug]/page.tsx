@@ -1,4 +1,3 @@
-import { DocumentRenderer } from '@keystatic/core/renderer';
 import { notFound } from 'next/navigation';
 import { reader } from '@/lib/reader';
 import Image from 'next/image';
@@ -6,52 +5,25 @@ import Link from 'next/link';
 import Markdoc from "@markdoc/markdoc";
 import React from 'react';
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  try {
-    const project = await reader.collections.project.read(params.slug);
-    if (!project) {
-      console.error(`Project with slug ${params.slug} not found`);
-      return {
-        title: "Project Not Found - Brink Design Co.",
-        description: "The requested project could not be found.",
-      };
-    }
-    return {
-      title: `${project.title} - Brink Design Co.`,
-      description: `${project.title} - Explore our innovative web design, logo design, and app development projects at Brink Design Co. Tailored solutions that elevate your brand.`,
-      image: project.image,
-    };
-  } catch (error) {
-    console.error("Error generating metadata:", error);
-    return {
-      title: "Error - Brink Design Co.",
-      description: "An error occurred while fetching the project data.",
-    };
-  }
+type Project = {
+  slug: string;
+};
+
+export async function generateStaticParams() {
+  const projects: Project[] = (await reader.collections.project.list()).map((slug) => ({ slug }));
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
 }
 
-async function fetchProjectWithRetry(slug: string, retries = 3, delay = 1000): Promise<any> {
-  for (let i = 0; i < retries; i++) {
-    try {
-      const project = await reader.collections.project.read(slug);
-      if (project) {
-        return project;
-      }
-      console.warn(`Attempt ${i + 1} - Project with slug ${slug} not found`);
-    } catch (error) {
-      console.error(`Attempt ${i + 1} - Error fetching project with slug ${slug}:`, error);
-    }
-    await new Promise(resolve => setTimeout(resolve, delay));
-  }
-  return null;
-}
-
+// Multiple versions of this page will be statically generated
+// using the `params` returned by `generateStaticParams`
 export default async function Project({ params }: { params: { slug: string } }) {
   const { slug } = params;
-  const project = await fetchProjectWithRetry(slug);
+  const project = await reader.collections.project.read(slug);
 
   if (!project) {
-    console.error(`Project with slug ${slug} not found after retries`);
+    console.error(`Project with slug ${slug} not found`);
     return notFound();
   }
 

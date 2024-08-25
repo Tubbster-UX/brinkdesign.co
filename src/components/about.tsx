@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { createReader } from "@keystatic/core/reader";
+import React from "react";
+import keystaticConfig from "../../keystatic.config";
 
-export default function About() {
+const reader = createReader(process.cwd(), keystaticConfig);
+
+export default async function About() {
+    const about = await reader.singletons.about.read();
+
+    console.log(about);
     return (
         <div className='p-6 bg-gray-100 text-black' id='about'>
             <h1 className='text-4xl font-extrabold text-center mb-8'>About Me</h1>

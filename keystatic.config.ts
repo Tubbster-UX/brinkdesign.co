@@ -1,4 +1,4 @@
-import { config, fields, collection } from '@keystatic/core';
+import { config, fields, collection, singleton } from '@keystatic/core';
 
 export default config({
   storage: {
@@ -66,6 +66,24 @@ export default config({
           }
         }),
         website: fields.url({ label: 'Website' }),
+      },
+    }),
+  },
+  singletons: {
+    about: singleton({
+      label: 'About',
+      path: '/src/content/about/',
+      schema: {
+        title: fields.text({ label: 'Title' }),
+        content: fields.markdoc({
+          label: 'Content',
+          options: {
+            image: {
+              directory: 'public/images/about',
+              publicPath: '/images/about',
+            },
+          },
+        }),
       },
     }),
   },

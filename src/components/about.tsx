@@ -27,7 +27,6 @@ export default async function About() {
         throw new Error('Invalid content');
       }
     const renderable = Markdoc.transform(node);
-    console.log(about);
     return (
         <div className="p-6 bg-gray-100 text-black" id="about">
             <h1 className="text-4xl font-extrabold text-center mb-8">{about.title}</h1>

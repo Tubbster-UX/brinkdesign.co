@@ -10,9 +10,7 @@ const reader = createReader(process.cwd(), keystaticConfig);
 
 async function fetchProjects() {
   try {
-    console.log('Fetching projects...');
     const allProjects = await reader.collections.project.all();
-    console.log('Raw fetched projects:', allProjects);
 
     if (!allProjects || allProjects.length === 0) {
       console.warn('No projects found.');
@@ -22,7 +20,6 @@ async function fetchProjects() {
     // Sort projects by published date in descending order
     allProjects.sort((a, b) => new Date(b.entry.published).getTime() - new Date(a.entry.published).getTime());
 
-    console.log('Sorted projects:', allProjects);
     return allProjects;
   } catch (error) {
     console.error('Error fetching projects:', error);
@@ -38,8 +35,6 @@ export const metadata: Metadata = {
 export default async function Page() {
   try {
     const projects = await fetchProjects();
-    console.log('Projects:', projects);
-
     return (
       <div>
         <div className='bg-[url("/hero.avif")] bg-cover bg-center bg-fixed h-96 py-10'>

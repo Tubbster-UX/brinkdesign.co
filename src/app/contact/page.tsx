@@ -9,12 +9,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <div>
-            <div className='bg-[url("/hero.avif")] bg-cover bg-center bg-fixed h-96 py-10'>
-                <div className="container flex flex-col justify-end items-start h-full">
-                    <h1 className="text-3xl font-bold text-white">Contact</h1>
-                </div>
-            </div>
-
             <ContactContainer />
         </div>
     );

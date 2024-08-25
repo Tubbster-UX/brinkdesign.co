@@ -67,13 +67,13 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="space-y-6">
             <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
                     Name
                 </label>
                 <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
                     id="name"
                     type="text"
                     placeholder="Your name"
@@ -87,7 +87,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                     Email
                 </label>
                 <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
                     id="email"
                     type="email"
                     placeholder="Your email"
@@ -101,7 +101,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                     Subject
                 </label>
                 <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
                     id="subject"
                     type="text"
                     placeholder="Subject"
@@ -115,7 +115,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                     Message
                 </label>
                 <textarea
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
                     id="message"
                     rows={5}
                     placeholder="Your message"
@@ -134,6 +134,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                 <Button
                     type="submit"
                     disabled={loading}
+                    className="transition duration-300 ease-in-out transform hover:scale-105"
                 >
                     {loading ? 'Sending...' : 'Send Message'}
                 </Button>

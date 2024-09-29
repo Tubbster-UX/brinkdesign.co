@@ -30,6 +30,18 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: `${project.title} - Brink Design Co.`,
       description: `${project.title} - Innovative web design, logo design, and app development by Brink Design Co. Tailored solutions to elevate your brand.`,
       image: project.image,
+      openGraph: {
+        title: `${project.title} - Brink Design Co.`,
+        description: `${project.title} - Innovative web design, logo design, and app development by Brink Design Co. Tailored solutions to elevate your brand.`,
+        images: [
+          {
+            url: project.image,
+            width: 450,
+            height: 400,
+            alt: project.title,
+          },
+        ],
+      },
     };
   } catch (error) {
     console.error("Error generating metadata:", error);

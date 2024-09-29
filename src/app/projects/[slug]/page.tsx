@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
     return {
       title: `${project.title} - Brink Design Co.`,
-      description: `${project.title} - Explore our innovative web design, logo design, and app development projects at Brink Design Co. Tailored solutions that elevate your brand.`,
+      description: `${project.title} - Innovative web design, logo design, and app development by Brink Design Co. Tailored solutions to elevate your brand.`,
       image: project.image,
     };
   } catch (error) {

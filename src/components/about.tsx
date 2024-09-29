@@ -29,7 +29,7 @@ export default async function About() {
     const renderable = Markdoc.transform(node);
     return (
         <div className="p-6 bg-gray-100 text-black" id="about">
-            <h1 className="text-4xl font-extrabold text-center mb-8">{about.title}</h1>
+            <h2 className="text-4xl font-extrabold text-center mb-8">{about.title}</h2>
             <section className="max-w-4xl mx-auto p-8">
                 <div className="prose">{Markdoc.renderers.react(renderable, React)}</div>
                 <div className="text-center mt-8">

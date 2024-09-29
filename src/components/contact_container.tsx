@@ -9,7 +9,7 @@ const ContactContainer = () => {
     return (
         <div className="container mx-auto p-4 my-8">
             <div className="text-center mb-8">
-                <h2 className="text-4xl font-bold">Get in Touch</h2>
+                <h1 className="text-4xl font-bold">Get in Touch</h1>
             </div>
 
             <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg relative overflow-hidden">

@@ -25,7 +25,7 @@ export default function Header() {
                     <Logo className="h-14 mr-3 sm:h-20" />
                 </a>
                 <div className="flex items-center lg:order-2">
-                    <Button className="hidden mt-2 mr-4 sm:inline-block" asChild><Link href="/contact">Contact Me</Link></Button>
+                    <Button className="hidden mt-2 mr-4 sm:inline-block" asChild><Link href="/contact">Contact</Link></Button>
                     <button
                         onClick={toggleMobileMenu}
                         className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"

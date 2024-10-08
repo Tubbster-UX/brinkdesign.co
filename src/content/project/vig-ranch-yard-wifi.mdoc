@@ -5,25 +5,28 @@ published: 2024-06-28
 ---
 # Technologies Used:
 
-- **Unifi**: Deployed Unifi Swiss Army Knife devices for comprehensive WiFi coverage in remote locations.
-- **Point-to-Point WiFi Bridges**: Utilized to extend network connectivity over long distances between buildings.
+- **Unifi**: Deployed Unifi access points (Swiss Army Knife devices) for extensive WiFi coverage across various locations on the property.
+- **Point-to-Point WiFi Bridges**: Used to transmit network connectivity over long distances between buildings and structures.
 
 # Implementation Details:
 
 ## Main House to Shop Connection:
 
-- Established a point-to-point WiFi bridge spanning 642 feet from the main house to the shop.
-- Installed a Unifi Swiss Army Knife in the shop to provide localized WiFi coverage.
+- Set up a point-to-point (PTP) WiFi bridge to cover 642 feet from the main house to a tower near the shop, which was previously used for satellite TV.
+- From the tower, the PTP WiFi bridge connects to a box in the shop. This connection then branches into a Unifi access point inside the shop, providing localized WiFi coverage.
 
 ## Shop to Horse Shed Extension:
 
-- Set up an additional point-to-point WiFi bridge, extending 250 feet from the shop to the Horse Shed.
-- Deployed another Unifi Swiss Army Knife at the Horse Shed to distribute WiFi to the surrounding yard area.
+- A 60-foot outdoor ethernet cable runs from the shop's PTP box to another PTP device, which sends the WiFi signal to the Horse Shed, located 250 feet away.
+- At the Horse Shed, a Unifi access point is mounted on a pole to provide outdoor WiFi coverage for branding and outdoor activities.
+- Inside the Horse Shed, a network switch connects to another Unifi access point via ethernet, providing WiFi coverage within the shed itself.
+
+![](/images/projects/vig-ranch-yard-wifi/Vig%20Ranch%20Wifi%20Setup.png)
 
 # Client Benefits:
 
-- **Expanded Coverage**: The implementation allows for seamless WiFi connectivity across a large property, including remote structures and outdoor areas.
-- **Flexible Solution**: The use of point-to-point bridges and versatile Unifi devices offers a scalable solution that can be easily expanded or modified as needs change.
-- **Cost-Effective**: By leveraging WiFi technology instead of running physical cables, the project provides a cost-effective way to extend network coverage over long distances.
-- **Improved Productivity**: Consistent WiFi access throughout the property enables better communication, monitoring, and use of smart devices in all areas.
-- **Scalable Infrastructure**: The modular nature of the setup allows for future expansions or additions to the network as the property's needs evolve.
+- **Expanded Coverage**: Seamless WiFi connectivity across the entire property, including remote structures like the shop and Horse Shed, as well as outdoor areas.
+- **Flexible Solution**: The combination of point-to-point bridges and Unifi devices offers a scalable solution that can adapt to future needs.
+- **Cost-Effective**: Utilizing WiFi bridges instead of laying physical cables provides an affordable way to extend network coverage over long distances.
+- **Improved Productivity**: Reliable WiFi access throughout the property enhances communication, monitoring, and the use of smart devices in both indoor and outdoor areas.
+- **Scalable Infrastructure**: The modular setup allows for easy expansion or modification to accommodate evolving needs on the property.

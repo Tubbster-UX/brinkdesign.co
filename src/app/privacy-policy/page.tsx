@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Privacy Policy - Brink Design Co.",
+    description: "Learn how Brink Design Co. collects, uses, and protects your personal information when using our websites, apps, and services.",
+};
+
 export default function PrivacyPolicy() {
     return (
         <div className="max-w-4xl mx-auto p-6">
@@ -5,10 +12,10 @@ export default function PrivacyPolicy() {
             <p className="text-sm mb-6">Effective Date: October 10th 2024</p>
 
             <p className="mb-4">
-                Brink Design ("we," "us," or "our") is committed to protecting your privacy.
+                Brink Design (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting your privacy.
                 This Privacy Policy outlines how we collect, use, disclose, and protect your
                 information when you interact with our websites, apps, games, logos, and other
-                products or services ("Services"). By using any of our Services, you agree to the
+                products or services (&quot;Services&quot;). By using any of our Services, you agree to the
                 terms of this Privacy Policy.
             </p>
 
@@ -64,7 +71,7 @@ export default function PrivacyPolicy() {
                 We take reasonable measures to protect your personal information from unauthorized access, loss, or misuse. However, no security measure is perfect, and we cannot guarantee complete security.
             </p>
 
-            <h2 className="text-2xl font-semibold mb-3">6. Children’s Privacy</h2>
+            <h2 className="text-2xl font-semibold mb-3">6. Children&apos;s Privacy</h2>
             <p className="mb-4">
                 Our Services are not directed to individuals under 13, and we do not knowingly collect personal information from children under 13.
             </p>

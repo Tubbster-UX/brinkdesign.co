@@ -3,6 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import ConditionalLayout from "@/components/ConditionalLayout";
+import CalendlyEmbed from "@/components/CalendlyEmbed";
 
 export const metadata: Metadata = {
   title: "Brink Design Co. - Innovative Web Solutions",
@@ -60,7 +61,10 @@ export default function RootLayout({
         "min-h-screen bg-background font-sans antialiased",
         fontSans.variable
       )}>
-        <ConditionalLayout>{children}</ConditionalLayout>
+        <ConditionalLayout>
+          {children}
+          <CalendlyEmbed url="https://calendly.com/brinkdesignco/30min" />
+        </ConditionalLayout>
       </body>
     </html>
   );

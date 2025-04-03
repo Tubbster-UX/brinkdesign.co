@@ -8,7 +8,11 @@ declare global {
   }
 }
 
-export default function CalendlyEmbed() {
+interface CalendlyEmbedProps {
+  url: string;
+}
+
+export default function CalendlyEmbed({ url }: CalendlyEmbedProps) {
   useEffect(() => {
     const link = document.createElement("link");
     link.href = "https://assets.calendly.com/assets/external/widget.css";

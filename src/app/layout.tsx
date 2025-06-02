@@ -67,7 +67,7 @@ export default function RootLayout({
           <CalendlyEmbed url="https://calendly.com/brinkdesignco/30min" />
         </ConditionalLayout>
       </body>
-      <GoogleAnalytics gaId="G-K6VB75FMGH" />
+            <GoogleAnalytics gaId="G-K6VB75FMGH" />
     </html>
   );
 }

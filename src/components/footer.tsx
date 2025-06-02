@@ -19,8 +19,9 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                     <h2 className="text-xl font-bold mb-4">Contact Us</h2>
-                    <p className="text-gray-400">alexavierb@brinkdesign.co</p>
+                    <p className="text-gray-400">contact@brinkdesign.co</p>
                     <p className="text-gray-400">Proudly based in South Dakota</p>
+                    <p className="text-gray-400 mt-2">5509 W Elm St<br />Black Hawk, SD 57718</p>
                 </div>
             </div>
             <div className="text-center text-gray-400 mt-8">

@@ -23,7 +23,7 @@ const ContactContainer = () => {
 
             <div className="text-center mt-8">
                 <p className="text-lg">
-                    Or email me directly at <a href="mailto:alexavierb@brinkdesign.co" className="text-blue-500 underline">alexavierb@brinkdesign.co</a>
+                    Or send a email to <a href="mailto:alexavierb@brinkdesign.co" className="text-blue-500 underline">contact@brinkdesign.co</a>
                 </p>
             </div>
         </div>

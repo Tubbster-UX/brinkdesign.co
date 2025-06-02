@@ -7,11 +7,13 @@ export default function Hero() {
         <div className='relative flex flex-col justify-center items-center h-[45rem] bg-[url("/hero.avif")] bg-cover bg-center bg-fixed p-6 text-white'>
             <div className='absolute inset-0 bg-black opacity-60'></div>
             <div className='relative z-10 text-center'>
-                <h1 className='text-4xl font-extrabold mb-4'>Turning Ideas into Innovative Solutions</h1>
-                <p className='text-lg mb-6'>Transform your digital presence with cutting-edge design and development tailored to your vision.</p>
+                <h1 className='text-4xl font-extrabold mb-4'>Expert Low Voltage Installation Services</h1>
+                <p className='text-lg mb-6'>
+                    Professional solutions for security systems, network cabling, audio/video, and more. Reliable, safe, and tailored to your needs.
+                </p>
                 <Button asChild>
                     <Link href="/contact">
-                        Contact Me
+                        Request a Quote
                     </Link>
                 </Button>
             </div>

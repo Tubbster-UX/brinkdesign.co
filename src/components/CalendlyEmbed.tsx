@@ -25,7 +25,7 @@ export default function CalendlyEmbed({ url }: CalendlyEmbedProps) {
     script.onload = () => {
       window.Calendly.initBadgeWidget({
         url: 'https://calendly.com/alexavierb-brinkdesign/30min',
-        text: 'Schedule a Meeting',
+        text: 'Request a Walkthrough',
         color: '#1f2937',
         textColor: '#ffffff'
       });

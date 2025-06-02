@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import ConditionalLayout from "@/components/ConditionalLayout";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "Brink Design Co. - Innovative Web Solutions",
@@ -66,6 +67,7 @@ export default function RootLayout({
           <CalendlyEmbed url="https://calendly.com/brinkdesignco/30min" />
         </ConditionalLayout>
       </body>
+      <GoogleAnalytics gaId="G-K6VB75FMGH" />
     </html>
   );
 }

@@ -29,7 +29,7 @@ async function fetchProjects() {
 
 export const metadata: Metadata = {
   title: "Projects - Brink Design Co.",
-  description: "Explore our portfolio of projects at Brink Design Co. Discover our innovative web design, logo design, and app development projects.",
+  description: "Browse our portfolio of AV installations and low voltage projects, including networking, security systems, door access, and more.",
 };
 
 export default async function Page() {

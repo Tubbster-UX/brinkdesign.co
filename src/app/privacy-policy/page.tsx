@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Privacy Policy - Brink Design Co.",
-    description: "Learn how Brink Design Co. collects, uses, and protects your personal information when using our websites, apps, and services.",
+  title: "Privacy Policy - Brink Design Co.",
+  description: "Learn how Brink Design Co. handles your information when providing AV installations, networking, and low voltage services.",
 };
+
 
 export default function PrivacyPolicy() {
     return (

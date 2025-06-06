@@ -28,11 +28,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     }
     return {
       title: `${project.title} - Brink Design Co.`,
-      description: `${project.title} - Innovative web design, logo design, and app development by Brink Design Co. Tailored solutions to elevate your brand.`,
+      description: `${project.title} - Professional AV and low voltage installation by Brink Design Co. Reliable solutions for security, networking, and audio/video systems.`,
       image: project.image,
       openGraph: {
         title: `${project.title} - Brink Design Co.`,
-        description: `${project.title} - Innovative web design, logo design, and app development by Brink Design Co. Tailored solutions to elevate your brand.`,
+        description: `${project.title} - Professional AV and low voltage installation by Brink Design Co. Reliable solutions for security, networking, and audio/video systems.`,
         images: [
           {
             url: project.image,
@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         ],
       },
     };
+
   } catch (error) {
     console.error("Error generating metadata:", error);
     return {

@@ -2,6 +2,25 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+export const metadata = {
+  title: "FAQ – Brink Design Co.",
+  description: "Frequently asked questions about AV installation, security cameras, networking, and more from Brink Design Co. Serving Rapid City and the Black Hills.",
+  openGraph: {
+    title: "FAQ – Brink Design Co.",
+    description: "Answers to common questions about our AV and low voltage services, process, support, and more.",
+    url: "https://www.brinkdesign.co/faq",
+    type: "article",
+    images: [
+      {
+        url: "https://www.brinkdesign.co/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Brink Design Co. AV Services",
+      },
+    ],
+  },
+};
+
 export default function FAQPage() {
     return (
         <div className="min-h-screen bg-white px-4 py-12 md:px-20 text-gray-900">
@@ -38,7 +57,7 @@ export default function FAQPage() {
                     <AccordionItem value="q4">
                         <AccordionTrigger>Can you upgrade existing systems?</AccordionTrigger>
                         <AccordionContent>
-                            Absolutely. We can upgrade or expand your current setup, whether it's security, networking, or sound.
+                            Absolutely. We can upgrade or expand your current setup, whether it&#39;s security, networking, or sound.
                         </AccordionContent>
                     </AccordionItem>
 
@@ -73,7 +92,7 @@ export default function FAQPage() {
 
                 <div className="text-center">
                     <h2 className="text-2xl font-semibold mb-4">Still have questions?</h2>
-                    <p className="text-gray-600 mb-6">We're happy to help. Reach out and we'll get back to you shortly.</p>
+                    <p className="text-gray-600 mb-6">We&#39;re happy to help. Reach out and we&#39;ll get back to you shortly.</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <a href="tel:6053818290">
                             <Button className="flex items-center gap-2" size="lg">

@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -64,7 +64,7 @@ export default function ServiceArea() {
                     <Card>
                         <CardContent className="py-6 px-4 md:px-8">
                             <h2 className="text-2xl font-semibold mb-4">Need Help in Your Area?</h2>
-                            <p className="mb-6">Reach out to schedule a free consultation or site visit. We're here to help bring your AV vision to life.</p>
+                            <p className="mb-6">Reach out to schedule a free consultation or site visit. We&#39;re here to help bring your AV vision to life.</p>
                             <div className="flex flex-col gap-4">
                                 <Link href="tel:6053818290" className="w-full flex items-center gap-2"><Button className="w-full gap-2"><Phone size={18} /> Call Now</Button></Link>
                                 <Link href="mailto:contact@brinkdesign.co" className="w-full flex items-center gap-2"><Button variant="outline" className="w-full gap-2"><Mail size={18} /> Send Email</Button></Link>

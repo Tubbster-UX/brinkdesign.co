@@ -35,7 +35,7 @@ export default function PhotoBoothOptInPolicy() {
                             <li className="flex items-start">
                                 <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                                 <span className="text-gray-700">
-                                    To opt-out from future messages, reply "STOP" to any message.
+                                    To opt-out from future messages, reply &ldquo;STOP&rdquo; to any message.
                                 </span>
                             </li>
                         </ul>
@@ -50,8 +50,8 @@ export default function PhotoBoothOptInPolicy() {
                         </h2>
                         <p className="text-gray-700 leading-relaxed">
                             We respect your privacy. For more information on how we handle your personal data, please refer to our{' '}
-                            <a 
-                                href="/privacy-policy" 
+                            <a
+                                href="/privacy-policy"
                                 className="text-blue-600 hover:text-blue-800 underline font-medium transition-colors duration-200"
                             >
                                 Privacy Policy

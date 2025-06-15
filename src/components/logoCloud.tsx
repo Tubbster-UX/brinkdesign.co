@@ -3,7 +3,7 @@ import Image from "next/image";
 const logos = [
     { src: "/logos/unifi.svg", alt: "UniFi" },
     { src: "/logos/netgear.svg", alt: "Netgear" },
-    { src: "/logos/epson.svg", alt: "Epson" },
+    { src: "/logos/Epson.svg", alt: "Epson" },
     { src: "/logos/shure.svg", alt: "Shure" },
     { src: "/logos/logitech.svg", alt: "Logitech" },
 ];

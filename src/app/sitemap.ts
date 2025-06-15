@@ -38,6 +38,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
     },
     {
+      url: 'https://www.brinkdesign.co/commercial-av',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://www.brinkdesign.co/network-cabling',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://www.brinkdesign.co/security-installation',
+      lastModified: new Date(),
+    },
+    {
       url: 'https://www.brinkdesign.co/privacy-policy',
       lastModified: new Date(),
     }

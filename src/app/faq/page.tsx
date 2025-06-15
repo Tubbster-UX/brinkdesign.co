@@ -3,22 +3,22 @@ import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "FAQ – Brink Design Co.",
-  description: "Frequently asked questions about AV installation, security cameras, networking, and more from Brink Design Co. Serving Rapid City and the Black Hills.",
-  openGraph: {
     title: "FAQ – Brink Design Co.",
-    description: "Answers to common questions about our AV and low voltage services, process, support, and more.",
-    url: "https://www.brinkdesign.co/faq",
-    type: "article",
-    images: [
-      {
-        url: "https://www.brinkdesign.co/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Brink Design Co. AV Services",
-      },
-    ],
-  },
+    description: "Frequently asked questions about AV installation, security cameras, networking, and more from Brink Design Co. Serving Rapid City and the Black Hills.",
+    openGraph: {
+        title: "FAQ – Brink Design Co.",
+        description: "Answers to common questions about our AV and low voltage services, process, support, and more.",
+        url: "https://www.brinkdesign.co/faq",
+        type: "article",
+        images: [
+            {
+                url: "https://www.brinkdesign.co/og-image.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Brink Design Co. AV Services",
+            },
+        ],
+    },
 };
 
 export default function FAQPage() {
@@ -32,63 +32,64 @@ export default function FAQPage() {
                     </p>
                 </div>
 
-                <Accordion type="single" collapsible className="w-full mb-12">
+                <Accordion type="multiple" className="w-full mb-12">
                     <AccordionItem value="q1">
-                        <AccordionTrigger>Do you charge for consultations?</AccordionTrigger>
+                        <AccordionTrigger>Do you offer free consultations?</AccordionTrigger>
                         <AccordionContent>
-                            Nope — we offer free consultations and walkthroughs to evaluate your space and recommend the right setup.
+                            Yes — we provide free on-site walkthroughs to assess your space and recommend the best solution.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="q2">
-                        <AccordionTrigger>What types of systems do you install?</AccordionTrigger>
+                        <AccordionTrigger>What systems do you install?</AccordionTrigger>
                         <AccordionContent>
-                            We install security cameras, Wi-Fi & networking, door access control, audio systems, live streaming setups, and more.
+                            We install security cameras, Wi-Fi networks, door access control, audio/video systems, live streaming setups, and more.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="q3">
                         <AccordionTrigger>What areas do you serve?</AccordionTrigger>
                         <AccordionContent>
-                            We serve Rapid City and the entire Black Hills region. <a href="/service-area" className="text-blue-600 underline">See full service area</a>.
+                            We serve Rapid City and the greater Black Hills region. <a href="/service-area" className="text-blue-600 underline">View full service area</a>.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="q4">
-                        <AccordionTrigger>Can you upgrade existing systems?</AccordionTrigger>
+                        <AccordionTrigger>Can you upgrade or expand existing systems?</AccordionTrigger>
                         <AccordionContent>
-                            Absolutely. We can upgrade or expand your current setup, whether it&#39;s security, networking, or sound.
+                            Absolutely. We can improve or add onto your current security, networking, or AV setup.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="q5">
-                        <AccordionTrigger>How long does installation take?</AccordionTrigger>
+                        <AccordionTrigger>How long does a typical install take?</AccordionTrigger>
                         <AccordionContent>
-                            Most installs are completed within 1–4 days. Larger jobs may take longer based on the scope.
+                            Most jobs are completed within 1–4 days. Timelines vary based on scope and complexity.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="q6">
-                        <AccordionTrigger>Do you offer ongoing support?</AccordionTrigger>
+                        <AccordionTrigger>Do you provide ongoing support?</AccordionTrigger>
                         <AccordionContent>
-                            Yes — we offer free remote support and paid on-site support. Service agreements available for larger installs.
+                            Yes — we offer free remote support and optional paid on-site visits. Service plans are available for larger systems.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="q7">
                         <AccordionTrigger>Are there any monthly fees?</AccordionTrigger>
                         <AccordionContent>
-                            No monthly fees. All our installs are one-time costs unless you request ongoing service.
+                            No recurring fees unless you choose an ongoing service agreement. Most installs are one-time projects.
                         </AccordionContent>
                     </AccordionItem>
 
                     <AccordionItem value="q8">
-                        <AccordionTrigger>What brands or gear do you use?</AccordionTrigger>
+                        <AccordionTrigger>What brands do you work with?</AccordionTrigger>
                         <AccordionContent>
-                            We use reliable brands like UniFi, Shure, and others — customized to fit your project and budget.
+                            We use top-tier brands like UniFi, Shure, BirdDog, and more — always tailored to your needs and budget.
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>
+
 
                 <div className="text-center">
                     <h2 className="text-2xl font-semibold mb-4">Still have questions?</h2>

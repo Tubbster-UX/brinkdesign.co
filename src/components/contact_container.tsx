@@ -37,21 +37,20 @@ const ContactContainer = () => {
 
             {/* 🛡 Trust Signals */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-700">
-                <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg shadow-sm border">
-                    <ShieldCheck className="w-5 h-5 text-green-600 mt-0.5" />
-                    <span className="leading-snug">No subscriptions, no ongoing fees.</span>
+                <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg px-4 py-3 shadow-sm hover:shadow-md transition">
+                    <ShieldCheck className="w-5 h-5 text-green-600" />
+                    <span className="font-medium text-gray-800">No subscriptions, no ongoing fees.</span>
                 </div>
-
-                <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-lg shadow-sm border">
-                    <Home className="w-5 h-5 text-blue-600 mt-0.5" />
-                    <span className="leading-snug">Locally owned & operated in South Dakota.</span>
+                <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg px-4 py-3 shadow-sm hover:shadow-md transition">
+                    <Home className="w-5 h-5 text-blue-600" />
+                    <span className="font-medium text-gray-800">Locally owned & operated in South Dakota.</span>
                 </div>
-
-                <div className="flex items-center gap-3 bg-gray-50 p-4 rounded-lg shadow-sm border">
-                    <Star className="w-5 h-5 text-yellow-500 mt-0.5" />
-                    <span className="leading-snug">5-Star Rated</span>
+                <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg px-4 py-3 shadow-sm hover:shadow-md transition">
+                    <Star className="w-5 h-5 text-yellow-500" />
+                    <span className="font-medium text-gray-800">5-Star Rated by real clients.</span>
                 </div>
             </div>
+
 
             <div className="text-center mt-10">
                 <p className="text-gray-600">

@@ -1,28 +1,21 @@
-import { createReader } from '@keystatic/core/reader';
-import keystaticConfig from '../../keystatic.config';
+"use client";
+
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import Markdoc from '@markdoc/markdoc';
 import { Card, CardContent, CardHeader, CardFooter, CardTitle } from '@/components/ui/card';
-import { motion } from 'framer-motion';
 import React from 'react';
 
-const reader = createReader(process.cwd(), keystaticConfig);
+type Project = {
+  slug: string;
+  entry: {
+    title: string;
+    image: string;
+    description: React.ReactNode; // Updated to accept rendered description
+  };
+};
 
-export default async function FeaturedProjects() {
-  const all = await reader.collections.project.all();
-  if (!all || all.length === 0) return null;
-  all.sort((a, b) => new Date(b.entry.published).getTime() - new Date(a.entry.published).getTime());
-  const slice = all.slice(0, 3);
-
-  const projects = await Promise.all(
-    slice.map(async (proj) => {
-      const { node } = await proj.entry.description();
-      const renderable = Markdoc.transform(node);
-      return { ...proj, renderable };
-    })
-  );
-
+export default function FeaturedProjectsClient({ projects }: { projects: Project[] }) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
@@ -48,9 +41,6 @@ export default async function FeaturedProjects() {
               <CardHeader>
                 <CardTitle>{project.entry.title}</CardTitle>
               </CardHeader>
-              <CardContent className="pt-0 text-sm text-gray-700 flex-1">
-                {Markdoc.renderers.react(project.renderable, React)}
-              </CardContent>
               <CardFooter className="mt-auto">
                 <Link href={`/projects/${project.slug}`} className="text-primary hover:underline">
                   View Project

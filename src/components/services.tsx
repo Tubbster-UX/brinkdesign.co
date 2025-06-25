@@ -1,3 +1,5 @@
+"use client";
+
 import { Network, Shield, Speaker, Home } from 'lucide-react';
 import { motion } from 'framer-motion';
 

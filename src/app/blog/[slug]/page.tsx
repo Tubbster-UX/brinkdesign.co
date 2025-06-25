@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
         description: `${post.title} - Insights and tips from Brink Design Co. on AV installations, networking, security systems, and low voltage solutions.`,
         images: [
           {
-            url: post.featuredImage || '/og-image.jpg',
+            url: post.featuredImage,
             width: 1200,
             height: 630,
             alt: post.title,

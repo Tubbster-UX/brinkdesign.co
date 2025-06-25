@@ -23,6 +23,7 @@ export default function Header() {
             <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="/" className="flex items-center">
                     <Logo className="h-14 mr-3 sm:h-20" />
+                    <span className="sr-only">Brink Design Co.</span>
                 </a>
                 <div className="flex items-center lg:order-2">
                     <Button className="hidden mt-2 mr-4 sm:inline-block" asChild>

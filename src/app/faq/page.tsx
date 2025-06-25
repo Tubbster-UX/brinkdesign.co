@@ -85,7 +85,29 @@ export default function FAQPage() {
                     <AccordionItem value="q8">
                         <AccordionTrigger>What brands do you work with?</AccordionTrigger>
                         <AccordionContent>
-                            We use top-tier brands like UniFi, Shure, BirdDog, and more — always tailored to your needs and budget.
+                            We use top-tier brands like
+                            {" "}
+                            <a
+                                href="https://ui.com"
+                                className="text-blue-600 underline"
+                            >
+                                UniFi
+                            </a>
+                            ,{" "}
+                            <a
+                                href="https://www.shure.com"
+                                className="text-blue-600 underline"
+                            >
+                                Shure
+                            </a>
+                            ,{" "}
+                            <a
+                                href="https://birddog.tv"
+                                className="text-blue-600 underline"
+                            >
+                                BirdDog
+                            </a>
+                            , and more — always tailored to your needs and budget.
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>

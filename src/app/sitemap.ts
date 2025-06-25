@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { reader } from '@/lib/reader'; // Import the reader from Keystatic
+import { reader } from '@/lib/reader';
 import fs from 'fs';
 import path from 'path';
 
@@ -7,66 +7,69 @@ type Project = {
   slug: string;
 };
 
+function escapeXml(url: string): string {
+  return url.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const links = [
     {
-      url: 'https://www.brinkdesign.co',
+      url: escapeXml('https://www.brinkdesign.co'),
       lastModified: new Date(),
     },
     {
-      url: 'https://www.brinkdesign.co/services',
+      url: escapeXml('https://www.brinkdesign.co/services'),
       lastModified: new Date(),
     },
     {
-      url: 'https://www.brinkdesign.co/projects',
+      url: escapeXml('https://www.brinkdesign.co/projects'),
       lastModified: new Date(),
     },
     {
-      url: 'https://www.brinkdesign.co/#about',
+      url: escapeXml('https://www.brinkdesign.co/#about'),
       lastModified: new Date(),
     },
     {
-      url: 'https://www.brinkdesign.co/contact',
-      lastModified: new Date()
-    },
-    {
-      url: 'https://www.brinkdesign.co/service-area',
+      url: escapeXml('https://www.brinkdesign.co/contact'),
       lastModified: new Date(),
     },
     {
-      url: 'https://www.brinkdesign.co/faq',
+      url: escapeXml('https://www.brinkdesign.co/service-area'),
       lastModified: new Date(),
     },
     {
-      url: 'https://www.brinkdesign.co/commercial-av',
+      url: escapeXml('https://www.brinkdesign.co/faq'),
       lastModified: new Date(),
     },
     {
-      url: 'https://www.brinkdesign.co/network-cabling',
+      url: escapeXml('https://www.brinkdesign.co/commercial-av'),
       lastModified: new Date(),
     },
     {
-      url: 'https://www.brinkdesign.co/security-installation',
+      url: escapeXml('https://www.brinkdesign.co/network-cabling'),
       lastModified: new Date(),
     },
     {
-      url: 'https://www.brinkdesign.co/privacy-policy',
+      url: escapeXml('https://www.brinkdesign.co/security-installation'),
       lastModified: new Date(),
-    }
+    },
+    {
+      url: escapeXml('https://www.brinkdesign.co/privacy-policy'),
+      lastModified: new Date(),
+    },
   ];
 
-  const projectSlugs: string[] = await reader.collections.project.list(); // Fetch project slugs from Keystatic
+  const projectSlugs: string[] = await reader.collections.project.list();
 
-  const projects: Project[] = projectSlugs.map(slug => ({ slug })); // Map slugs to Project objects
+  const projects: Project[] = projectSlugs.map(slug => ({ slug }));
 
   projects.forEach((project) => {
     links.push({
-      url: `https://www.brinkdesign.co/projects/${project.slug}`,
+      url: escapeXml(`https://www.brinkdesign.co/projects/${project.slug}`),
       lastModified: new Date(),
     });
   });
 
-  // Recursive function to get all image files from a directory and its subdirectories
   function getAllImageFiles(dir: string): string[] {
     let results: string[] = [];
     const list = fs.readdirSync(dir);
@@ -82,16 +85,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return results;
   }
 
-  // Get all image files from the public folder and its subfolders
   const publicFolderPath = path.join(process.cwd(), 'public');
   const imageFiles = getAllImageFiles(publicFolderPath);
 
-  // Add image URLs to the sitemap with their last modified date
   imageFiles.forEach((file) => {
     const relativePath = path.relative(publicFolderPath, file).replace(/\\/g, '/');
     const stat = fs.statSync(file);
     links.push({
-      url: `https://www.brinkdesign.co/${relativePath}`,
+      url: escapeXml(`https://www.brinkdesign.co/${relativePath}`),
       lastModified: stat.mtime,
     });
   });

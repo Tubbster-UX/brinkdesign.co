@@ -12,6 +12,14 @@ export const metadata: Metadata = {
             "Professional sound, display, and streaming solutions tailored for your business or organization in Rapid City.",
         url: "https://www.brinkdesign.co/commercial-av",
         type: "article",
+        images: [
+            {
+                url: 'https://www.brinkdesign.co/og-image.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Brink Design Co. AV Services',
+            },
+        ],
     },
 };
 

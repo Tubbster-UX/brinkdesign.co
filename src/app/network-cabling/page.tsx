@@ -12,6 +12,14 @@ export const metadata: Metadata = {
             "Professional network cabling, labeling, and testing for businesses and homes across Rapid City.",
         url: "https://www.brinkdesign.co/network-cabling",
         type: "article",
+        images: [
+            {
+                url: 'https://www.brinkdesign.co/og-image.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Brink Design Co. AV Services',
+            },
+        ],
     },
 };
 

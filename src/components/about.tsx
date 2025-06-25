@@ -33,7 +33,7 @@ export default async function About() {
             <section className="max-w-4xl mx-auto p-8">
                 <div className="prose">{Markdoc.renderers.react(renderable, React)}</div>
                 <div className="text-center mt-8">
-                    <Button asChild><Link href="/contact">Work With Me</Link></Button>
+                    <Button asChild><Link href="/contact">Work With Us</Link></Button>
                 </div>
             </section>
         </div>

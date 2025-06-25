@@ -12,6 +12,14 @@ export const metadata: Metadata = {
             "Protect your home or business with reliable security systems installed by Brink Design Co.",
         url: "https://www.brinkdesign.co/security-installation",
         type: "article",
+        images: [
+            {
+                url: 'https://www.brinkdesign.co/og-image.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Brink Design Co. AV Services',
+            },
+        ],
     },
 };
 

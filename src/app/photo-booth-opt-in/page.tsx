@@ -10,6 +10,14 @@ export const metadata: Metadata = {
             "Learn about our SMS photo delivery and privacy practices for Brink Design Co.'s photo booth.",
         url: "https://www.brinkdesign.co/photo-booth-opt-in",
         type: "article",
+        images: [
+            {
+                url: 'https://www.brinkdesign.co/og-image.jpg',
+                width: 1200,
+                height: 630,
+                alt: 'Brink Design Co. AV Services',
+            },
+        ],
     },
 };
 

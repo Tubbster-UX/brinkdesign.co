@@ -1,5 +1,19 @@
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "Network Cabling - Brink Design Co.",
+    description:
+        "Clean and reliable network cabling services in Rapid City. We install structured wiring, racks, patch panels, and Wi-Fi for offices and new builds.",
+    openGraph: {
+        title: "Network Cabling - Brink Design Co.",
+        description:
+            "Professional network cabling, labeling, and testing for businesses and homes across Rapid City.",
+        url: "https://www.brinkdesign.co/network-cabling",
+        type: "article",
+    },
+};
 
 export default function NetworkCablingPage() {
     return (

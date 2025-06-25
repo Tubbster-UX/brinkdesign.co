@@ -1,5 +1,19 @@
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "Commercial AV Installation - Brink Design Co.",
+    description:
+        "Custom audio and video installations for Rapid City businesses, houses of worship, and classrooms. We design systems that just work — no guesswork.",
+    openGraph: {
+        title: "Commercial AV Installation - Brink Design Co.",
+        description:
+            "Professional sound, display, and streaming solutions tailored for your business or organization in Rapid City.",
+        url: "https://www.brinkdesign.co/commercial-av",
+        type: "article",
+    },
+};
 
 export default function CommercialAVPage() {
     return (

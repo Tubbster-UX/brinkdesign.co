@@ -1,3 +1,18 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Photo Booth Opt-In Policy - Brink Design Co.",
+    description:
+        "Details on how we send your photo booth images via SMS and how to manage your consent and privacy preferences.",
+    openGraph: {
+        title: "Photo Booth Opt-In Policy - Brink Design Co.",
+        description:
+            "Learn about our SMS photo delivery and privacy practices for Brink Design Co.'s photo booth.",
+        url: "https://www.brinkdesign.co/photo-booth-opt-in",
+        type: "article",
+    },
+};
+
 export default function PhotoBoothOptInPolicy() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4">

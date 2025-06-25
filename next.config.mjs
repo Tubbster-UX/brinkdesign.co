@@ -10,9 +10,6 @@ const nextConfig = {
       { source: '/sitemap-projects.xml',  destination: '/projects/sitemap.xml' },
       // images sitemap
       { source: '/sitemap-images.xml',    destination: '/images/sitemap.xml' },
-
-      // index sitemap
-      { source: '/sitemap-index.xml',   destination: '/index/sitemap.xml' },
     ];
   },
 };

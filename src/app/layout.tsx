@@ -6,11 +6,14 @@ import ConditionalLayout from "@/components/ConditionalLayout";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
-  title: "Brink Design Co. - Pro AV & Low Voltage Solutions",
-  description: "Professional low voltage AV installations including security cameras, networking, door access, and more — powered by Brink Design Co.",
+  title: "Brink Design | AV & Low Voltage Tech Installers",
+  description:
+    "Brink Design provides professional audio-visual installations, low voltage wiring, and security camera systems for churches, businesses, and events.",
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "Brink Design Co. - Pro AV & Low Voltage Solutions",
-    description: "Professional low voltage AV installations including security cameras, networking, door access, and more — powered by Brink Design Co.",
+    title: "Brink Design | AV & Low Voltage Tech Installers",
+    description:
+      "Brink Design provides professional audio-visual installations, low voltage wiring, and security camera systems for churches, businesses, and events.",
     url: "https://www.brinkdesign.co",
     type: "website",
     images: [
@@ -25,8 +28,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.brinkdesign.co" },
   twitter: {
     card: "summary_large_image",
-    title: "Brink Design Co. - Pro AV & Low Voltage Solutions",
-    description: "Professional low voltage AV installations including security cameras, networking, door access, and more — powered by Brink Design Co.",
+    title: "Brink Design | AV & Low Voltage Tech Installers",
+    description:
+      "Brink Design provides professional audio-visual installations, low voltage wiring, and security camera systems for churches, businesses, and events.",
     images: ["https://www.brinkdesign.co/og-image.jpg"],
   },
 };

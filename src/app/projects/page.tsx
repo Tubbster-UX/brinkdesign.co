@@ -30,6 +30,13 @@ async function fetchProjects() {
 export const metadata: Metadata = {
   title: "Projects - Brink Design Co.",
   description: "Browse our portfolio of AV installations and low voltage projects, including networking, security systems, door access, and more.",
+  alternates: { canonical: "https://www.brinkdesign.co/projects" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects - Brink Design Co.",
+    description: "Browse our portfolio of AV installations and low voltage projects, including networking, security systems, door access, and more.",
+    images: ["https://www.brinkdesign.co/og-image.jpg"],
+  },
 };
 
 export default async function Page() {

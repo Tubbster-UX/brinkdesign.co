@@ -19,6 +19,14 @@ export const metadata: Metadata = {
             },
         ],
     },
+    alternates: { canonical: "https://www.brinkdesign.co/photo-booth-opt-in" },
+    twitter: {
+        card: "summary_large_image",
+        title: "Photo Booth Opt-In Policy - Brink Design Co.",
+        description:
+            "Details on how we send your photo booth images via SMS and how to manage your consent and privacy preferences.",
+        images: ["https://www.brinkdesign.co/og-image.jpg"],
+    },
 };
 
 export default function PhotoBoothOptInPolicy() {

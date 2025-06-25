@@ -21,6 +21,14 @@ export const metadata: Metadata = {
             },
         ],
     },
+    alternates: { canonical: "https://www.brinkdesign.co/network-cabling" },
+    twitter: {
+        card: "summary_large_image",
+        title: "Network Cabling - Brink Design Co.",
+        description:
+            "Clean and reliable network cabling services in Rapid City. We install structured wiring, racks, patch panels, and Wi-Fi for offices and new builds.",
+        images: ["https://www.brinkdesign.co/og-image.jpg"],
+    },
 };
 
 export default function NetworkCablingPage() {

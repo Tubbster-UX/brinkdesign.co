@@ -1,8 +1,9 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "FAQ – Brink Design Co.",
     description: "Frequently asked questions about AV installation, security cameras, networking, and more from Brink Design Co. Serving Rapid City and the Black Hills.",
     openGraph: {
@@ -18,6 +19,13 @@ export const metadata = {
                 alt: "Brink Design Co. AV Services",
             },
         ],
+    },
+    alternates: { canonical: "https://www.brinkdesign.co/faq" },
+    twitter: {
+        card: "summary_large_image",
+        title: "FAQ – Brink Design Co.",
+        description: "Frequently asked questions about AV installation, security cameras, networking, and more from Brink Design Co. Serving Rapid City and the Black Hills.",
+        images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };
 

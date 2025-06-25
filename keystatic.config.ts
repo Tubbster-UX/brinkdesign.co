@@ -33,6 +33,34 @@ export default config({
         }),
       },
     }),
+    blog: collection({
+  label: 'Blog',
+  slugField: 'title',
+  path: '/src/content/blog/*',
+  format: { contentField: 'content' },
+  schema: {
+    title: fields.slug({ name: { label: 'Title' } }),
+    content: fields.markdoc({
+      label: 'Content',
+      options: {
+        image: {
+          directory: 'public/images/blog',
+          publicPath: '/images/blog',
+        },
+      },
+    }),
+    featuredImage: fields.image({
+      label: 'Featured Image',
+      directory: 'public/images/blog',
+      publicPath: '/images/blog',
+    }),
+    published: fields.date({
+      label: 'Published Date',
+      validation: { isRequired: true },
+    }),
+  },
+}),
+
     testimonials: collection({
       label: 'Testimonials',
       slugField: 'author',

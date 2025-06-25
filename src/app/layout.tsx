@@ -57,6 +57,24 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Brink Design Co.",
+              url: "https://www.brinkdesign.co",
+              telephone: "605-381-8290",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Rapid City",
+                addressRegion: "SD",
+                addressCountry: "US",
+              },
+            }),
+          }}
+        />
       </head>
       <body className={cn(
         "min-h-screen bg-background font-sans antialiased",

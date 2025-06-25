@@ -22,7 +22,7 @@ export default async function FeaturedProjectsServer() {
         slug: proj.slug,
         entry: {
           title: proj.entry.title,
-          image: proj.entry.image,
+          image: proj.entry.image || '', // Handle null case
           description: renderedDescription, // Pass the rendered description
           published: proj.entry.published,
         },

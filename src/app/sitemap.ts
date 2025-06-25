@@ -7,6 +7,10 @@ type Project = {
   slug: string;
 };
 
+type Blog = {
+  slug: string;
+}
+
 function escapeXml(url: string): string {
   return url.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
 }
@@ -60,8 +64,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   const projectSlugs: string[] = await reader.collections.project.list();
+  const blogSlugs: string[] = await reader.collections.blog.list();
 
   const projects: Project[] = projectSlugs.map(slug => ({ slug }));
+  const blogs: Blog[] = blogSlugs.map(slug => ({ slug }));
+
+  blogs.forEach((blog) => {
+    links.push({
+      url: escapeXml(`https://www.brinkdesign.co/blog/${blog.slug}`),
+      lastModified: new Date(),
+    });
+  });
 
   projects.forEach((project) => {
     links.push({

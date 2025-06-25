@@ -1,5 +1,19 @@
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: "Security System Installation - Brink Design Co.",
+    description:
+        "Professional security camera and access control installation in Rapid City. Modern, scalable systems with no monthly fees.",
+    openGraph: {
+        title: "Security System Installation - Brink Design Co.",
+        description:
+            "Protect your home or business with reliable security systems installed by Brink Design Co.",
+        url: "https://www.brinkdesign.co/security-installation",
+        type: "article",
+    },
+};
 
 export default function SecurityInstallationPage() {
     return (

@@ -28,7 +28,6 @@ const Footer: React.FC = () => {
                         <li className="mb-2"><Link href="/faq" className="hover:text-white">FAQ</Link></li>
                         <li className="mb-2"><Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
                     </ul>
-
                 </div>
 
                 {/* Contact Info */}
@@ -55,9 +54,11 @@ const Footer: React.FC = () => {
 
             {/* Legal and Disclaimer */}
             <div className="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-500 px-6">
-                <p>&copy; {new Date().getFullYear()} Brink Design. All rights reserved.</p>
                 <p className="mt-2">
                     Product names, logos, brands, and other trademarks are the property of their respective owners.
+                </p>
+                <p className="mt-2">
+                    &copy; {new Date().getFullYear()} Skytab Innovations LLC DBA Brink Design.
                 </p>
             </div>
         </footer>

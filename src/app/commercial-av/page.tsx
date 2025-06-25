@@ -21,6 +21,14 @@ export const metadata: Metadata = {
             },
         ],
     },
+    alternates: { canonical: "https://www.brinkdesign.co/commercial-av" },
+    twitter: {
+        card: "summary_large_image",
+        title: "Commercial AV Installation - Brink Design Co.",
+        description:
+            "Custom audio and video installations for Rapid City businesses, houses of worship, and classrooms. We design systems that just work — no guesswork.",
+        images: ["https://www.brinkdesign.co/og-image.jpg"],
+    },
 };
 
 export default function CommercialAVPage() {

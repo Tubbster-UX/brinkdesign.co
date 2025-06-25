@@ -36,6 +36,13 @@ const services = [
 export const metadata: Metadata = {
     title: "Low Voltage Services - Brink Design Co.",
     description: "Explore our professional low voltage services including security system installation, network cabling, audio/video solutions, and more.",
+    alternates: { canonical: "https://www.brinkdesign.co/services" },
+    twitter: {
+        card: "summary_large_image",
+        title: "Low Voltage Services - Brink Design Co.",
+        description: "Explore our professional low voltage services including security system installation, network cabling, audio/video solutions, and more.",
+        images: ["https://www.brinkdesign.co/og-image.jpg"],
+    },
 };
 
 export default function Page() {

@@ -3,6 +3,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy - Brink Design Co.",
   description: "Learn how Brink Design Co. handles your information when providing AV installations, networking, and low voltage services.",
+  alternates: { canonical: "https://www.brinkdesign.co/privacy-policy" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy - Brink Design Co.",
+    description: "Learn how Brink Design Co. handles your information when providing AV installations, networking, and low voltage services.",
+    images: ["https://www.brinkdesign.co/og-image.jpg"],
+  },
 };
 
 

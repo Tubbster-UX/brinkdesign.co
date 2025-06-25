@@ -21,6 +21,14 @@ export const metadata: Metadata = {
             },
         ],
     },
+    alternates: { canonical: "https://www.brinkdesign.co/security-installation" },
+    twitter: {
+        card: "summary_large_image",
+        title: "Security System Installation - Brink Design Co.",
+        description:
+            "Professional security camera and access control installation in Rapid City. Modern, scalable systems with no monthly fees.",
+        images: ["https://www.brinkdesign.co/og-image.jpg"],
+    },
 };
 
 export default function SecurityInstallationPage() {

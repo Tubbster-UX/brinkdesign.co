@@ -22,6 +22,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: { canonical: "https://www.brinkdesign.co" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Brink Design Co. - Pro AV & Low Voltage Solutions",
+    description: "Professional low voltage AV installations including security cameras, networking, door access, and more — powered by Brink Design Co.",
+    images: ["https://www.brinkdesign.co/og-image.jpg"],
+  },
 };
 
 

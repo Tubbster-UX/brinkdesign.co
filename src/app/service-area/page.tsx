@@ -13,6 +13,13 @@ export const metadata: Metadata = {
         url: "https://www.brinkdesign.co/service-area",
         type: "website",
     },
+    alternates: { canonical: "https://www.brinkdesign.co/service-area" },
+    twitter: {
+        card: "summary_large_image",
+        title: "Service Area - Brink Design Co.",
+        description: "Brink Design Co. provides professional AV and low voltage installations throughout Rapid City and the Black Hills. Explore our coverage area and services.",
+        images: ["https://www.brinkdesign.co/og-image.jpg"],
+    },
 };
 
 

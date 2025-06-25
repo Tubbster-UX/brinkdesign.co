@@ -83,17 +83,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Get all image files from the public folder and its subfolders
-  // const publicFolderPath = path.join(process.cwd(), 'public');
-  // const imageFiles = getAllImageFiles(publicFolderPath);
+  const publicFolderPath = path.join(process.cwd(), 'public');
+  const imageFiles = getAllImageFiles(publicFolderPath);
 
-  // Add image URLs to the sitemap
-  // imageFiles.forEach((file) => {
-  //   const relativePath = path.relative(publicFolderPath, file).replace(/\\/g, '/');
-  //   links.push({
-  //     url: `https://www.brinkdesign.co/${relativePath}`,
-  //     lastModified: new Date(),
-  //   });
-  // });
+  // Add image URLs to the sitemap with their last modified date
+  imageFiles.forEach((file) => {
+    const relativePath = path.relative(publicFolderPath, file).replace(/\\/g, '/');
+    const stat = fs.statSync(file);
+    links.push({
+      url: `https://www.brinkdesign.co/${relativePath}`,
+      lastModified: stat.mtime,
+    });
+  });
 
   return links;
 }

@@ -22,6 +22,8 @@ const Footer: React.FC = () => {
                         <li className="mb-2"><Link href="/" className="hover:text-white">Home</Link></li>
                         <li className="mb-2"><Link href="/services" className="hover:text-white">Services</Link></li>
                         <li className="mb-2"><Link href="/projects" className="hover:text-white">Projects</Link></li>
+                        <li className="mb-2"><Link href="/blog" className="hover:text-white">Blog</Link></li>
+                        <li className="mb-2"><Link href="/linecard" className="hover:text-white">Line Card</Link></li>
                         <li className="mb-2"><Link href="/services/low-voltage" className="hover:text-white">Low Voltage Cabling</Link></li>
                         <li className="mb-2"><Link href="/services/security-cameras" className="hover:text-white">Security Cameras</Link></li>
                         <li className="mb-2"><Link href="/#about" className="hover:text-white">About</Link></li>

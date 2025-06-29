@@ -107,14 +107,14 @@ export default config({
         category: fields.select({
           label: 'Category',
           options: [
-            { label: 'Networking', value: 'networking' },
-            { label: 'Security', value: 'security' },
-            { label: 'Audio/Video', value: 'av' },
-            { label: 'Smart Home', value: 'smart-home' },
-            { label: 'Cabling & Hardware', value: 'cabling' },
+            { label: 'Networking', value: 'Networking' },
+            { label: 'Security', value: 'Security' },
+            { label: 'Audio/Video', value: 'Audio/Visual' },
+            { label: 'Smart Home', value: 'Smart Home' },
+            { label: 'Cabling & Hardware', value: 'Cabling' },
             { label: 'Other', value: 'other' },
           ],
-          defaultValue: 'networking',
+          defaultValue: 'Networking',
         }),
         logo: fields.image({
           label: 'Brand Logo',

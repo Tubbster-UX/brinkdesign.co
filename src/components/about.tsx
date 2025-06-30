@@ -4,6 +4,7 @@ import { createReader } from "@keystatic/core/reader";
 import React from "react";
 import keystaticConfig from "../../keystatic.config";
 import Markdoc from "@markdoc/markdoc";
+import { ArrowRight, Users, Award, MapPin, Clock } from "lucide-react";
 
 type About = {
     title: string;
@@ -27,15 +28,86 @@ export default async function About() {
         throw new Error('Invalid content');
       }
     const renderable = Markdoc.transform(node);
+    
     return (
-        <div className="p-6 bg-gray-100 text-black" id="about">
-            <h2 className="text-4xl font-extrabold text-center mb-8">{about.title}</h2>
-            <section className="max-w-4xl mx-auto p-8">
-                <div className="prose">{Markdoc.renderers.react(renderable, React)}</div>
-                <div className="text-center mt-8">
-                    <Button asChild><Link href="/contact">Work With Us</Link></Button>
+        <section className="py-20 bg-primary text-white" id="about">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    {/* Content */}
+                    <div>
+                        <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-6 border border-white/20">
+                            <Users className="w-4 h-4 mr-2" />
+                            About Brink Design Co.
+                        </div>
+                        
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                            {about.title}
+                        </h2>
+                        
+                        <div className="prose prose-lg prose-invert max-w-none mb-8">
+                            {Markdoc.renderers.react(renderable, React)}
+                        </div>
+                        
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Button asChild size="lg" className="bg-yellow-500 text-gray-900 hover:bg-yellow-400 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                                <Link href="/about" className="inline-flex items-center">
+                                    Learn Our Story
+                                    <ArrowRight className="w-5 h-5 ml-2" />
+                                </Link>
+                            </Button>
+                            <Button asChild variant="ghost" size="lg">
+                                <Link href="/contact" className="inline-flex items-center">
+                                    <Users className="w-5 h-5 mr-2" />
+                                    Work With Us
+                                </Link>
+                            </Button>
+                        </div>
+                    </div>
+                    
+                    {/* Stats & Features */}
+                    <div className="space-y-6">
+                        {/* Main Feature Card */}
+                        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <h3 className="text-2xl font-bold mb-6">Why South Dakota Trusts Us</h3>
+                            <div className="space-y-4">
+                                <div className="flex items-center">
+                                    <Award className="w-6 h-6 mr-4 text-yellow-400" />
+                                    <div>
+                                        <div className="font-semibold">Professional Quality</div>
+                                        <div className="text-sm text-blue-100">Enterprise-grade installations</div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center">
+                                    <MapPin className="w-6 h-6 mr-4 text-green-400" />
+                                    <div>
+                                        <div className="font-semibold">Local Expertise</div>
+                                        <div className="text-sm text-blue-100">Understanding of regional needs</div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center">
+                                    <Clock className="w-6 h-6 mr-4 text-blue-400" />
+                                    <div>
+                                        <div className="font-semibold">Reliable Support</div>
+                                        <div className="text-sm text-blue-100">24/7 emergency assistance</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {/* Stats */}
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+                                <div className="text-3xl font-bold text-yellow-400 mb-2">10+</div>
+                                <div className="text-sm text-blue-100">Years Experience</div>
+                            </div>
+                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+                                <div className="text-3xl font-bold text-blue-400 mb-2">24/7</div>
+                                <div className="text-sm text-blue-100">Support</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }

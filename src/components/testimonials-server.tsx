@@ -7,31 +7,62 @@ import TestimonialsClient from "./testimonials-client";
 const reader = createReader(process.cwd(), keystaticConfig);
 
 export default async function TestimonialsServer() {
-    const slugs = await reader.collections.testimonials.list();
-const testimonials = await Promise.all(
-    slugs.map(async (slug) => {
-        const testimonial = await reader.collections.testimonials.read(slug);
-        if (!testimonial) return null;
-        const { node } = await testimonial.content();
-        const errors = Markdoc.validate(node);
-        if (errors.length) return null;
-        const renderable = Markdoc.transform(node);
-        // Only pass serializable fields!
-        return {
-            slug,
-            author: testimonial.author,
-            authorImage: testimonial.authorImage,
-            published: testimonial.published,
-            rating: testimonial.rating,
-            website: testimonial.website,
-            content: JSON.stringify(renderable), // serialize for client
-        };
-    })
-);
+    try {
+        const slugs = await reader.collections.testimonials.list();
+        
+        if (!slugs.length) {
+            return null;
+        }
 
-    const validTestimonials = testimonials.filter(Boolean);
+        const testimonials = await Promise.all(
+            slugs.map(async (slug) => {
+                try {
+                    const testimonial = await reader.collections.testimonials.read(slug);
+                    if (!testimonial) return null;
 
-    if (validTestimonials.length === 0) return null;
+                    // Validate required fields
+                    if (!testimonial.author || !testimonial.published) {
+                        return null;
+                    }
 
-    return <TestimonialsClient testimonials={validTestimonials} />;
+                    const { node } = await testimonial.content();
+                    const errors = Markdoc.validate(node);
+                    if (errors.length) {
+                        console.warn(`Markdoc validation errors for testimonial ${slug}:`, errors);
+                        return null;
+                    }
+
+                    const renderable = Markdoc.transform(node);
+
+                    // Return serializable testimonial data
+                    return {
+                        slug,
+                        author: String(testimonial.author),
+                        authorImage: testimonial.authorImage || null,
+                        published: Boolean(testimonial.published),
+                        rating: Math.max(1, Math.min(5, Number(testimonial.rating) || 5)),
+                        website: testimonial.website ? String(testimonial.website) : null,
+                        content: JSON.stringify(renderable),
+                    };
+                } catch (error) {
+                    console.warn(`Error processing testimonial ${slug}:`, error);
+                    return null;
+                }
+            })
+        );
+
+        // Filter out null entries and only include published testimonials
+        const validTestimonials = testimonials
+            .filter((t): t is NonNullable<typeof t> => t !== null && t.published)
+            .sort((a, b) => b.rating - a.rating); // Sort by rating descending
+
+        if (validTestimonials.length === 0) {
+            return null;
+        }
+
+        return <TestimonialsClient testimonials={validTestimonials} />;
+    } catch (error) {
+        console.error("Error loading testimonials:", error);
+        return null;
+    }
 }

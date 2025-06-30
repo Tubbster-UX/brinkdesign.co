@@ -13,5 +13,5 @@ export function trackPageView(path: string) {
 
 export function trackEvent(action: string, params?: Record<string, any>) {
   if (!GA_ID) return;
-  sendGAEvent('event', action, params);
+  sendGAEvent('event', action, params ?? {});
 }

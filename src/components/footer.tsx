@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                                 <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-secondary to-secondary/60"></div>
                             </h3>
                             <nav className="space-y-3">
-                                <Link href="/#about" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
+                                <Link href="/about" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
                                     About Us
                                 </Link>
                                 <Link href="/projects" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">

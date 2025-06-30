@@ -27,8 +27,7 @@ const AboutPage: React.FC = () => {
                     />
                     <p>
                         Skytab Innovations has been serving South Dakota for over a decade. In 2023,
-                        Alexavier Brink took over the family LLC and launched <strong>Brink Design</strong>
-                        to help smaller churches get professional AV installs—without the big-firm price
+                        Alexavier Brink took over the family LLC and launched <strong>Brink Design</strong> to help smaller churches get professional AV installs—without the big-firm price
                         tag. He continued taking on web and logo work on the side, but by early 2025 made
                         the full pivot: Brink Design is now 100% focused on low-voltage and AV systems
                         that just work.

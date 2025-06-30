@@ -4,6 +4,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import ConditionalLayout from "@/components/ConditionalLayout";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Analytics from "@/components/Analytics";
+import { GA_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
   title: "Brink Design | AV & Low Voltage Tech Installers",
@@ -95,7 +97,8 @@ export default function RootLayout({
         <ConditionalLayout>
           {children}
         </ConditionalLayout>
-        <GoogleAnalytics gaId="G-K6VB75FMGH" />
+        <GoogleAnalytics gaId={GA_ID} />
+        <Analytics />
       </body>
     </html>
   );

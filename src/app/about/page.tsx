@@ -25,18 +25,18 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "About Brink Design Co. - Professional Low Voltage & AV Solutions",
-    description: "Learn about Brink Design Co.'s story, mission, and expertise in professional low voltage installations, AV systems, and technology solutions across South Dakota.",
+    title: "About Brink Design Co. - Rapid City AV & Low Voltage Experts",
+    description: "Learn how Brink Design Co. from Rapid City serves homes and businesses across South Dakota with expert low voltage installations and AV solutions.",
     alternates: { canonical: "https://www.brinkdesign.co/about" },
     openGraph: {
-        title: "About Brink Design Co. - Professional Low Voltage & AV Solutions",
-        description: "Learn about our story, mission, and expertise in professional low voltage installations and AV systems across South Dakota.",
+        title: "About Brink Design Co. - Rapid City AV & Low Voltage Experts",
+        description: "Learn how Brink Design Co. from Rapid City serves homes and businesses across South Dakota with expert low voltage installations and AV solutions.",
         images: ["/og-image.jpg"],
     },
     twitter: {
         card: "summary_large_image",
-        title: "About Brink Design Co. - Professional Low Voltage & AV Solutions",
-        description: "Learn about our story, mission, and expertise in professional low voltage installations and AV systems across South Dakota.",
+        title: "About Brink Design Co. - Rapid City AV & Low Voltage Experts",
+        description: "Learn how Brink Design Co. from Rapid City serves homes and businesses across South Dakota with expert low voltage installations and AV solutions.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };
@@ -178,6 +178,10 @@ const AboutPage: React.FC = () => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link href="/projects" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white hover:bg-white/10 rounded-xl transition-all duration-300">
                                     See Our Work
+                                    <ArrowRight className="w-5 h-5 ml-2" />
+                                </Link>
+                                <Link href="/blog" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white hover:bg-white/10 rounded-xl transition-all duration-300">
+                                    Read Recent Articles
                                     <ArrowRight className="w-5 h-5 ml-2" />
                                 </Link>
                             </div>

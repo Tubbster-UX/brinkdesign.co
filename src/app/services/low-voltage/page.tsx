@@ -161,8 +161,35 @@ export default function LowVoltageCablingPage() {
         }
     ];
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Low Voltage Cabling Services",
+        description:
+            "Expert low voltage cabling installation for data, voice, video, and security systems. Serving South Dakota with professional structured wiring solutions for homes and businesses.",
+        provider: {
+            "@type": "LocalBusiness",
+            name: "Brink Design Co.",
+            url: "https://www.brinkdesign.co",
+            telephone: "605-381-8290",
+            email: "contact@brinkdesign.co",
+            address: {
+                "@type": "PostalAddress",
+                addressLocality: "Rapid City",
+                addressRegion: "SD",
+                addressCountry: "US",
+            },
+        },
+        url: "https://www.brinkdesign.co/services/low-voltage",
+    };
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+            {/* JSON-LD Structured Data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Hero Section */}
             <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:40px_40px] opacity-20"></div>

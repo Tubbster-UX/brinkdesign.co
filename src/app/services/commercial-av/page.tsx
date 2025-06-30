@@ -48,7 +48,7 @@ export const metadata: Metadata = {
             },
         ],
     },
-    alternates: { canonical: "https://www.brinkdesign.co/commercial-av" },
+    alternates: { canonical: "https://www.brinkdesign.co/services/commercial-av" },
     twitter: {
         card: "summary_large_image",
         title: "Professional Commercial AV Installation - Brink Design Co.",
@@ -214,8 +214,35 @@ export default function CommercialAVPage() {
         }
     ];
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Commercial AV Installation",
+        description:
+            "Expert commercial audio/video installation for businesses, churches, schools, and conference rooms. Custom AV systems designed for South Dakota organizations.",
+        provider: {
+            "@type": "LocalBusiness",
+            name: "Brink Design Co.",
+            url: "https://www.brinkdesign.co",
+            telephone: "605-381-8290",
+            email: "contact@brinkdesign.co",
+            address: {
+                "@type": "PostalAddress",
+                addressLocality: "Rapid City",
+                addressRegion: "SD",
+                addressCountry: "US",
+            },
+        },
+        url: "https://www.brinkdesign.co/commercial-av",
+    };
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50">
+            {/* JSON-LD Structured Data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Hero Section */}
             <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-800 to-indigo-900">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:40px_40px] opacity-20"></div>

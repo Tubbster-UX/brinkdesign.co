@@ -76,19 +76,19 @@ export default async function BlogPage() {
                         Expert AV & Technology Insights
                     </h1>
                     <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed">
-                        Stay ahead with professional insights on commercial AV systems, network infrastructure, 
-                        security technology, and smart building solutions from South Dakota's leading experts.
+                        Stay ahead with professional insights on commercial AV systems, network infrastructure,
+                        security technology, and smart building solutions from South Dakota&apos;s leading experts.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link 
-                            href="/contact" 
+                        <Link
+                            href="/contact"
                             className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-50 transition-colors duration-200 shadow-lg"
                         >
                             Get Expert Consultation
                             <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
-                        <Link 
-                            href="/services" 
+                        <Link
+                            href="/services"
                             className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-xl transition-colors duration-200"
                         >
                             Our Services
@@ -174,11 +174,11 @@ export default async function BlogPage() {
                                 Coming Soon
                             </h3>
                             <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                                We're preparing valuable content on AV systems, networking, and security technology. 
+                                We&apos;re preparing valuable content on AV systems, networking, and security technology.
                                 Check back soon for expert insights!
                             </p>
-                            <Link 
-                                href="/contact" 
+                            <Link
+                                href="/contact"
                                 className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
                             >
                                 Get Expert Advice Now
@@ -196,19 +196,19 @@ export default async function BlogPage() {
                         Need Expert AV & Technology Guidance?
                     </h2>
                     <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                        Get personalized advice from our team of professionals. We're here to help you make informed 
+                        Get personalized advice from our team of professionals. We&apos;re here to help you make informed
                         decisions about your AV, networking, and security technology needs.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link 
-                            href="/contact" 
+                        <Link
+                            href="/contact"
                             className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-50 transition-colors duration-200 shadow-lg"
                         >
                             Schedule Consultation
                             <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
-                        <Link 
-                            href="/projects" 
+                        <Link
+                            href="/projects"
                             className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-xl transition-colors duration-200"
                         >
                             View Our Work

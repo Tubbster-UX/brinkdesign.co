@@ -65,8 +65,8 @@ export default async function BlogPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="relative bg-blue-600 py-20 lg:py-32">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"></div>
+            <section className="relative bg-primary py-20 lg:py-32">
+                <div className="absolute inset-0 bg-primary"></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 text-blue-100 rounded-full text-sm font-medium mb-6">
                         <BookOpen className="w-4 h-4 mr-2" />
@@ -190,7 +190,7 @@ export default async function BlogPage() {
             </section>
 
             {/* Newsletter/CTA Section */}
-            <section className="py-20 bg-blue-600">
+            <section className="py-20 bg-primary">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                         Need Expert AV & Technology Guidance?

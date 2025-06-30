@@ -48,7 +48,7 @@ export const metadata: Metadata = {
             },
         ],
     },
-    alternates: { canonical: "https://www.brinkdesign.co/commercial-av" },
+    alternates: { canonical: "https://www.brinkdesign.co/services/commercial-av" },
     twitter: {
         card: "summary_large_image",
         title: "Professional Commercial AV Installation - Brink Design Co.",

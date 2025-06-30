@@ -1,7 +1,10 @@
+"use client";
+
 import React from 'react';
 import Logo from './logo';
 import Link from 'next/link';
 import { Button } from './ui/button';
+import { trackEvent } from '@/lib/analytics';
 
 const Footer: React.FC = () => {
     return (
@@ -93,7 +96,10 @@ const Footer: React.FC = () => {
                             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
                                 <p className="text-sm mb-3 text-gray-300 font-medium">Ready to get started?</p>
                                 <p className="text-xs mb-4 text-gray-400">Free consultation • No pressure • Expert advice</p>
-                                <Link href="/contact">
+                                <Link
+                                    href="/contact"
+                                    onClick={() => trackEvent('cta_click', { cta: 'footer_book_site_visit' })}
+                                >
                                     <Button className="w-full bg-secondary hover:bg-secondary/90 text-primary font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-secondary/20">
                                         Book Free Site Visit
                                     </Button>

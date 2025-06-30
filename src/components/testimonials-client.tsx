@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Card, CardContent } from "./ui/card";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote, Star, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { trackEvent } from '@/lib/analytics';
 import Markdoc from "@markdoc/markdoc";
 
 interface Testimonial {
@@ -173,12 +174,14 @@ export default function TestimonialsClient({ testimonials }: TestimonialsClientP
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
                                 href="/contact"
+                                onClick={() => trackEvent('start_project_click', { location: 'testimonials' })}
                                 className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
                             >
                                 Start Your Project
                             </a>
                             <a
                                 href="tel:6053818290"
+                                onClick={() => trackEvent('phone_click', { location: 'testimonials' })}
                                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 rounded-xl transition-all duration-300"
                             >
                                 Call (605) 381-8290

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar, X } from "lucide-react";
+import { trackEvent } from '@/lib/analytics';
 
 export default function StickyHeaderCTA() {
     const [isVisible, setIsVisible] = useState(false);
@@ -19,6 +20,7 @@ export default function StickyHeaderCTA() {
     }, []);
 
     const handleCallClick = () => {
+        trackEvent('phone_click', { location: 'sticky_header_cta' });
         window.location.href = "tel:+16053818290"; // Replace with your actual phone number
     };
 

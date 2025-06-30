@@ -3,6 +3,7 @@
 import { Network, Shield, Speaker, Home, ArrowRight, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { trackEvent } from '@/lib/analytics';
 
 const services = [
   {
@@ -81,7 +82,11 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Link href={service.href} className="group block h-full">
+              <Link
+                href={service.href}
+                onClick={() => trackEvent('service_learn_more', { service: service.title })}
+                className="group block h-full"
+              >
                 <div className="h-full bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group-hover:border-gray-200">
                   {/* Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -142,8 +147,9 @@ export default function Services() {
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link 
+              <Link
                 href="tel:6053818290"
+                onClick={() => trackEvent('phone_click', { location: 'services' })}
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 rounded-xl transition-all duration-300"
               >
                 Call (605) 381-8290

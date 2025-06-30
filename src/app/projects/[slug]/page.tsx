@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Markdoc from "@markdoc/markdoc";
 import React from 'react';
+import { trackEvent } from '@/lib/analytics';
 
 type Project = {
   slug: string;
@@ -178,7 +179,11 @@ export default async function Project(props: { params: Promise<{ slug: string }>
                 Discover how we delivered exceptional low voltage solutions that transformed this space with cutting-edge technology and professional installation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200 hover:shadow-lg">
+                <Link
+                  href="/contact"
+                  onClick={() => trackEvent('start_project_click', { location: 'project-detail' })}
+                  className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200 hover:shadow-lg"
+                >
                   Start Your Project
                 </Link>
                 <Link href="/projects" className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200">

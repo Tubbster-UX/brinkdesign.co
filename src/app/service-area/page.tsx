@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
+import { trackEvent } from '@/lib/analytics';
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -106,7 +107,11 @@ export default function ServiceArea() {
                             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200 hover:shadow-lg">
                                 Schedule Site Visit
                             </Link>
-                            <Link href="tel:6053818290" className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <Link
+                                href="tel:6053818290"
+                                onClick={() => trackEvent('phone_click', { location: 'service-area-hero' })}
+                                className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                            >
                                 <Phone className="mr-2" size={20} />
                                 Call (605) 381-8290
                             </Link>
@@ -263,7 +268,11 @@ export default function ServiceArea() {
                                 <Mail className="mr-2" size={20} />
                                 Schedule Consultation
                             </Link>
-                            <Link href="tel:6053818290" className="inline-flex items-center justify-center px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-secondary rounded-lg transition-all duration-200">
+                            <Link
+                                href="tel:6053818290"
+                                onClick={() => trackEvent('phone_click', { location: 'service-area-bottom' })}
+                                className="inline-flex items-center justify-center px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-secondary rounded-lg transition-all duration-200"
+                            >
                                 <Phone className="mr-2" size={20} />
                                 Call (605) 381-8290
                             </Link>

@@ -23,6 +23,7 @@ import {
     Building,
     Wifi
 } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 
 export const metadata: Metadata = {
     title: "About Brink Design Co. - Rapid City AV & Low Voltage Experts",
@@ -344,7 +345,11 @@ const AboutPage: React.FC = () => {
                                     plus emergency/after-hours service.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4">
-                                    <a href="tel:6053818290" className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-50 transition-colors">
+                                    <a
+                                        href="tel:6053818290"
+                                        onClick={() => trackEvent('phone_click', { location: 'about-support' })}
+                                        className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-50 transition-colors"
+                                    >
                                         <Phone className="w-5 h-5 mr-2" />
                                         Call 605-381-8290
                                     </a>
@@ -473,11 +478,19 @@ const AboutPage: React.FC = () => {
                         trust Brink Design Co. for their technology needs.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg transform hover:scale-105">
+                        <Link
+                            href="/contact"
+                            onClick={() => trackEvent('start_project_click', { location: 'about' })}
+                            className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg transform hover:scale-105"
+                        >
                             <Users className="w-5 h-5 mr-2" />
                             Start Your Project
                         </Link>
-                        <Link href="tel:6053818290" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-orange-600 rounded-xl transition-all duration-300">
+                        <Link
+                            href="tel:6053818290"
+                            onClick={() => trackEvent('phone_click', { location: 'about' })}
+                            className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-orange-600 rounded-xl transition-all duration-300"
+                        >
                             <Phone className="w-5 h-5 mr-2" />
                             Call (605) 381-8290
                         </Link>

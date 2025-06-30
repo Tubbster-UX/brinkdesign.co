@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Mail, Phone, MessageCircle, Clock, Shield, Award, ArrowRight, CheckCircle } from "lucide-react";
+import { trackEvent } from '@/lib/analytics';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -170,7 +171,11 @@ export default function FAQPage() {
                                 <MessageCircle className="mr-2" size={20} />
                                 Ask a Question
                             </Link>
-                            <Link href="tel:6053818290" className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <Link
+                                href="tel:6053818290"
+                                onClick={() => trackEvent('phone_click', { location: 'faq-hero' })}
+                                className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                            >
                                 <Phone className="mr-2" size={20} />
                                 Call (605) 381-8290
                             </Link>
@@ -331,7 +336,11 @@ export default function FAQPage() {
                                 <ArrowRight className="w-5 h-5 mx-auto mt-3 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             
-                            <Link href="tel:6053818290" className="group bg-primary text-secondary p-6 rounded-2xl hover:bg-primary/90 transition-all duration-200 hover:shadow-lg">
+                            <Link
+                                href="tel:6053818290"
+                                onClick={() => trackEvent('phone_click', { location: 'faq-bottom' })}
+                                className="group bg-primary text-secondary p-6 rounded-2xl hover:bg-primary/90 transition-all duration-200 hover:shadow-lg"
+                            >
                                 <Phone className="w-8 h-8 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                                 <h3 className="font-bold text-lg mb-2">Call Directly</h3>
                                 <p className="text-sm opacity-80">(605) 381-8290 - Local support</p>

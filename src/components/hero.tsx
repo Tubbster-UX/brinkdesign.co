@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import Link from 'next/link'
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Users, Star, Phone } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 
 export default function Hero() {
     return (
@@ -91,13 +92,21 @@ export default function Hero() {
                             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                         >
                             <Button asChild size="lg" className="bg-yellow-500 text-gray-900 hover:bg-yellow-400 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                                <Link href="/contact" className="inline-flex items-center">
+                                <Link
+                                    href="/contact"
+                                    onClick={() => trackEvent('cta_click', { cta: 'hero_request_free_quote' })}
+                                    className="inline-flex items-center"
+                                >
                                     Request Free Quote
                                     <ArrowRight className="w-5 h-5 ml-2" />
                                 </Link>
                             </Button>
                             <Button asChild variant="outline" size="lg">
-                                <Link href="tel:6053818290" className="inline-flex items-center">
+                                <Link
+                                    href="tel:6053818290"
+                                    onClick={() => trackEvent('phone_click', { location: 'hero' })}
+                                    className="inline-flex items-center"
+                                >
                                     <Phone className="w-5 h-5 mr-2" />
                                     Call (605) 381-8290
                                 </Link>

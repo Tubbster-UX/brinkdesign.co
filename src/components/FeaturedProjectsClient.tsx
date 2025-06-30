@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardFooter, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Eye, Calendar, MapPin } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 import React from 'react';
 
 type Project = {
@@ -136,8 +137,9 @@ export default function FeaturedProjectsClient({ projects }: { projects: Project
                 View All Projects
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link 
+              <Link
                 href="/contact"
+                onClick={() => trackEvent('start_project_click', { location: 'featured_projects' })}
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 rounded-xl transition-all duration-300"
               >
                 Start Your Project

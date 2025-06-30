@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { usePathname } from 'next/navigation';
 import Logo from "./logo";
 import { Phone, MapPin, Clock, Menu, X, ChevronDown } from "lucide-react";
+import { trackEvent } from '@/lib/analytics';
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -164,6 +165,7 @@ export default function Header() {
                         <div className="hidden lg:flex items-center space-x-4">
                             <a
                                 href="tel:6053818290"
+                                onClick={() => trackEvent('phone_click', { location: 'header-desktop' })}
                                 className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
                             >
                                 <Phone className="w-4 h-4" />
@@ -200,7 +202,11 @@ export default function Header() {
                             <div className="bg-gray-50 rounded-lg p-4 space-y-3">
                                 <div className="flex items-center space-x-3">
                                     <Phone className="w-5 h-5 text-blue-600" />
-                                    <a href="tel:6053818290" className="text-blue-600 font-semibold text-lg">
+                                    <a
+                                        href="tel:6053818290"
+                                        onClick={() => trackEvent('phone_click', { location: 'header-mobile' })}
+                                        className="text-blue-600 font-semibold text-lg"
+                                    >
                                         (605) 381-8290
                                     </a>
                                 </div>

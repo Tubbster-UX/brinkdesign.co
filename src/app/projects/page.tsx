@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ReactElement, JSXElementConstructor, ReactNode, Key } from 'react';
+import { trackEvent } from '@/lib/analytics';
 
 
 const reader = createReader(process.cwd(), keystaticConfig);
@@ -64,7 +65,11 @@ export default async function Page() {
                   Explore our portfolio of successful low voltage installations, from security systems to smart home automation and commercial AV solutions.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200 hover:shadow-lg">
+                  <Link
+                    href="/contact"
+                    onClick={() => trackEvent('start_project_click', { location: 'projects-hero' })}
+                    className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200 hover:shadow-lg"
+                  >
                     Start Your Project
                   </Link>
                   <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
@@ -169,7 +174,11 @@ export default async function Page() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">No Projects Yet</h3>
               <p className="text-gray-600 mb-6">We&apos;re working on showcasing our amazing projects. Check back soon!</p>
-              <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200">
+              <Link
+                href="/contact"
+                onClick={() => trackEvent('start_project_click', { location: 'projects-empty' })}
+                className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200"
+              >
                 Start Your Project
               </Link>
             </div>

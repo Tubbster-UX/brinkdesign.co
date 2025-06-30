@@ -4,6 +4,7 @@ import { createReader } from '@keystatic/core/reader';
 import Image from 'next/image';
 import Link from 'next/link';
 import Markdoc from '@markdoc/markdoc';
+import { trackEvent } from '@/lib/analytics';
 import React from 'react';
 
 export default async function LineCardPage() {
@@ -250,7 +251,11 @@ export default async function LineCardPage() {
               Leverage our partnerships with industry leaders to get the highest quality solutions for your project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-secondary font-bold rounded-lg hover:bg-primary/90 transition-all duration-200 hover:shadow-lg">
+              <Link
+                href="/contact"
+                onClick={() => trackEvent('start_project_click', { location: 'linecard' })}
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-secondary font-bold rounded-lg hover:bg-primary/90 transition-all duration-200 hover:shadow-lg"
+              >
                 Start Your Project
               </Link>
               <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-secondary rounded-lg transition-all duration-200">

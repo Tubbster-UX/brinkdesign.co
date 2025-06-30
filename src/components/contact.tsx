@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import ReCAPTCHA from "react-google-recaptcha";
 import { User, Mail, MessageSquare, FileText, Send, Loader2 } from 'lucide-react';
+import { trackEvent } from '@/lib/analytics';
 
 interface ContactFormProps {
     onSuccess: (message: string) => void;
@@ -51,6 +52,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
 
             if (response.ok) {
                 onSuccess('Message sent successfully! We\'ll get back to you within 24 hours.');
+                trackEvent('contact_form_submitted', { subject: formData.subject });
                 setFormData({
                     name: '',
                     email: '',

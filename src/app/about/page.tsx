@@ -180,6 +180,10 @@ const AboutPage: React.FC = () => {
                                     See Our Work
                                     <ArrowRight className="w-5 h-5 ml-2" />
                                 </Link>
+                                <Link href="/blog" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white hover:bg-white/10 rounded-xl transition-all duration-300">
+                                    Read Recent Articles
+                                    <ArrowRight className="w-5 h-5 ml-2" />
+                                </Link>
                             </div>
                         </div>
 

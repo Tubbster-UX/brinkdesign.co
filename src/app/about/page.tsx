@@ -139,47 +139,21 @@ const AboutPage: React.FC = () => {
                 <h2 className="text-3xl font-semibold mb-6">Why Choose Brink Design</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="text-center">
-                        <Image
-                            src="/images/about/clean-installs.png"
-                            alt="Icon for Clean Installs"
-                            width={100}
-                            height={100}
-                            className="mx-auto mb-4"
-                        />
                         <h4 className="font-medium">Clean Installs</h4>
                         <p>Neat cable management and professional finishes.</p>
                     </div>
 
                     <div className="text-center">
-                        <Image
-                            src="/images/about/honest-advice.png"
-                            alt="Icon for Honest Advice"
-                            width={100}
-                            height={100}
-                            className="mx-auto mb-4"
-                        />
                         <h4 className="font-medium">Honest Advice</h4>
                         <p>Vendor-neutral recommendations to fit your needs.</p>
                     </div>
 
                     <div className="text-center">
-                        <Image
-                            src="/images/about/built-to-last.png"
-                            alt="Icon for Built to Last"
-                            width={100}
-                            height={100}
-                            className="mx-auto mb-4"
-                        />
                         <h4 className="font-medium">Built to Last</h4>
                         <p>Enterprise-grade hardware and best practices.</p>
                     </div>
 
                     <div className="text-center">
-                        <img
-                            src="/images/about/local-expertise.png"
-                            alt="Icon for Local Expertise"
-                            className="mx-auto mb-4"
-                        />
                         <h4 className="font-medium">Local Expertise</h4>
                         <p>Optimized for South Dakota’s unique environments.</p>
                     </div>

@@ -72,8 +72,82 @@ export default async function Project(props: { params: Promise<{ slug: string }>
   }
   const renderable = Markdoc.transform(node);
 
+  // Generate JSON-LD structured data
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "@id": `https://www.brinkdesign.co/projects/${slug}`,
+    "name": project.title,
+    "headline": project.title,
+    "description": `Professional AV and low voltage installation project: ${project.title}. Discover our expert solutions for security, networking, and audio/video systems in South Dakota.`,
+    "url": `https://www.brinkdesign.co/projects/${slug}`,
+    "image": {
+      "@type": "ImageObject",
+      "url": project.image ? `https://www.brinkdesign.co${project.image}` : "https://www.brinkdesign.co/og-image.jpg",
+      "width": 600,
+      "height": 400,
+      "caption": project.title
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "Brink Design Co.",
+      "url": "https://www.brinkdesign.co",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.brinkdesign.co/brink-design-logo.png",
+        "width": 200,
+        "height": 80
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "SD",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-605-381-8290",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      }
+    },
+    "about": [
+      "Commercial AV Systems",
+      "Network Infrastructure",
+      "Security Systems",
+      "Low Voltage Installation",
+      "Audio Video Solutions"
+    ],
+    "keywords": `${project.title}, commercial AV, low voltage installation, security systems, network cabling, audio video, South Dakota, professional installation`,
+    "genre": "Case Study",
+    "workExample": {
+      "@type": "CreativeWork",
+      "name": project.title,
+      "description": "Professional AV and technology installation project showcasing expert craftsmanship and innovative solutions."
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Brink Design Co.",
+      "url": "https://www.brinkdesign.co"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.brinkdesign.co/projects/${slug}`
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Brink Design Co.",
+      "url": "https://www.brinkdesign.co"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-primary via-primary to-primary/95 text-white overflow-hidden">
         {/* Background Pattern */}

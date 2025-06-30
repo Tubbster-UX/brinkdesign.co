@@ -90,8 +90,113 @@ export default async function BlogPost(props: { params: Promise<{ slug: string }
   const contentText = JSON.stringify(node);
   const readingTime = calculateReadingTime(contentText);
 
+  // Generate JSON-LD structured data for BlogPosting
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `https://www.brinkdesign.co/blog/${slug}`,
+    "headline": post.title,
+    "name": post.title,
+    "description": `Expert insights on AV systems, networking, and security technology: ${post.title}. Professional advice from South Dakota's leading low voltage specialists.`,
+    "url": `https://www.brinkdesign.co/blog/${slug}`,
+    "datePublished": post.published,
+    "dateModified": post.published,
+    "image": {
+      "@type": "ImageObject",
+      "url": post.featuredImage ? `https://www.brinkdesign.co${post.featuredImage}` : "https://www.brinkdesign.co/og-image.jpg",
+      "width": 1200,
+      "height": 630,
+      "caption": post.title
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Brink Design Co.",
+      "url": "https://www.brinkdesign.co",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.brinkdesign.co/brink-design-logo.png",
+        "width": 200,
+        "height": 80
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "SD",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-605-381-8290",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Brink Design Co.",
+      "url": "https://www.brinkdesign.co",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.brinkdesign.co/brink-design-logo.png",
+        "width": 200,
+        "height": 80
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.brinkdesign.co/blog/${slug}`
+    },
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Brink Design Co. Blog",
+      "@id": "https://www.brinkdesign.co/blog"
+    },
+    "articleSection": "Technology",
+    "wordCount": contentText.split(/\s+/).length,
+    "timeRequired": `PT${readingTime}M`,
+    "keywords": `${post.title}, commercial AV, low voltage installation, security systems, network cabling, audio video, South Dakota, professional installation, AV technology, smart building solutions`,
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Commercial AV Systems"
+      },
+      {
+        "@type": "Thing", 
+        "name": "Network Infrastructure"
+      },
+      {
+        "@type": "Thing",
+        "name": "Security Systems"
+      },
+      {
+        "@type": "Thing",
+        "name": "Low Voltage Installation"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "Organization",
+        "name": "Brink Design Co.",
+        "url": "https://www.brinkdesign.co"
+      }
+    ],
+    "inLanguage": "en-US",
+    "genre": "Technology",
+    "educationalUse": "Professional Development",
+    "learningResourceType": "Article",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Business Professionals"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-primary via-primary to-primary/95 text-white overflow-hidden">
         {/* Background Pattern */}

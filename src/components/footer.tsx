@@ -84,13 +84,11 @@ const Footer: React.FC = () => {
                             
                             <div className="space-y-4 mb-6">
                                 <div className="flex items-center space-x-3">
-                                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
                                     <a href="mailto:contact@brinkdesign.co" className="text-gray-300 hover:text-white transition-colors">
                                         contact@brinkdesign.co
                                     </a>
                                 </div>
                                 <div className="flex items-center space-x-3">
-                                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
                                     <span className="text-gray-400">South Dakota</span>
                                 </div>
                             </div>

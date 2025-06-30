@@ -4,7 +4,7 @@ import keystaticConfig from '../../../keystatic.config';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ReactElement, JSXElementConstructor, ReactNode, AwaitedReactNode, Key } from 'react';
+import { ReactElement, JSXElementConstructor, ReactNode, Key } from 'react';
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
@@ -120,37 +120,51 @@ export default async function Page() {
                     {/* Blog Posts Grid */}
                     {posts.length > 0 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-                            {posts.map((post: { entry: { title: boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | Promise<AwaitedReactNode> | Key | null | undefined; featuredImage: any; published: string; summary?: string; }; slug: any; readingTime: number; }, index: number) => (
-                                <Link key={String(post.entry.title)} href={`/blog/${post.slug}`}>
-                                    <Card className="group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white h-full flex flex-col">
-                                        {/* Featured Image */}
-                                        <div className="relative overflow-hidden">
-                                            <Image
-                                                src={post.entry.featuredImage || '/images/placeholder.png'}
-                                                alt={post.entry.title?.toString() ?? ''}
-                                                width={450}
-                                                height={250}
-                                                className="w-full h-48 object-contain transition-transform duration-500 group-hover:scale-110"
-                                            />
-                                            {/* Overlay on hover */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            {posts.map((post: { entry: { title: any; featuredImage: any; published: string; summary?: string; }; slug: any; readingTime: number; }, index: number) => {
+                                // Ensure title is a renderable value (string or ReactNode)
+                                let renderableTitle: React.ReactNode = '';
+                                if (typeof post.entry.title === 'string' || typeof post.entry.title === 'number') {
+                                    renderableTitle = post.entry.title;
+                                } else if (React.isValidElement(post.entry.title)) {
+                                    renderableTitle = post.entry.title;
+                                } else if (post.entry.title && typeof post.entry.title.then === 'function') {
+                                    // If it's a Promise, show a placeholder or fallback
+                                    renderableTitle = 'Untitled';
+                                } else if (post.entry.title) {
+                                    renderableTitle = post.entry.title.toString();
+                                }
 
-                                            {/* Read More Button - appears on hover */}
-                                            <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                                <div className="bg-white/20 backdrop-blur-sm rounded-full p-3 border border-white/30">
-                                                    <svg className="w-4 h-4 text-white transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                                                    </svg>
+                                return (
+                                    <Link key={String(renderableTitle)} href={`/blog/${post.slug}`}>
+                                        <Card className="group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white h-full flex flex-col">
+                                            {/* Featured Image */}
+                                            <div className="relative overflow-hidden">
+                                                <Image
+                                                    src={post.entry.featuredImage || '/images/placeholder.png'}
+                                                    alt={renderableTitle ?? ''}
+                                                    width={450}
+                                                    height={250}
+                                                    className="w-full h-48 object-contain transition-transform duration-500 group-hover:scale-110"
+                                                />
+                                                {/* Overlay on hover */}
+                                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                                                {/* Read More Button - appears on hover */}
+                                                <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-3 border border-white/30">
+                                                        <svg className="w-4 h-4 text-white transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                                        </svg>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        {/* Article Content */}
-                                        <div className="p-6 flex-1 flex flex-col">
-                                            <div className="flex-1">
-                                                <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors leading-tight">
-                                                    {post.entry.title}
-                                                </CardTitle>
+                                            {/* Article Content */}
+                                            <div className="p-6 flex-1 flex flex-col">
+                                                <div className="flex-1">
+                                                    <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors leading-tight">
+                                                        {renderableTitle}
+                                                    </CardTitle>
 
                                                 {/* Article Meta */}
                                                 <div className="flex items-center text-sm text-gray-500 mb-4">

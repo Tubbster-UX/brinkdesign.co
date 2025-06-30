@@ -26,28 +26,24 @@ export default async function About() {
     if (errors.length) {
         console.error(errors);
         throw new Error('Invalid content');
-      }
+    }
     const renderable = Markdoc.transform(node);
-    
+
     return (
         <section className="py-20 bg-primary text-white" id="about">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Content */}
                     <div>
-                        <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-6 border border-white/20">
-                            <Users className="w-4 h-4 mr-2" />
-                            About Brink Design Co.
-                        </div>
-                        
+
                         <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                             {about.title}
                         </h2>
-                        
+
                         <div className="prose prose-lg prose-invert max-w-none mb-8">
                             {Markdoc.renderers.react(renderable, React)}
                         </div>
-                        
+
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Button asChild size="lg" className="bg-yellow-500 text-gray-900 hover:bg-yellow-400 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                                 <Link href="/about" className="inline-flex items-center">
@@ -63,7 +59,7 @@ export default async function About() {
                             </Button>
                         </div>
                     </div>
-                    
+
                     {/* Stats & Features */}
                     <div className="space-y-6">
                         {/* Main Feature Card */}
@@ -93,7 +89,7 @@ export default async function About() {
                                 </div>
                             </div>
                         </div>
-                        
+
                         {/* Stats */}
                         <div className="grid grid-cols-2 gap-4">
                             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">

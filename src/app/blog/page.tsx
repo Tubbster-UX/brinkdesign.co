@@ -187,7 +187,7 @@ export default async function Page() {
                                 </svg>
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-2">Coming Soon</h3>
-                            <p className="text-gray-600 mb-6">We're preparing expert insights and industry tips. Check back soon for valuable content!</p>
+                            <p className="text-gray-600 mb-6">We&apos;re preparing expert insights and industry tips. Check back soon for valuable content!</p>
                             <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200">
                                 Get Expert Advice
                             </Link>

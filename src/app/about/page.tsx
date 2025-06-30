@@ -46,14 +46,14 @@ const AboutPage: React.FC = () => {
         {
             icon: Network,
             title: "Network & Cabling",
-            description: "Structured cabling, rack builds, patch panels, PoE deployments, fiber runs—your backbone for performance.",
+            description: "Structured cabling, rack builds, patch panels, PoE deployments, fiber runs&mdash;your backbone for performance.",
             image: "/images/about/network.webp",
             alt: "Cleanly labeled Cat6 cables bundled into a patch panel"
         },
         {
             icon: Camera,
             title: "Security Systems",
-            description: "Surveillance cameras, access control, motion sensors, remote monitoring, and alarm integrations—keeping an eye on what matters.",
+            description: "Surveillance cameras, access control, motion sensors, remote monitoring, and alarm integrations&mdash;keeping an eye on what matters.",
             image: "/images/about/Unifi-Protect-Dashboard.jpg",
             alt: "Wall-mounted NVR with multiple camera feeds visible on a monitor"
         },
@@ -67,7 +67,7 @@ const AboutPage: React.FC = () => {
         {
             icon: Home,
             title: "Smart Home & Automation",
-            description: "Lighting control, thermostats, door locks, whole-house audio, voice-control integrations—and all the gadgets that make life easier.",
+            description: "Lighting control, thermostats, door locks, whole-house audio, voice-control integrations&mdash;and all the gadgets that make life easier.",
             image: "/images/about/smarthome.jpeg",
             alt: "Tablet displaying a home-automation dashboard controlling lights, locks, and thermostat"
         }
@@ -222,7 +222,7 @@ const AboutPage: React.FC = () => {
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Evolution of Excellence</h3>
                             <p className="text-gray-700 leading-relaxed mb-6">
                                 Skytab Innovations has been serving South Dakota for over a decade. In 2023,
-                                Alexavier Brink took over the family LLC and launched <strong>Brink Design</strong> to help smaller churches get professional AV installs—without the big-firm price tag.
+                                Alexavier Brink took over the family LLC and launched <strong>Brink Design</strong> to help smaller churches get professional AV installs&mdash;without the big-firm price tag.
                             </p>
                             <div className="flex items-center p-4 bg-green-50 rounded-lg border border-green-200">
                                 <CheckCircle className="w-6 h-6 text-green-600 mr-3 flex-shrink-0" />
@@ -251,9 +251,9 @@ const AboutPage: React.FC = () => {
                             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
                                 <Target className="w-16 h-16 text-blue-600 mx-auto mb-6" />
                                 <blockquote className="text-2xl font-medium text-gray-900 mb-6 leading-relaxed">
-                                    "To empower churches, businesses, ranchers, and homeowners across western
-                                    South Dakota (and into Wyoming and Nebraska) with smart, scalable technology—
-                                    installed right the first time."
+                                    &ldquo;To empower churches, businesses, ranchers, and homeowners across western
+                                    South Dakota (and into Wyoming and Nebraska) with smart, scalable technology&mdash;
+                                    installed right the first time.&rdquo;
                                 </blockquote>
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                                     <div className="text-center">
@@ -326,7 +326,7 @@ const AboutPage: React.FC = () => {
                     ))}
 
                     {/* Maintenance & Support */}
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl shadow-lg p-8 md:p-12 text-white">
+                    <div className="bg-primary rounded-2xl shadow-lg p-8 md:p-12 text-white">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             <div>
                                 <div className="flex items-center mb-6">
@@ -336,7 +336,7 @@ const AboutPage: React.FC = () => {
                                     <h3 className="text-2xl font-bold">Maintenance & Support</h3>
                                 </div>
                                 <p className="text-blue-100 text-lg leading-relaxed mb-6">
-                                    Firmware updates, system health checks, expansions, and remote diagnostics—
+                                    Firmware updates, system health checks, expansions, and remote diagnostics&mdash;
                                     plus emergency/after-hours service.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4">
@@ -352,7 +352,7 @@ const AboutPage: React.FC = () => {
                             <div className="flex items-center justify-center">
                                 <div className="text-center">
                                     <Clock className="w-24 h-24 text-white/60 mx-auto mb-4" />
-                                    <p className="text-blue-100">We'll be there when you need us!</p>
+                                    <p className="text-blue-100">We&rsquo;ll be there when you need us!</p>
                                 </div>
                             </div>
                         </div>
@@ -366,7 +366,7 @@ const AboutPage: React.FC = () => {
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Brink Design Co?</h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            The qualities that set us apart and make us South Dakota's preferred AV partner
+                            The qualities that set us apart and make us South Dakota&rsquo;s preferred AV partner
                         </p>
                     </div>
 
@@ -465,7 +465,7 @@ const AboutPage: React.FC = () => {
                         Ready to Work Together?
                     </h2>
                     <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-                        Let's discuss your project and show you why South Dakota businesses 
+                        Let&rsquo;s discuss your project and show you why South Dakota businesses 
                         trust Brink Design Co. for their technology needs.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">

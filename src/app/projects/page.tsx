@@ -106,7 +106,7 @@ export default async function Page() {
               Our Success Stories
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              From residential smart homes to complex commercial installations, see how we've transformed spaces with innovative low voltage solutions.
+              From residential smart homes to complex commercial installations, see how we&apos;ve transformed spaces with innovative low voltage solutions.
             </p>
           </div>
 
@@ -165,7 +165,7 @@ export default async function Page() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">No Projects Yet</h3>
-              <p className="text-gray-600 mb-6">We're working on showcasing our amazing projects. Check back soon!</p>
+              <p className="text-gray-600 mb-6">We&apos;re working on showcasing our amazing projects. Check back soon!</p>
               <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200">
                 Start Your Project
               </Link>

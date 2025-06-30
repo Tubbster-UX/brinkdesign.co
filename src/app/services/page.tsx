@@ -210,7 +210,7 @@ export default function Page() {
                             Ready to Transform Your Space?
                         </h2>
                         <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                            Get a free consultation and see how our expert low voltage solutions can enhance your property's functionality and value.
+                            Get a free consultation and see how our expert low voltage solutions can enhance your property&apos;s functionality and value.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>

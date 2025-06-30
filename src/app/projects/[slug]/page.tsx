@@ -213,7 +213,7 @@ export default async function Project({ params }: { params: { slug: string } }) 
             <div>
               <h3 className="text-2xl font-bold mb-6">Explore More Projects</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                See how we've transformed other spaces with our expert low voltage solutions and innovative installations.
+                See how we&apos;ve transformed other spaces with our expert low voltage solutions and innovative installations.
               </p>
               <Link href="/projects" className="inline-flex items-center space-x-2 text-secondary hover:text-secondary/80 transition-colors font-semibold">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -227,7 +227,7 @@ export default async function Project({ params }: { params: { slug: string } }) 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h3 className="text-2xl font-bold mb-4">Ready for Your Project?</h3>
               <p className="text-gray-300 mb-6">
-                Let's discuss how we can bring similar innovation and quality to your space.
+                Let&apos;s discuss how we can bring similar innovation and quality to your space.
               </p>
               <div className="space-y-4">
                 <Link href="/contact" className="block w-full text-center bg-secondary text-primary font-bold py-4 px-6 rounded-lg hover:bg-secondary/90 transition-all duration-200 hover:shadow-lg">

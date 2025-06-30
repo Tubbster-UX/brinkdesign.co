@@ -99,7 +99,7 @@ export default function ServiceArea() {
                         </h1>
 
                         <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-                            Professional low voltage solutions across South Dakota's Black Hills region. From Rapid City to remote locations, we bring expert technology services to your doorstep.
+                            Professional low voltage solutions across South Dakota&apos;s Black Hills region. From Rapid City to remote locations, we bring expert technology services to your doorstep.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -149,7 +149,7 @@ export default function ServiceArea() {
                         Areas We Serve
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Comprehensive coverage across the Black Hills region with specialized expertise for each community's unique needs.
+                        Comprehensive coverage across the Black Hills region with specialized expertise for each community&apos;s unique needs.
                     </p>
                 </div>
 
@@ -255,7 +255,7 @@ export default function ServiceArea() {
                             Ready to Get Started?
                         </h2>
                         <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                            Whether you're in downtown Rapid City or the remote Black Hills, we're here to help with expert technology solutions.
+                            Whether you&apos;re in downtown Rapid City or the remote Black Hills, we&apos;re here to help with expert technology solutions.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-8">

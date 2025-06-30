@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
                             Privacy Policy
                         </h1>
                         <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-                            We're committed to protecting your privacy and being transparent about how we handle your information.
+                            We&apos;re committed to protecting your privacy and being transparent about how we handle your information.
                         </p>
                         <div className="inline-flex items-center px-4 py-2 bg-white/10 rounded-lg text-white text-sm">
                             <FileText className="w-4 h-4 mr-2" />
@@ -197,7 +197,7 @@ export default function PrivacyPolicy() {
                 <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-8">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                         <Shield className="w-6 h-6 mr-3 text-orange-600" />
-                        6. Children's Privacy
+                        6. Children&apos;s Privacy
                     </h2>
                     <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
                         <p className="text-orange-800 leading-relaxed">

@@ -85,7 +85,7 @@ const ContactContainer = () => {
                             We typically respond within 2 hours
                         </div>
                         <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                            Let's Create Something Amazing Together
+                            Let&apos;s Create Something Amazing Together
                         </h1>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                             Ready to transform your space with cutting-edge AV, networking, or security solutions?
@@ -130,7 +130,7 @@ const ContactContainer = () => {
                             <div className="relative p-8 lg:p-12">
                                 <div className="mb-8">
                                     <h2 className="text-3xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
-                                    <p className="text-gray-600">Fill out the form below and we'll get back to you within 24 hours.</p>
+                                    <p className="text-gray-600">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
                                 </div>
 
                                 <ContactForm onSuccess={setSuccessMessage} onError={setErrorMessage} />

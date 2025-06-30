@@ -4,95 +4,298 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { usePathname } from 'next/navigation';
 import Logo from "./logo";
+import { Phone, MapPin, Clock, Menu, X, ChevronDown } from "lucide-react";
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [IsProjectsPage, setIsProjectsPage] = useState(true);
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isProjectsPage, setIsProjectsPage] = useState(false);
     const path = usePathname();
 
     useEffect(() => {
         setIsProjectsPage(path === '/keystatic');
     }, [path]);
 
+    // Handle scroll effect
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
+        if (!isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
     };
 
-    return (
-        <nav className={`top-0 relative left-0 w-full z-50 py-5 border-gray-200 ${IsProjectsPage ? 'hidden' : 'bg-white'}`}>
-            <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-                <a href="/" className="flex items-center">
-                    <Logo className="h-14 mr-3 sm:h-20" />
-                    <span className="sr-only">Brink Design Co.</span>
-                </a>
-                <div className="flex items-center lg:order-2">
-                    <Button className="hidden mt-2 mr-4 sm:inline-block" asChild>
-                        <Link href="/contact">Book Free Site Visit</Link>
-                    </Button>
+    // Close mobile menu when clicking outside or on link
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            const handleClickOutside = () => {
+                setIsMobileMenuOpen(false);
+                document.body.style.overflow = 'unset';
+            };
+            document.addEventListener('click', handleClickOutside);
+            return () => document.removeEventListener('click', handleClickOutside);
+        }
+    }, [isMobileMenuOpen]);
 
-                    <button
-                        onClick={toggleMobileMenu}
-                        className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                        aria-controls="mobile-menu-2"
-                        aria-expanded={isMobileMenuOpen}
-                    >
-                        <span className="sr-only">Open main menu</span>
-                        <svg className={`w-6 h-6 ${isMobileMenuOpen ? 'hidden' : 'block'}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
-                        </svg>
-                        <svg className={`w-6 h-6 ${isMobileMenuOpen ? 'block' : 'hidden'}`} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                        </svg>
-                    </button>
+    const serviceLinks = [
+        { href: "/commercial-av", label: "Commercial AV" },
+        { href: "/network-cabling", label: "Network Cabling" },
+        { href: "/security-installation", label: "Security Systems" },
+    ];
+
+    if (isProjectsPage) return null;
+
+    return (
+        <>
+            {/* Top Info Bar */}
+            <div className="bg-primary text-white py-2 px-4 text-sm hidden lg:block">
+                <div className="max-w-7xl mx-auto flex justify-between items-center">
+                    <div className="flex items-center space-x-6">
+                        <div className="flex items-center space-x-2">
+                            <Phone className="w-4 h-4" />
+                            <span>(605) 381-8290</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <MapPin className="w-4 h-4" />
+                            <span>Serving South Dakota</span>
+                        </div>
+                    </div>
+                    <div className="text-sm">
+                        <span className="font-medium">Free Consultations Available</span>
+                    </div>
                 </div>
-                <div className={`items-center justify-between w-full lg:flex lg:w-auto lg:order-1 ${isMobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu-2">
-                    <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                        <li>
-                            <Link href="/about" className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+            </div>
+
+            {/* Main Navigation */}
+            <nav 
+                className={`sticky top-0 left-0 w-full z-50 transition-all duration-200 ${
+                    isScrolled 
+                        ? 'bg-white shadow-md border-b border-gray-200' 
+                        : 'bg-white border-b border-gray-100'
+                }`}
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex justify-between items-center h-20">
+                        {/* Logo */}
+                        <Link href="/" className="flex items-center space-x-3">
+                            <Logo className="h-12 w-auto" />
+                            <div className="hidden sm:block">
+                                <div className="text-xl font-bold text-gray-900">Brink Design Co.</div>
+                                <div className="text-xs text-primary font-medium">Professional AV & Technology</div>
+                            </div>
+                        </Link>
+
+                        {/* Desktop Navigation */}
+                        <div className="hidden lg:flex items-center space-x-8">
+                            <Link 
+                                href="/about" 
+                                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                            >
                                 About
                             </Link>
-                        </li>
-                        <li>
-                            <Link href="/services" className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                                Services
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/projects" className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                            
+                            {/* Services Dropdown */}
+                            <div 
+                                className="relative"
+                                onMouseEnter={() => setIsServicesOpen(true)}
+                                onMouseLeave={() => setIsServicesOpen(false)}
+                            >
+                                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+                                    <span>Services</span>
+                                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                                </button>
+                                
+                                {isServicesOpen && (
+                                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200">
+                                        <div className="p-2">
+                                            {serviceLinks.map((service) => (
+                                                <Link
+                                                    key={service.href}
+                                                    href={service.href}
+                                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                                                >
+                                                    {service.label}
+                                                </Link>
+                                            ))}
+                                            <Link
+                                                href="/services"
+                                                className="block px-4 py-3 text-blue-600 font-medium hover:bg-gray-50 rounded-md transition-colors duration-200 border-t border-gray-100 mt-2"
+                                            >
+                                                View All Services →
+                                            </Link>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+
+                            <Link 
+                                href="/projects" 
+                                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                            >
                                 Projects
                             </Link>
-                        </li>
-                        <li>
-                            <Link href="/blog" className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                            
+                            <Link 
+                                href="/blog" 
+                                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                            >
                                 Blog
                             </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href="/linecard"
-                                className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                            
+                            <Link 
+                                href="/linecard" 
+                                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
                             >
                                 Line Card
                             </Link>
-                        </li>
+                        </div>
 
-                        <li>
-                            <Link href="/service-area" className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                                Service Area
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/faq" className="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                                FAQ
-                            </Link>
-                        </li>
-                        <Button className="sm:hidden mt-2 mr-4 inline-block" asChild>
-                            <Link href="/contact">Free Site Visit</Link>
-                        </Button>
+                        {/* CTA Buttons */}
+                        <div className="hidden lg:flex items-center space-x-4">
+                            <a
+                                href="tel:6053818290"
+                                className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                            >
+                                <Phone className="w-4 h-4" />
+                                <span className="font-medium">(605) 381-8290</span>
+                            </a>
+                            <Button asChild >
+                                <Link href="/contact">Free Site Visit</Link>
+                            </Button>
+                        </div>
 
-                    </ul>
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                toggleMobileMenu();
+                            }}
+                            className="lg:hidden p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors duration-200"
+                            aria-label="Toggle mobile menu"
+                        >
+                            {isMobileMenuOpen ? (
+                                <X className="w-6 h-6" />
+                            ) : (
+                                <Menu className="w-6 h-6" />
+                            )}
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </nav>
+
+                {/* Mobile Menu */}
+                {isMobileMenuOpen && (
+                    <div className="lg:hidden bg-white border-t border-gray-200 shadow-md">
+                        <div className="px-4 py-6 space-y-4">
+                            {/* Mobile Contact Info */}
+                            <div className="bg-gray-50 rounded-lg p-4 space-y-3">
+                                <div className="flex items-center space-x-3">
+                                    <Phone className="w-5 h-5 text-blue-600" />
+                                    <a href="tel:6053818290" className="text-blue-600 font-semibold text-lg">
+                                        (605) 381-8290
+                                    </a>
+                                </div>
+                                <div className="flex items-center space-x-3">
+                                    <MapPin className="w-5 h-5 text-blue-600" />
+                                    <span className="text-gray-700">Serving South Dakota</span>
+                                </div>
+                            </div>
+
+                            {/* Mobile Navigation Links */}
+                            <nav className="space-y-2">
+                                <Link 
+                                    href="/about" 
+                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    About
+                                </Link>
+                                
+                                <div className="space-y-1">
+                                    <div className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                                        Services
+                                    </div>
+                                    {serviceLinks.map((service) => (
+                                        <Link
+                                            key={service.href}
+                                            href={service.href}
+                                            className="block px-6 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                                            onClick={() => setIsMobileMenuOpen(false)}
+                                        >
+                                            {service.label}
+                                        </Link>
+                                    ))}
+                                    <Link
+                                        href="/services"
+                                        className="block px-6 py-2 text-blue-600 font-medium hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                    >
+                                        View All Services →
+                                    </Link>
+                                </div>
+                                
+                                <Link 
+                                    href="/projects" 
+                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    Projects
+                                </Link>
+                                
+                                <Link 
+                                    href="/blog" 
+                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    Blog
+                                </Link>
+                                
+                                <Link 
+                                    href="/linecard" 
+                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    Line Card
+                                </Link>
+                                
+                                <Link 
+                                    href="/service-area" 
+                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    Service Area
+                                </Link>
+                                
+                                <Link 
+                                    href="/faq" 
+                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    FAQ
+                                </Link>
+                            </nav>
+
+                            {/* Mobile CTA */}
+                            <div className="pt-4 border-t border-gray-200">
+                                <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-sm">
+                                    <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                                        Schedule Free Site Visit
+                                    </Link>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </nav>
+        </>
     );
 }

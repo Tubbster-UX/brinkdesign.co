@@ -42,11 +42,8 @@ const Footer: React.FC = () => {
                                 <Link href="/services/security-cameras" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
                                     Security Systems
                                 </Link>
-                                <Link href="/commercial-av" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
+                                <Link href="/services/commercial-av" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
                                     Commercial AV
-                                </Link>
-                                <Link href="/network-cabling" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
-                                    Network Cabling
                                 </Link>
                             </nav>
                         </div>

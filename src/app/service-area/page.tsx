@@ -25,59 +25,265 @@ export const metadata: Metadata = {
 
 
 export default function ServiceArea() {
+    const serviceAreas = [
+        { name: "Rapid City", description: "Main service hub with fastest response times", isMain: true },
+        { name: "Box Elder", description: "Military housing and residential services", isMain: false },
+        { name: "Sturgis", description: "Event venues and commercial installations", isMain: false },
+        { name: "Spearfish", description: "Educational and business technology", isMain: false },
+        { name: "Hill City", description: "Tourism and hospitality solutions", isMain: false },
+        { name: "Custer", description: "Remote location specialists", isMain: false },
+        { name: "Hot Springs", description: "Healthcare and senior facilities", isMain: false },
+        { name: "Deadwood", description: "Gaming and entertainment venues", isMain: false },
+        { name: "Keystone", description: "Tourist destination tech solutions", isMain: false },
+        { name: "Black Hawk", description: "Gaming industry expertise", isMain: false },
+        { name: "Piedmont", description: "Rural connectivity solutions", isMain: false },
+        { name: "Hermosa", description: "Agricultural and residential", isMain: false },
+    ];
+
+    const services = [
+        {
+            title: "Security Camera Installation",
+            icon: "🔒",
+            description: "Professional CCTV systems for homes and businesses",
+            areas: "All service areas"
+        },
+        {
+            title: "Sound System Setup",
+            icon: "🔊",
+            description: "Crystal clear audio for every space",
+            areas: "Churches, venues, homes"
+        },
+        {
+            title: "Wi-Fi & Network Installation",
+            icon: "📶",
+            description: "High-speed connectivity solutions",
+            areas: "Rural and urban locations"
+        },
+        {
+            title: "Door Access Control",
+            icon: "🚪",
+            description: "Smart entry and security management",
+            areas: "Commercial and residential"
+        },
+        {
+            title: "Live Stream & Broadcast",
+            icon: "📹",
+            description: "Professional streaming and recording",
+            areas: "Churches, events, businesses"
+        },
+        {
+            title: "Smart Home Integration",
+            icon: "🏠",
+            description: "Complete home automation solutions",
+            areas: "Residential properties"
+        },
+    ];
+
     return (
-        <div className="min-h-screen bg-white text-gray-900 px-4 py-12 md:px-20">
-            <div className="max-w-5xl mx-auto">
-                <h1 className="text-4xl text-center font-bold mb-4">Service Area – Where We Work</h1>
-                <p className="text-lg text-center mb-8">
-                    Brink Design Co. provides professional AV and low voltage installations across the Black Hills. We serve homes, churches, and businesses with expert security, networking, and AV solutions.
-                </p>
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+            {/* Hero Section */}
+            <div className="relative bg-gradient-to-r from-primary via-primary to-primary/95 text-white overflow-hidden">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:40px_40px]"></div>
+                </div>
 
-                <Card className="mb-12">
-                    <CardContent className="py-6 px-4 md:px-8">
-                        <h2 className="text-2xl font-semibold mb-4">Areas We Serve</h2>
-                        <ul className="grid grid-cols-2 md:grid-cols-3 gap-3 text-base">
-                            <li>Rapid City, SD</li>
-                            <li>Box Elder, SD</li>
-                            <li>Sturgis, SD</li>
-                            <li>Spearfish, SD</li>
-                            <li>Hill City, SD</li>
-                            <li>Custer, SD</li>
-                            <li>Hot Springs, SD</li>
-                            <li>Deadwood, SD</li>
-                            <li>Keystone, SD</li>
-                            <li>Black Hawk, SD</li>
-                            <li>Piedmont, SD</li>
-                            <li>Hermosa, SD</li>
-                        </ul>
-                    </CardContent>
-                </Card>
+                <div className="relative container mx-auto px-6 py-20">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <div className="inline-block px-4 py-2 bg-secondary/20 backdrop-blur-sm rounded-full text-secondary font-semibold text-sm mb-6 border border-secondary/30">
+                            Local Experts
+                        </div>
 
-                <div className="grid md:grid-cols-2 gap-8 mb-12">
-                    <Card>
-                        <CardContent className="py-6 px-4 md:px-8">
-                            <h2 className="text-2xl font-semibold mb-4">Services Offered</h2>
-                            <ul className="list-disc list-inside space-y-2">
-                                <li>Security Camera Installation</li>
-                                <li>Sound System Setup</li>
-                                <li>Wi-Fi & Network Installation</li>
-                                <li>Door Access Control Systems</li>
-                                <li>Live Stream & Broadcast Integration</li>
-                                <li>Residential & Commercial Installations</li>
-                            </ul>
-                        </CardContent>
-                    </Card>
+                        <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                            Serving the <span className="text-secondary">Black Hills</span>
+                        </h1>
 
-                    <Card>
-                        <CardContent className="py-6 px-4 md:px-8">
-                            <h2 className="text-2xl font-semibold mb-4">Need Help in Your Area?</h2>
-                            <p className="mb-6">Reach out to schedule a free consultation or site visit. We&#39;re here to help bring your AV vision to life.</p>
-                            <div className="flex flex-col gap-4">
-                                <Link href="tel:6053818290" className="w-full flex items-center gap-2"><Button className="w-full gap-2"><Phone size={18} /> Call Now</Button></Link>
-                                <Link href="mailto:contact@brinkdesign.co" className="w-full flex items-center gap-2"><Button variant="outline" className="w-full gap-2"><Mail size={18} /> Send Email</Button></Link>
+                        <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
+                            Professional low voltage solutions across South Dakota's Black Hills region. From Rapid City to remote locations, we bring expert technology services to your doorstep.
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200 hover:shadow-lg">
+                                Schedule Site Visit
+                            </Link>
+                            <Link href="tel:6053818290" className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                                <Phone className="mr-2" size={20} />
+                                Call (605) 381-8290
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Stats Section */}
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16">
+                <div className="container mx-auto px-6">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div className="space-y-2">
+                            <div className="text-3xl md:text-4xl font-bold text-secondary">12+</div>
+                            <div className="text-gray-300">Cities Served</div>
+                        </div>
+                        <div className="space-y-2">
+                            <div className="text-3xl md:text-4xl font-bold text-secondary">50+</div>
+                            <div className="text-gray-300">Mile Radius</div>
+                        </div>
+                        <div className="space-y-2">
+                            <div className="text-3xl md:text-4xl font-bold text-secondary">24hr</div>
+                            <div className="text-gray-300">Response Time</div>
+                        </div>
+                        <div className="space-y-2">
+                            <div className="text-3xl md:text-4xl font-bold text-secondary">10+</div>
+                            <div className="text-gray-300">Years Local</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Service Areas Section */}
+            <div className="container mx-auto px-6 py-20">
+                <div className="text-center mb-16">
+                    <div className="inline-block px-4 py-2 bg-secondary/70 rounded-full font-semibold text-sm mb-4">
+                        Coverage Map
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Areas We Serve
+                    </h2>
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        Comprehensive coverage across the Black Hills region with specialized expertise for each community's unique needs.
+                    </p>
+                </div>
+
+                {/* Service Areas Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-20">
+                    {serviceAreas.map((area, index) => (
+                        <div key={area.name} className={`group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border ${area.isMain ? 'bg-gradient-to-br from-accent to-accent/90 text-white border-secondary' : 'bg-white border-gray-100'}`}>
+                            <div className="p-6">
+                                {area.isMain && (
+                                    <div className="absolute top-4 right-4">
+                                        <div className="bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold">
+                                            Main Hub
+                                        </div>
+                                    </div>
+                                )}
+
+                                <h3 className={`text-xl font-bold mb-2 ${area.isMain ? 'text-white' : 'text-gray-900 group-hover:text-primary'} transition-colors`}>
+                                    {area.name}, SD
+                                </h3>
+                                <p className={`text-sm leading-relaxed ${area.isMain ? 'text-white/90' : 'text-gray-600'}`}>
+                                    {area.description}
+                                </p>
+
+                                {/* Bottom Border Animation */}
+                                {!area.isMain && (
+                                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary to-secondary/60 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                                )}
                             </div>
-                        </CardContent>
-                    </Card>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Services Section */}
+                <div className="mb-20">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Services Available <span className="text-accent">Everywhere</span>
+                        </h2>
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                            Professional installation and support across all service areas
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {services.map((service, index) => (
+                            <div key={service.title} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 p-6">
+                                <div className="text-3xl mb-4">{service.icon}</div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                                    {service.title}
+                                </h3>
+                                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                                    {service.description}
+                                </p>
+                                <div className="text-xs text-accent font-semibold">
+                                    {service.areas}
+                                </div>
+
+                                {/* Bottom Border Animation */}
+                                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary to-secondary/60 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Local Expertise Section */}
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 md:p-16 text-white">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Local?</h2>
+                        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                            Deep Black Hills knowledge and community commitment
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[
+                            {
+                                title: 'Local Knowledge',
+                                desc: 'Understanding unique challenges of Black Hills terrain and climate',
+                            },
+                            {
+                                title: 'Fast Response',
+                                desc: 'Quick on-site support with local technicians and inventory',
+                            },
+                            {
+                                title: 'Community Trust',
+                                desc: '10+ years serving our neighbors with proven reliability',
+                            },
+                        ].map((benefit, index) => (
+                            <div key={index} className="text-center group">
+                                <h3 className="text-xl font-semibold mb-3 group-hover:text-secondary transition-colors">{benefit.title}</h3>
+                                <p className="text-gray-400 text-sm leading-relaxed">{benefit.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Contact CTA Section */}
+            <div className="bg-gradient-to-r from-secondary via-secondary to-secondary/90 text-primary py-20">
+                <div className="container mx-auto px-6 text-center">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                            Ready to Get Started?
+                        </h2>
+                        <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                            Whether you're in downtown Rapid City or the remote Black Hills, we're here to help with expert technology solutions.
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-8">
+                            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-secondary font-bold rounded-lg hover:bg-primary/90 transition-all duration-200 hover:shadow-lg">
+                                <Mail className="mr-2" size={20} />
+                                Schedule Consultation
+                            </Link>
+                            <Link href="tel:6053818290" className="inline-flex items-center justify-center px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-secondary rounded-lg transition-all duration-200">
+                                <Phone className="mr-2" size={20} />
+                                Call (605) 381-8290
+                            </Link>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                            <div className="flex items-center justify-center space-x-2">
+                                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                                <span>Free Site Visits</span>
+                            </div>
+                            <div className="flex items-center justify-center space-x-2">
+                                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                                <span>Local Technicians</span>
+                            </div>
+                            <div className="flex items-center justify-center space-x-2">
+                                <div className="w-2 h-2 bg-primary rounded-full"></div>
+                                <span>Same-Day Service</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -12,9 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.brinkdesign.co/contact', lastModified: now },
     { url: 'https://www.brinkdesign.co/service-area', lastModified: now },
     { url: 'https://www.brinkdesign.co/faq', lastModified: now },
-    { url: 'https://www.brinkdesign.co/commercial-av', lastModified: now },
-    { url: 'https://www.brinkdesign.co/network-cabling', lastModified: now },
-    { url: 'https://www.brinkdesign.co/security-installation', lastModified: now },
+    { url: 'https://www.brinkdesign.co/services/commercial-av', lastModified: now },
+    { url: 'https://www.brinkdesign.co/services/low-voltage', lastModified: now },
+    { url: 'https://www.brinkdesign.co/services/security-cameras', lastModified: now },
     { url: 'https://www.brinkdesign.co/privacy-policy', lastModified: now },
   ];
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import ReCAPTCHA from "react-google-recaptcha";
+import { User, Mail, MessageSquare, FileText, Send, Loader2 } from 'lucide-react';
 
 interface ContactFormProps {
     onSuccess: (message: string) => void;
@@ -16,8 +17,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
     });
     const [loading, setLoading] = useState(false);
     const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+    const [focusedField, setFocusedField] = useState<string | null>(null);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { id, value } = e.target;
         setFormData({ ...formData, [id]: value });
     };
@@ -33,7 +35,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
         onError('');
 
         if (!recaptchaToken) {
-            onError('Please complete the reCAPTCHA.');
+            onError('Please complete the reCAPTCHA verification.');
             setLoading(false);
             return;
         }
@@ -48,7 +50,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
             });
 
             if (response.ok) {
-                onSuccess('Your message has been sent successfully!');
+                onSuccess('Message sent successfully! We\'ll get back to you within 24 hours.');
                 setFormData({
                     name: '',
                     email: '',
@@ -57,87 +59,163 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                 });
                 setRecaptchaToken(null);
             } else {
-                onError('Failed to send your message. Please try again.');
+                onError('Failed to send your message. Please try again or contact us directly.');
             }
         } catch (error) {
-            onError('An error occurred. Please try again.');
+            onError('⚠️ Network error occurred. Please check your connection and try again.');
         } finally {
             setLoading(false);
         }
     };
 
+    const inputClasses = (fieldName: string) => `
+        w-full px-4 py-3 pl-12 bg-white border-2 border-gray-200 rounded-xl
+        focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 
+        transition-all duration-300 ease-in-out
+        placeholder-gray-400 text-gray-900
+        ${focusedField === fieldName ? 'border-blue-500 shadow-lg' : 'hover:border-gray-300'}
+    `;
+
+    const labelClasses = "block text-sm font-semibold text-gray-700 mb-2";
+
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                    Name
+            {/* Name Field */}
+            <div className="relative">
+                <label className={labelClasses} htmlFor="name">
+                    Full Name *
                 </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
-                    id="name"
-                    type="text"
-                    placeholder="Your name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                />
+                <div className="relative">
+                    <User className={`absolute left-4 top-3.5 w-5 h-5 transition-colors duration-300 ${
+                        focusedField === 'name' ? 'text-blue-500' : 'text-gray-400'
+                    }`} />
+                    <input
+                        className={inputClasses('name')}
+                        id="name"
+                        type="text"
+                        placeholder="Enter your full name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('name')}
+                        onBlur={() => setFocusedField(null)}
+                        required
+                    />
+                </div>
             </div>
-            <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                    Email
+
+            {/* Email Field */}
+            <div className="relative">
+                <label className={labelClasses} htmlFor="email">
+                    Email Address *
                 </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
-                    id="email"
-                    type="email"
-                    placeholder="Your email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                />
+                <div className="relative">
+                    <Mail className={`absolute left-4 top-3.5 w-5 h-5 transition-colors duration-300 ${
+                        focusedField === 'email' ? 'text-blue-500' : 'text-gray-400'
+                    }`} />
+                    <input
+                        className={inputClasses('email')}
+                        id="email"
+                        type="email"
+                        placeholder="your.email@example.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('email')}
+                        onBlur={() => setFocusedField(null)}
+                        required
+                    />
+                </div>
             </div>
-            <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="subject">
-                    Subject
+
+            {/* Subject Field */}
+            <div className="relative">
+                <label className={labelClasses} htmlFor="subject">
+                    Project Type *
                 </label>
-                <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
-                    id="subject"
-                    type="text"
-                    placeholder="Subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                />
+                <div className="relative">
+                    <FileText className={`absolute left-4 top-3.5 w-5 h-5 transition-colors duration-300 ${
+                        focusedField === 'subject' ? 'text-blue-500' : 'text-gray-400'
+                    }`} />
+                    <select
+                        className={inputClasses('subject')}
+                        id="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('subject')}
+                        onBlur={() => setFocusedField(null)}
+                        required
+                    >
+                        <option value="">Select your project type</option>
+                        <option value="AV Installation">AV Installation & Integration</option>
+                        <option value="Network Cabling">Network Cabling & Infrastructure</option>
+                        <option value="Security Systems">Security Systems & Cameras</option>
+                        <option value="Smart Home">Smart Home Automation</option>
+                        <option value="Commercial AV">Commercial AV Solutions</option>
+                        <option value="Maintenance">System Maintenance & Support</option>
+                        <option value="Consultation">Free Consultation</option>
+                        <option value="Other">Other / Custom Project</option>
+                    </select>
+                </div>
             </div>
-            <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
-                    Message
+
+            {/* Message Field */}
+            <div className="relative">
+                <label className={labelClasses} htmlFor="message">
+                    Project Details *
                 </label>
-                <textarea
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
-                    id="message"
-                    rows={5}
-                    placeholder="Your message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                ></textarea>
+                <div className="relative">
+                    <MessageSquare className={`absolute left-4 top-3.5 w-5 h-5 transition-colors duration-300 ${
+                        focusedField === 'message' ? 'text-blue-500' : 'text-gray-400'
+                    }`} />
+                    <textarea
+                        className={`${inputClasses('message')} min-h-[120px] resize-y`}
+                        id="message"
+                        rows={5}
+                        placeholder="Tell us about your project... What are your goals? Timeline? Any specific requirements?"
+                        value={formData.message}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('message')}
+                        onBlur={() => setFocusedField(null)}
+                        required
+                    />
+                </div>
+                <div className="mt-2 text-xs text-gray-500">
+                    The more details you provide, the better we can help you!
+                </div>
             </div>
-            <div className="mb-4">
-                <ReCAPTCHA
-                    sitekey="6Lc9FS4qAAAAALV1txIeKmMJY1qgV8THXLCMKk7C"
-                    onChange={handleRecaptchaChange}
-                />
+
+            {/* reCAPTCHA */}
+            <div className="flex justify-center">
+                <div className="transform scale-90 sm:scale-100">
+                    <ReCAPTCHA
+                        sitekey="6Lc9FS4qAAAAALV1txIeKmMJY1qgV8THXLCMKk7C"
+                        onChange={handleRecaptchaChange}
+                        theme="light"
+                    />
+                </div>
             </div>
-            <div className="flex items-center justify-between">
+
+            {/* Submit Button */}
+            <div className="pt-4">
                 <Button
                     type="submit"
-                    disabled={loading}
-                    className="transition duration-300 ease-in-out transform hover:scale-105"
+                    disabled={loading || !recaptchaToken}
+                    className="w-full"
                 >
-                    {loading ? 'Sending...' : 'Send Message'}
+                    {loading ? (
+                        <div className="flex items-center justify-center gap-2">
+                            <Loader2 className="w-5 h-5 animate-spin" />
+                            <span>Sending your message...</span>
+                        </div>
+                    ) : (
+                        <div className="flex items-center justify-center gap-2">
+                            <Send className="w-5 h-5" />
+                            <span>Send Message</span>
+                        </div>
+                    )}
                 </Button>
+                <p className="text-center text-sm text-gray-500 mt-3">
+                    🔒 Your information is secure and will never be shared with third parties.
+                </p>
             </div>
         </form>
     );

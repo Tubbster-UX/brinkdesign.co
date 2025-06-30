@@ -163,7 +163,7 @@ const AboutPage: React.FC = () => {
                         <div>
                             <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 text-blue-200 rounded-full text-sm font-medium mb-6 border border-blue-400/30">
                                 <Users className="w-4 h-4 mr-2" />
-                                South Dakota's AV & Low Voltage Experts
+                                South Dakota&apos;s AV & Low Voltage Experts
                             </div>
                             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                                 About <span className="text-secondary">Brink Design Co.</span>
@@ -212,7 +212,7 @@ const AboutPage: React.FC = () => {
                         Our Story
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        From family business to South Dakota's premier low voltage specialists
+                        From family business to South Dakota&apos;s premier low voltage specialists
                     </p>
                 </div>
 

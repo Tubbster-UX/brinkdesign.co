@@ -4,7 +4,8 @@ import keystaticConfig from '../../../keystatic.config';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ReactElement, JSXElementConstructor, ReactNode, AwaitedReactNode, Key } from 'react';
+import { ReactElement, JSXElementConstructor, ReactNode, Key } from 'react';
+
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
@@ -113,7 +114,7 @@ export default async function Page() {
           {/* Projects Grid */}
           {projects.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-              {projects.map((project: { entry: { title: boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | Promise<AwaitedReactNode> | Key | null | undefined; image: any; published: string; }; slug: any; }, index: number) => (
+              {projects.map((project: { entry: { title: boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | Promise<ReactNode> | Key | null | undefined; image: any; published: string; }; slug: any; }, index: number) => (
                 <Link key={String(project.entry.title)} href={`/projects/${project.slug}`}>
                   <Card className="group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white">
                     {/* Project Image */}
@@ -141,7 +142,9 @@ export default async function Page() {
                     {/* Project Info */}
                     <CardContent className="p-6">
                       <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-                        {project.entry.title}
+                        {typeof project.entry.title === "string" || typeof project.entry.title === "number"
+                          ? project.entry.title
+                          : ""}
                       </CardTitle>
 
                       {/* Project Meta */}

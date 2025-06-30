@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [
     { url: 'https://www.brinkdesign.co', lastModified: now },
+    { url: 'https://www.brinkdesign.co/about', lastModified: now },
     { url: 'https://www.brinkdesign.co/services', lastModified: now },
     { url: 'https://www.brinkdesign.co/projects', lastModified: now },
     { url: 'https://www.brinkdesign.co/blog', lastModified: now },

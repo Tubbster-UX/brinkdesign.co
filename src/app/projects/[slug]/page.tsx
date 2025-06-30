@@ -16,7 +16,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   try {
     const project = await reader.collections.project.read(params.slug);
     if (!project) {
@@ -53,7 +54,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function Project({ params }: { params: { slug: string } }) {
+export default async function Project(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const { slug } = params;
   const project = await reader.collections.project.read(slug);
 
@@ -155,7 +157,7 @@ export default async function Project({ params }: { params: { slug: string } }) 
             <div className="relative p-8 md:p-12">
               <div className="prose prose-lg prose-gray max-w-none
                 prose-headings:text-gray-900 prose-headings:font-bold
-                prose-h1:text-4xl prose-h1:mb-8 prose-h1:text-secondary
+                prose-h1:text-4xl prose-h1:mb-8 prose-h1:text-primary
                 prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-12 prose-h2:pb-2 prose-h2:border-b prose-h2:border-gray-200
                 prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-8 prose-h3:text-primary
                 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6

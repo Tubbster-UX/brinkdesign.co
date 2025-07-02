@@ -78,7 +78,7 @@ const AboutPage: React.FC = () => {
             icon: Shield,
             title: "Clean Installs",
             description: "Neat cable management and professional finishes that last",
-            color: "text-blue-600"
+            color: "text-primary"
         },
         {
             icon: Target,
@@ -90,7 +90,7 @@ const AboutPage: React.FC = () => {
             icon: Award,
             title: "Built to Last",
             description: "Enterprise-grade hardware and industry best practices",
-            color: "text-purple-600"
+            color: "text-primary"
         },
         {
             icon: MapPin,
@@ -108,7 +108,7 @@ const AboutPage: React.FC = () => {
             icon: Zap,
             title: "Fast Response",
             description: "Emergency support and quick turnaround times",
-            color: "text-yellow-500"
+            color: "text-accent"
         }
     ];
 
@@ -253,7 +253,7 @@ const AboutPage: React.FC = () => {
                         <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
                         <div className="max-w-4xl mx-auto">
                             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
-                                <Target className="w-16 h-16 text-blue-600 mx-auto mb-6" />
+                                <Target className="w-16 h-16 text-primary mx-auto mb-6" />
                                 <blockquote className="text-2xl font-medium text-gray-900 mb-6 leading-relaxed">
                                     &ldquo;To empower churches, businesses, ranchers, and homeowners across western
                                     South Dakota (and into Wyoming and Nebraska) with smart, scalable technology&mdash;
@@ -262,7 +262,7 @@ const AboutPage: React.FC = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                                     <div className="text-center">
                                         <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                                            <Users className="w-6 h-6 text-blue-600" />
+                                            <Users className="w-6 h-6 text-primary" />
                                         </div>
                                         <h4 className="font-semibold text-gray-900">People First</h4>
                                         <p className="text-sm text-gray-600">Building lasting relationships with every client</p>
@@ -276,7 +276,7 @@ const AboutPage: React.FC = () => {
                                     </div>
                                     <div className="text-center">
                                         <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                                            <MapPin className="w-6 h-6 text-purple-600" />
+                                            <MapPin className="w-6 h-6 text-primary" />
                                         </div>
                                         <h4 className="font-semibold text-gray-900">Local Focus</h4>
                                         <p className="text-sm text-gray-600">Dedicated to serving our South Dakota community</p>
@@ -311,7 +311,7 @@ const AboutPage: React.FC = () => {
                                     <p className="text-gray-700 text-lg leading-relaxed mb-6">
                                         {service.description}
                                     </p>
-                                    <Link href="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+                                    <Link href="/contact" className="inline-flex items-center text-primary hover:text-primary font-medium">
                                         Learn More
                                         <ArrowRight className="w-4 h-4 ml-2" />
                                     </Link>
@@ -344,7 +344,7 @@ const AboutPage: React.FC = () => {
                                     plus emergency/after-hours service.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4">
-                                    <a href="tel:6053818290" className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-50 transition-colors">
+                                    <a href="tel:6053818290" className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary font-bold rounded-lg hover:bg-gray-50 transition-colors">
                                         <Phone className="w-5 h-5 mr-2" />
                                         Call 605-381-8290
                                     </a>
@@ -405,7 +405,7 @@ const AboutPage: React.FC = () => {
                     />
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                         <div className="text-center">
-                            <MapPin className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                            <MapPin className="w-8 h-8 text-primary mx-auto mb-2" />
                             <h4 className="font-semibold text-gray-900">Primary Service Area</h4>
                             <p className="text-sm text-gray-600">Western South Dakota</p>
                         </div>
@@ -415,7 +415,7 @@ const AboutPage: React.FC = () => {
                             <p className="text-sm text-gray-600">Wyoming & Nebraska</p>
                         </div>
                         <div className="text-center">
-                            <Phone className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+                            <Phone className="w-8 h-8 text-primary mx-auto mb-2" />
                             <h4 className="font-semibold text-gray-900">Remote Support</h4>
                             <p className="text-sm text-gray-600">Nationwide assistance</p>
                         </div>

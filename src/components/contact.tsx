@@ -72,10 +72,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
 
     const inputClasses = (fieldName: string) => `
         w-full px-4 py-3 pl-12 bg-white border-2 border-gray-200 rounded-xl
-        focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 
+        focus:border-primary focus:ring-4 focus:ring-primary/10 
         transition-all duration-300 ease-in-out
         placeholder-gray-400 text-gray-900
-        ${focusedField === fieldName ? 'border-blue-500 shadow-lg' : 'hover:border-gray-300'}
+        ${focusedField === fieldName ? 'border-primary shadow-lg' : 'hover:border-gray-300'}
     `;
 
     const labelClasses = "block text-sm font-semibold text-gray-700 mb-2";
@@ -89,7 +89,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                 </label>
                 <div className="relative">
                     <User className={`absolute left-4 top-3.5 w-5 h-5 transition-colors duration-300 ${
-                        focusedField === 'name' ? 'text-blue-500' : 'text-gray-400'
+                        focusedField === 'name' ? 'text-primary' : 'text-gray-400'
                     }`} />
                     <input
                         className={inputClasses('name')}
@@ -112,7 +112,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                 </label>
                 <div className="relative">
                     <Mail className={`absolute left-4 top-3.5 w-5 h-5 transition-colors duration-300 ${
-                        focusedField === 'email' ? 'text-blue-500' : 'text-gray-400'
+                        focusedField === 'email' ? 'text-primary' : 'text-gray-400'
                     }`} />
                     <input
                         className={inputClasses('email')}
@@ -135,7 +135,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                 </label>
                 <div className="relative">
                     <FileText className={`absolute left-4 top-3.5 w-5 h-5 transition-colors duration-300 ${
-                        focusedField === 'subject' ? 'text-blue-500' : 'text-gray-400'
+                        focusedField === 'subject' ? 'text-primary' : 'text-gray-400'
                     }`} />
                     <select
                         className={inputClasses('subject')}
@@ -166,7 +166,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                 </label>
                 <div className="relative">
                     <MessageSquare className={`absolute left-4 top-3.5 w-5 h-5 transition-colors duration-300 ${
-                        focusedField === 'message' ? 'text-blue-500' : 'text-gray-400'
+                        focusedField === 'message' ? 'text-primary' : 'text-gray-400'
                     }`} />
                     <textarea
                         className={`${inputClasses('message')} min-h-[120px] resize-y`}

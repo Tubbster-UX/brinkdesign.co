@@ -110,7 +110,7 @@ export default function TestimonialsClient({ testimonials }: TestimonialsClientP
                                 <button
                                     key={i}
                                     className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                                        i === currentIndex ? "bg-blue-600 w-8" : "bg-gray-300 hover:bg-gray-400"
+                                        i === currentIndex ? "bg-primary w-8" : "bg-gray-300 hover:bg-gray-400"
                                     }`}
                                     onClick={() => goToIndex(i)}
                                     aria-label={`Show testimonial ${i + 1}`}
@@ -173,7 +173,7 @@ export default function TestimonialsClient({ testimonials }: TestimonialsClientP
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
                                 href="/contact"
-                                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg"
                             >
                                 Start Your Project
                             </a>
@@ -204,7 +204,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
             <Card className="h-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group relative overflow-hidden">
                 {/* Quote Icon */}
                 <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
-                    <Quote className="w-12 h-12 text-blue-600" />
+                    <Quote className="w-12 h-12 text-primary" />
                 </div>
 
                 <div className="p-6 h-full flex flex-col">
@@ -236,7 +236,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
                                         key={i}
                                         className={`w-4 h-4 ${
                                             i < testimonial.rating
-                                                ? "text-yellow-400 fill-current"
+                                                ? "text-accent fill-current"
                                                 : "text-gray-300"
                                         }`}
                                     />
@@ -260,7 +260,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
                                 href={testimonial.website}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium transition-colors duration-200"
+                                className="inline-flex items-center text-primary hover:text-primary text-sm font-medium transition-colors duration-200"
                             >
                                 Visit Website
                                 <ExternalLink className="w-3 h-3 ml-1" />

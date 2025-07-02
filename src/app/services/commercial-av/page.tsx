@@ -130,13 +130,13 @@ export default function CommercialAVPage() {
             icon: Award,
             title: "Expert Design & Engineering",
             description: "Custom AV solutions designed specifically for your space and needs",
-            color: "text-purple-600"
+            color: "text-primary"
         },
         {
             icon: Settings,
             title: "Professional Installation",
             description: "Clean, organized installations with proper cable management",
-            color: "text-blue-600"
+            color: "text-primary"
         },
         {
             icon: Clock,
@@ -154,7 +154,7 @@ export default function CommercialAVPage() {
             icon: Star,
             title: "Local Expertise",
             description: "South Dakota based with deep understanding of local needs",
-            color: "text-yellow-500"
+            color: "text-accent"
         },
         {
             icon: Zap,

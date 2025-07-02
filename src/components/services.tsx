@@ -13,7 +13,7 @@ const services = [
     href: '/services/low-voltage',
     color: 'from-blue-500 to-cyan-500',
     bgColor: 'bg-blue-50',
-    textColor: 'text-blue-600'
+    textColor: 'text-primary'
   },
   {
     icon: Shield,
@@ -23,7 +23,7 @@ const services = [
     href: '/services/security-cameras',
     color: 'from-red-500 to-orange-500',
     bgColor: 'bg-red-50',
-    textColor: 'text-red-600'
+    textColor: 'text-primary'
   },
   {
     icon: Speaker,
@@ -33,7 +33,7 @@ const services = [
     href: '/services/commercial-av',
     color: 'from-purple-500 to-pink-500',
     bgColor: 'bg-purple-50',
-    textColor: 'text-purple-600'
+    textColor: 'text-primary'
   },
   {
     icon: Home,
@@ -43,7 +43,7 @@ const services = [
     href: '/contact',
     color: 'from-green-500 to-emerald-500',
     bgColor: 'bg-green-50',
-    textColor: 'text-green-600'
+    textColor: 'text-primary'
   },
 ];
 
@@ -108,7 +108,7 @@ export default function Services() {
                   </div>
 
                   {/* CTA */}
-                  <div className="flex items-center text-sm font-medium text-blue-600 group-hover:text-blue-700 transition-colors">
+                  <div className="flex items-center text-sm font-medium text-primary group-hover:text-primary transition-colors">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>

@@ -95,7 +95,7 @@ export default function LowVoltageCablingPage() {
             icon: FileCheck,
             title: "Testing & Certification",
             description: "Every cable tested and certified to industry standards",
-            color: "text-blue-600"
+            color: "text-primary"
         },
         {
             icon: Clock,
@@ -107,7 +107,7 @@ export default function LowVoltageCablingPage() {
             icon: Users,
             title: "Experienced Team",
             description: "Certified technicians with years of low voltage expertise",
-            color: "text-purple-600"
+            color: "text-primary"
         },
         {
             icon: Award,
@@ -119,7 +119,7 @@ export default function LowVoltageCablingPage() {
             icon: Star,
             title: "Local Expertise",
             description: "South Dakota owned with deep understanding of local needs",
-            color: "text-yellow-500"
+            color: "text-accent"
         }
     ];
 

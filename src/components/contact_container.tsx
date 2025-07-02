@@ -28,7 +28,7 @@ const ContactContainer = () => {
             description: "Speak directly with our team",
             value: "(605) 381-8290",
             href: "tel:+16053818290",
-            color: "bg-blue-500"
+            color: "bg-primary"
         },
         {
             icon: Mail,
@@ -36,7 +36,7 @@ const ContactContainer = () => {
             description: "Send us a detailed message",
             value: "contact@brinkdesign.co",
             href: "mailto:contact@brinkdesign.co",
-            color: "bg-green-500"
+            color: "bg-primary"
         }
     ];
 
@@ -45,31 +45,31 @@ const ContactContainer = () => {
             icon: ShieldCheck,
             title: "No Hidden Fees",
             description: "Transparent pricing, no subscriptions",
-            color: "text-green-600"
+            color: "text-accent"
         },
         {
             icon: Home,
             title: "Local Experts",
             description: "South Dakota owned & operated",
-            color: "text-blue-600"
+            color: "text-accent"
         },
         {
             icon: Star,
             title: "5-Star Rated",
             description: "Trusted by satisfied clients",
-            color: "text-yellow-500"
+            color: "text-accent"
         },
         {
             icon: Zap,
             title: "Fast Response",
             description: "Same-day replies guaranteed",
-            color: "text-orange-500"
+            color: "text-accent"
         },
         {
             icon: Award,
             title: "Expert Team",
             description: "Certified professionals",
-            color: "text-indigo-600"
+            color: "text-accent"
         }
     ];
 
@@ -111,7 +111,7 @@ const ContactContainer = () => {
                                 </div>
                                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{method.title}</h3>
                                 <p className="text-gray-600 text-sm mb-3">{method.description}</p>
-                                <p className="text-blue-600 font-medium group-hover:text-blue-700 transition-colors">
+                                <p className="text-accent font-medium group-hover:text-accent transition-colors">
                                     {method.value}
                                 </p>
                             </div>
@@ -138,7 +138,7 @@ const ContactContainer = () => {
                                 {/* Feedback Messages */}
                                 {successMessage && (
                                     <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-center gap-3 animate-in slide-in-from-top duration-300">
-                                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                                        <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
                                         <span className="text-green-800 font-medium">{successMessage}</span>
                                     </div>
                                 )}
@@ -157,7 +157,7 @@ const ContactContainer = () => {
                         {/* Business Hours */}
                         <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 border border-gray-100">
                             <div className="flex items-center gap-3 mb-4">
-                                <Clock className="w-6 h-6 text-blue-600" />
+                                <Clock className="w-6 h-6 text-accent" />
                                 <h3 className="text-lg font-semibold text-gray-900">Business Hours</h3>
                             </div>
                             <div className="space-y-2 text-sm">
@@ -184,7 +184,7 @@ const ContactContainer = () => {
                         {/* Service Areas */}
                         <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
                             <div className="flex items-center gap-3 mb-4">
-                                <MapPin className="w-6 h-6 text-purple-600" />
+                                <MapPin className="w-6 h-6 text-primary" />
                                 <h3 className="text-lg font-semibold text-gray-900">Service Areas</h3>
                             </div>
                             <div className="space-y-2 text-sm text-gray-600">

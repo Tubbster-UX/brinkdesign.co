@@ -48,9 +48,9 @@ export default function Header() {
     }, [isMobileMenuOpen]);
 
     const serviceLinks = [
-        { href: "/commercial-av", label: "Commercial AV" },
-        { href: "/network-cabling", label: "Network Cabling" },
-        { href: "/security-installation", label: "Security Systems" },
+        { href: "/services/commercial-av", label: "Commercial AV" },
+        { href: "/services/low-voltage", label: "Network Cabling" },
+        { href: "/services/security-cameras", label: "Security Systems" },
     ];
 
     if (isProjectsPage) return null;

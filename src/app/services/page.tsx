@@ -12,7 +12,7 @@ const services = [
         icon: '/icons/security-system.png',
         features: ['CCTV Systems', 'Access Control', 'Alarm Systems', '24/7 Monitoring'],
         color: 'from-red-500 to-orange-500',
-        href: '/security-installation',
+        href: '/services/security-cameras',
     },
     {
         title: 'Network Cabling',
@@ -20,7 +20,7 @@ const services = [
         icon: '/icons/network-cabling.png',
         features: ['Cat6/Cat6a Installation', 'Fiber Optic', 'Network Design', 'Testing & Certification'],
         color: 'from-blue-500 to-cyan-500',
-        href: '/network-cabling',
+        href: '/services/low-voltage',
     },
     {
         title: 'Audio/Video Solutions',
@@ -28,7 +28,7 @@ const services = [
         icon: '/icons/audio-video.png',
         features: ['Conference Rooms', 'Home Theaters', 'Digital Signage', 'Live Streaming'],
         color: 'from-purple-500 to-pink-500',
-        href: '/commercial-av',
+        href: '/services/commercial-av',
     },
     {
         title: 'Smart Home Integration',

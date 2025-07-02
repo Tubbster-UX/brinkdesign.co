@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         title: "Professional Commercial AV Installation - Brink Design Co.",
         description:
             "Expert commercial audio/video installation for businesses, churches, schools, and conference rooms. Custom AV systems designed for South Dakota organizations.",
-        url: "https://www.brinkdesign.co/commercial-av",
+        url: "https://www.brinkdesign.co/services/commercial-av",
         type: "article",
         images: [
             {
@@ -233,7 +233,7 @@ export default function CommercialAVPage() {
                 addressCountry: "US",
             },
         },
-        url: "https://www.brinkdesign.co/commercial-av",
+        url: "https://www.brinkdesign.co/services/commercial-av",
     };
 
     return (

@@ -71,7 +71,7 @@ export default function FeaturedProjectsClient({ projects }: { projects: Project
                     </div>
                     
                     {/* Bottom Badge */}
-                    <div className="absolute bottom-4 left-4 bg-blue-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-4 left-4 bg-primary/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       Case Study
                     </div>
                   </CardContent>
@@ -80,7 +80,7 @@ export default function FeaturedProjectsClient({ projects }: { projects: Project
                 {/* Content */}
                 <div className="flex-1 flex flex-col">
                   <CardHeader className="pb-3">
-                    <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200 line-clamp-2">
+                    <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-200 line-clamp-2">
                       {project.entry.title}
                     </CardTitle>
                   </CardHeader>
@@ -95,7 +95,7 @@ export default function FeaturedProjectsClient({ projects }: { projects: Project
                     <div className="flex items-center justify-between w-full">
                       <Link 
                         href={`/projects/${project.slug}`}
-                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm hover:underline"
+                        className="inline-flex items-center text-primary hover:text-primary font-medium text-sm hover:underline"
                       >
                         Read More
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -131,7 +131,7 @@ export default function FeaturedProjectsClient({ projects }: { projects: Project
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/projects"
-                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 View All Projects
                 <ArrowRight className="w-5 h-5 ml-2" />

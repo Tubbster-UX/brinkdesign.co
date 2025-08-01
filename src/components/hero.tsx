@@ -21,13 +21,13 @@ export default function Hero() {
                     <div className="text-center lg:text-left">
                         {/* Trust Badge */}
                         <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg text-sm font-medium mb-6 border border-white/20">
-                            <Star className="w-4 h-4 text-yellow-400 mr-2" />
+                            <Star className="w-4 h-4 text-accent mr-2" />
                             <span className="text-white">10+ Years Serving South Dakota</span>
                         </div>
                         
                         <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight'>
                             Professional AV, Security & 
-                            <span className="text-yellow-400 block">
+                            <span className="text-accent block">
                                 Low Voltage Solutions
                             </span>
                         </h1>
@@ -54,7 +54,7 @@ export default function Hero() {
                         
                         {/* CTA Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <Button asChild size="lg" className="bg-yellow-500 text-gray-900 hover:bg-yellow-400 font-bold px-8 py-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+                            <Button asChild size="lg" className="bg-accent text-gray-900 hover:bg-accent font-bold px-8 py-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
                                 <Link href="/contact" className="inline-flex items-center">
                                     Request Free Quote
                                     <ArrowRight className="w-5 h-5 ml-2" />
@@ -77,7 +77,7 @@ export default function Hero() {
                                 <h3 className="text-2xl font-bold text-white mb-4">Why Choose Brink Design?</h3>
                                 <div className="space-y-4">
                                     <div className="flex items-center text-blue-100">
-                                        <Users className="w-5 h-5 mr-3 text-yellow-400" />
+                                        <Users className="w-5 h-5 mr-3 text-accent" />
                                         <span>Personal service from our local team</span>
                                     </div>
                                     <div className="flex items-center text-blue-100">
@@ -85,7 +85,7 @@ export default function Hero() {
                                         <span>Enterprise-grade equipment & installations</span>
                                     </div>
                                     <div className="flex items-center text-blue-100">
-                                        <Star className="w-5 h-5 mr-3 text-yellow-400" />
+                                        <Star className="w-5 h-5 mr-3 text-accent" />
                                         <span>Honest pricing, no hidden fees</span>
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@ export default function Hero() {
                             {/* Stats Grid */}
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">
-                                    <div className="text-2xl font-bold text-yellow-400">10+</div>
+                                    <div className="text-2xl font-bold text-accent">10+</div>
                                     <div className="text-sm text-blue-100">Years Experience</div>
                                 </div>
                                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">

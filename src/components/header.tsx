@@ -99,7 +99,7 @@ export default function Header() {
                         <div className="hidden lg:flex items-center space-x-8">
                             <Link 
                                 href="/about" 
-                                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                                className="text-gray-700 hover:text-primary font-medium transition-colors duration-200"
                             >
                                 About
                             </Link>
@@ -110,7 +110,7 @@ export default function Header() {
                                 onMouseEnter={() => setIsServicesOpen(true)}
                                 onMouseLeave={() => setIsServicesOpen(false)}
                             >
-                                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+                                <button className="flex items-center space-x-1 text-gray-700 hover:text-primary font-medium transition-colors duration-200">
                                     <span>Services</span>
                                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
                                 </button>
@@ -122,14 +122,14 @@ export default function Header() {
                                                 <Link
                                                     key={service.href}
                                                     href={service.href}
-                                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                                                    className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors duration-200"
                                                 >
                                                     {service.label}
                                                 </Link>
                                             ))}
                                             <Link
                                                 href="/services"
-                                                className="block px-4 py-3 text-blue-600 font-medium hover:bg-gray-50 rounded-md transition-colors duration-200 border-t border-gray-100 mt-2"
+                                                className="block px-4 py-3 text-primary font-medium hover:bg-gray-50 rounded-md transition-colors duration-200 border-t border-gray-100 mt-2"
                                             >
                                                 View All Services →
                                             </Link>
@@ -140,21 +140,21 @@ export default function Header() {
 
                             <Link 
                                 href="/projects" 
-                                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                                className="text-gray-700 hover:text-primary font-medium transition-colors duration-200"
                             >
                                 Projects
                             </Link>
                             
                             <Link 
                                 href="/blog" 
-                                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                                className="text-gray-700 hover:text-primary font-medium transition-colors duration-200"
                             >
                                 Blog
                             </Link>
                             
                             <Link 
                                 href="/linecard" 
-                                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                                className="text-gray-700 hover:text-primary font-medium transition-colors duration-200"
                             >
                                 Line Card
                             </Link>
@@ -164,7 +164,7 @@ export default function Header() {
                         <div className="hidden lg:flex items-center space-x-4">
                             <a
                                 href="tel:6053818290"
-                                className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                                className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors duration-200"
                             >
                                 <Phone className="w-4 h-4" />
                                 <span className="font-medium">(605) 381-8290</span>
@@ -180,7 +180,7 @@ export default function Header() {
                                 e.stopPropagation();
                                 toggleMobileMenu();
                             }}
-                            className="lg:hidden p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors duration-200"
+                            className="lg:hidden p-2 rounded-lg text-gray-700 hover:text-primary hover:bg-gray-100 transition-colors duration-200"
                             aria-label="Toggle mobile menu"
                         >
                             {isMobileMenuOpen ? (
@@ -199,13 +199,13 @@ export default function Header() {
                             {/* Mobile Contact Info */}
                             <div className="bg-gray-50 rounded-lg p-4 space-y-3">
                                 <div className="flex items-center space-x-3">
-                                    <Phone className="w-5 h-5 text-blue-600" />
-                                    <a href="tel:6053818290" className="text-blue-600 font-semibold text-lg">
+                                    <Phone className="w-5 h-5 text-primary" />
+                                    <a href="tel:6053818290" className="text-primary font-semibold text-lg">
                                         (605) 381-8290
                                     </a>
                                 </div>
                                 <div className="flex items-center space-x-3">
-                                    <MapPin className="w-5 h-5 text-blue-600" />
+                                    <MapPin className="w-5 h-5 text-primary" />
                                     <span className="text-gray-700">Serving South Dakota</span>
                                 </div>
                             </div>
@@ -214,7 +214,7 @@ export default function Header() {
                             <nav className="space-y-2">
                                 <Link 
                                     href="/about" 
-                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     About
@@ -228,7 +228,7 @@ export default function Header() {
                                         <Link
                                             key={service.href}
                                             href={service.href}
-                                            className="block px-6 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                                            className="block px-6 py-2 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200"
                                             onClick={() => setIsMobileMenuOpen(false)}
                                         >
                                             {service.label}
@@ -236,7 +236,7 @@ export default function Header() {
                                     ))}
                                     <Link
                                         href="/services"
-                                        className="block px-6 py-2 text-blue-600 font-medium hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                                        className="block px-6 py-2 text-primary font-medium hover:bg-gray-50 rounded-lg transition-colors duration-200"
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         View All Services →
@@ -245,7 +245,7 @@ export default function Header() {
                                 
                                 <Link 
                                     href="/projects" 
-                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     Projects
@@ -253,7 +253,7 @@ export default function Header() {
                                 
                                 <Link 
                                     href="/blog" 
-                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     Blog
@@ -261,7 +261,7 @@ export default function Header() {
                                 
                                 <Link 
                                     href="/linecard" 
-                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     Line Card
@@ -269,7 +269,7 @@ export default function Header() {
                                 
                                 <Link 
                                     href="/service-area" 
-                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     Service Area
@@ -277,7 +277,7 @@ export default function Header() {
                                 
                                 <Link 
                                     href="/faq" 
-                                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
+                                    className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-medium transition-colors duration-200"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     FAQ
@@ -286,7 +286,7 @@ export default function Header() {
 
                             {/* Mobile CTA */}
                             <div className="pt-4 border-t border-gray-200">
-                                <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-sm">
+                                <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg shadow-sm">
                                     <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                                         Schedule Free Site Visit
                                     </Link>

@@ -44,7 +44,7 @@ export default function PrivacyPolicy() {
                 {/* Introduction */}
                 <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-8">
                     <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                        <Shield className="w-6 h-6 mr-3 text-blue-600" />
+                        <Shield className="w-6 h-6 mr-3 text-primary" />
                         Our Commitment to Your Privacy
                     </h2>
                     <p className="text-gray-700 leading-relaxed">
@@ -59,7 +59,7 @@ export default function PrivacyPolicy() {
                 {/* Information We Collect */}
                 <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-8">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                        <Eye className="w-6 h-6 mr-3 text-blue-600" />
+                        <Eye className="w-6 h-6 mr-3 text-primary" />
                         1. Information We Collect
                     </h2>
                     <p className="mb-4 text-gray-700 leading-relaxed">
@@ -80,11 +80,11 @@ export default function PrivacyPolicy() {
                             </ul>
                         </div>
                         <div className="bg-purple-50 rounded-lg p-4 border border-purple-200">
-                            <h4 className="font-semibold text-purple-900 mb-2 flex items-center">
+                            <h4 className="font-semibold text-primary mb-2 flex items-center">
                                 <Eye className="w-4 h-4 mr-2" />
                                 Information We Collect Automatically:
                             </h4>
-                            <ul className="space-y-1 text-sm text-purple-800">
+                            <ul className="space-y-1 text-sm text-primary">
                                 <li className="flex items-start"><CheckCircle className="w-3 h-3 mr-2 mt-1 flex-shrink-0" />Usage data: Information about how you interact with our websites, apps, or games, including IP address, browser type, device identifiers, and other similar data.</li>
                                 <li className="flex items-start"><CheckCircle className="w-3 h-3 mr-2 mt-1 flex-shrink-0" />Cookies and tracking technologies: We use cookies, web beacons, and similar technologies to collect data about your usage patterns.</li>
                             </ul>
@@ -95,7 +95,7 @@ export default function PrivacyPolicy() {
                 {/* How We Use Your Information */}
                 <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-8">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                        <Shield className="w-6 h-6 mr-3 text-blue-600" />
+                        <Shield className="w-6 h-6 mr-3 text-primary" />
                         2. How We Use Your Information
                     </h2>
                     <p className="mb-4 text-gray-700 leading-relaxed">We may use your information for purposes such as:</p>
@@ -109,8 +109,8 @@ export default function PrivacyPolicy() {
                         </div>
                         <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
                             <ul className="space-y-2 text-sm text-blue-800">
-                                <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0 text-blue-600" /><span><strong>Communications:</strong> To send you updates, marketing communications, or information about our Services.</span></li>
-                                <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0 text-blue-600" /><span><strong>Legal and compliance:</strong> To comply with legal obligations and protect the rights of Brink Design.</span></li>
+                                <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0 text-primary" /><span><strong>Communications:</strong> To send you updates, marketing communications, or information about our Services.</span></li>
+                                <li className="flex items-start"><CheckCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0 text-primary" /><span><strong>Legal and compliance:</strong> To comply with legal obligations and protect the rights of Brink Design.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -119,13 +119,13 @@ export default function PrivacyPolicy() {
                 {/* How We Share Your Information */}
                 <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-8">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                        <Lock className="w-6 h-6 mr-3 text-blue-600" />
+                        <Lock className="w-6 h-6 mr-3 text-primary" />
                         3. How We Share Your Information
                     </h2>
                     <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
                         <div className="flex items-center mb-2">
-                            <AlertTriangle className="w-5 h-5 text-yellow-600 mr-2" />
-                            <p className="font-semibold text-yellow-800">We do not sell or rent your personal information.</p>
+                            <AlertTriangle className="w-5 h-5 text-accent mr-2" />
+                            <p className="font-semibold text-accent">We do not sell or rent your personal information.</p>
                         </div>
                     </div>
                     <p className="mb-4 text-gray-700">We may share your information with:</p>
@@ -168,14 +168,14 @@ export default function PrivacyPolicy() {
                             <p className="text-sm text-green-800">You may access and update your account information.</p>
                         </div>
                         <div className="bg-blue-50 rounded-lg p-4 border border-blue-200 text-center">
-                            <Mail className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                            <Mail className="w-8 h-8 text-primary mx-auto mb-2" />
                             <h4 className="font-semibold text-blue-900 mb-1">Marketing Opt-out</h4>
                             <p className="text-sm text-blue-800">You can opt out of receiving marketing communications at any time.</p>
                         </div>
                         <div className="bg-purple-50 rounded-lg p-4 border border-purple-200 text-center">
-                            <Shield className="w-8 h-8 text-purple-600 mx-auto mb-2" />
-                            <h4 className="font-semibold text-purple-900 mb-1">Cookie Settings</h4>
-                            <p className="text-sm text-purple-800">Most web browsers allow you to manage cookie settings.</p>
+                            <Shield className="w-8 h-8 text-primary mx-auto mb-2" />
+                            <h4 className="font-semibold text-primary mb-1">Cookie Settings</h4>
+                            <p className="text-sm text-primary">Most web browsers allow you to manage cookie settings.</p>
                         </div>
                     </div>
                 </div>
@@ -209,7 +209,7 @@ export default function PrivacyPolicy() {
                 {/* Changes to Policy */}
                 <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-8">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                        <FileText className="w-6 h-6 mr-3 text-purple-600" />
+                        <FileText className="w-6 h-6 mr-3 text-primary" />
                         7. Changes to This Privacy Policy
                     </h2>
                     <p className="text-gray-700 leading-relaxed">

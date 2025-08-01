@@ -125,7 +125,7 @@ export default function SecurityCamerasPage() {
             icon: Lock,
             title: "Secure Systems",
             description: "Enterprise-grade security with encrypted connections and access controls",
-            color: "text-blue-600"
+            color: "text-primary"
         },
         {
             icon: Clock,
@@ -137,7 +137,7 @@ export default function SecurityCamerasPage() {
             icon: Users,
             title: "Local Support",
             description: "South Dakota based team providing ongoing support and service",
-            color: "text-purple-600"
+            color: "text-primary"
         },
         {
             icon: Award,
@@ -149,7 +149,7 @@ export default function SecurityCamerasPage() {
             icon: Star,
             title: "Custom Solutions",
             description: "Tailored systems designed specifically for your property and needs",
-            color: "text-yellow-500"
+            color: "text-accent"
         }
     ];
 

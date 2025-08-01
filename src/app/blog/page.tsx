@@ -82,14 +82,14 @@ export default async function BlogPage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/contact"
-                            className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-50 transition-colors duration-200 shadow-lg"
+                            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-gray-50 transition-colors duration-200 shadow-lg"
                         >
                             Get Expert Consultation
                             <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
                         <Link
                             href="/services"
-                            className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-xl transition-colors duration-200"
+                            className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary rounded-xl transition-colors duration-200"
                         >
                             Our Services
                         </Link>
@@ -145,7 +145,7 @@ export default async function BlogPage() {
                                                 </div>
 
                                                 {/* Title */}
-                                                <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
+                                                <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors duration-200">
                                                     {post.entry.title}
                                                 </CardTitle>
 
@@ -155,7 +155,7 @@ export default async function BlogPage() {
                                                 </p>
 
                                                 {/* Read More Link */}
-                                                <div className="flex items-center text-blue-600 font-medium group-hover:text-blue-700 transition-colors duration-200">
+                                                <div className="flex items-center text-primary font-medium group-hover:text-primary transition-colors duration-200">
                                                     <span>Read Article</span>
                                                     <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" />
                                                 </div>
@@ -179,7 +179,7 @@ export default async function BlogPage() {
                             </p>
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-200"
                             >
                                 Get Expert Advice Now
                                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -202,14 +202,14 @@ export default async function BlogPage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/contact"
-                            className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-50 transition-colors duration-200 shadow-lg"
+                            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-gray-50 transition-colors duration-200 shadow-lg"
                         >
                             Schedule Consultation
                             <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
                         <Link
                             href="/projects"
-                            className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-xl transition-colors duration-200"
+                            className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-primary rounded-xl transition-colors duration-200"
                         >
                             View Our Work
                         </Link>

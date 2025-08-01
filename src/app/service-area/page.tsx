@@ -6,10 +6,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Service Area - Brink Design Co.",
-    description: "Brink Design Co. provides professional AV and low voltage installations throughout Rapid City and the Black Hills. Explore our coverage area and services.",
+    description: "Brink Design Co. provides professional AV and low voltage installations across South Dakota, Wyoming, and Nebraska. Explore our coverage area and services.",
     openGraph: {
         title: "Service Area - Brink Design Co.",
-        description: "Professional AV installations and low voltage solutions across Rapid City, Sturgis, Spearfish, and the Black Hills.",
+        description: "Professional AV installations and low voltage solutions throughout South Dakota, Wyoming, and Nebraska.",
         url: "https://www.brinkdesign.co/service-area",
         type: "website",
     },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Service Area - Brink Design Co.",
-        description: "Brink Design Co. provides professional AV and low voltage installations throughout Rapid City and the Black Hills. Explore our coverage area and services.",
+        description: "Brink Design Co. provides professional AV and low voltage installations across South Dakota, Wyoming, and Nebraska. Explore our coverage area and services.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };
@@ -180,6 +180,29 @@ export default function ServiceArea() {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* State-Specific Pages Section */}
+                <div className="mb-20">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Explore Service in Your State
+                        </h2>
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                            Your trusted AV installer and systems integrator for South Dakota, Wyoming, and Nebraska.
+                        </p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row justify-center gap-4">
+                        <Link href="/service-area/south-dakota" className="inline-flex items-center px-6 py-3 bg-primary text-secondary font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                            South Dakota
+                        </Link>
+                        <Link href="/service-area/wyoming" className="inline-flex items-center px-6 py-3 bg-primary text-secondary font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                            Wyoming
+                        </Link>
+                        <Link href="/service-area/nebraska" className="inline-flex items-center px-6 py-3 bg-primary text-secondary font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                            Nebraska
+                        </Link>
+                    </div>
                 </div>
 
                 {/* Services Section */}

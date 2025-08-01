@@ -8,14 +8,14 @@ import Analytics from "@/components/Analytics";
 import { GA_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
-  title: "Brink Design | AV & Low Voltage Tech Installers",
+  title: "Brink Design Co. | Low Voltage Cabling & AV Specialists in South Dakota",
   description:
-    "Brink Design provides professional audio-visual installations, low voltage wiring, and security camera systems for churches, businesses, and events.",
+    "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota.",
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Brink Design | AV & Low Voltage Tech Installers",
+    title: "Brink Design Co. | Low Voltage Cabling & AV Specialists in South Dakota",
     description:
-      "Brink Design provides professional audio-visual installations, low voltage wiring, and security camera systems for churches, businesses, and events.",
+      "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota.",
     url: "https://www.brinkdesign.co",
     type: "website",
     images: [
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.brinkdesign.co" },
   twitter: {
     card: "summary_large_image",
-    title: "Brink Design | AV & Low Voltage Tech Installers",
+    title: "Brink Design Co. | Low Voltage Cabling & AV Specialists in South Dakota",
     description:
-      "Brink Design provides professional audio-visual installations, low voltage wiring, and security camera systems for churches, businesses, and events.",
+      "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota.",
     images: ["https://www.brinkdesign.co/og-image.jpg"],
   },
 };

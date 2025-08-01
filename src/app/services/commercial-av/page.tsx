@@ -429,6 +429,15 @@ export default function CommercialAVPage() {
                 </div>
             </div>
 
+            <div className="bg-white py-12">
+                <div className="max-w-3xl mx-auto px-4 text-center">
+                    <p className="text-lg text-gray-700">
+                        Looking for tips on upgrading your church system?&nbsp;
+                        <Link href="/blog/church-av-upgrades" className="text-blue-600 font-medium">Read our church AV upgrade guide</Link>.
+                    </p>
+                </div>
+            </div>
+
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 py-20">
                 <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

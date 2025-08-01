@@ -183,12 +183,47 @@ export default function LowVoltageCablingPage() {
         url: "https://www.brinkdesign.co/services/low-voltage",
     };
 
+    const faqLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "What is low voltage wiring?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Low voltage wiring carries 50 volts or less and powers technology like networking, security cameras, and smart devices."
+                }
+            },
+            {
+                "@type": "Question",
+                name: "What is low voltage wiring used for?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "It is used for structured cabling, Wi-Fi access points, cameras, and automation controls in homes and businesses."
+                }
+            },
+            {
+                "@type": "Question",
+                name: "When should I plan low voltage pre-wiring?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Pre-wiring is best done during new construction or renovations before the walls are closed to keep cables hidden and reduce costs."
+                }
+            }
+        ]
+    };
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
             {/* JSON-LD Structured Data */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
             />
             {/* Hero Section */}
             <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900">
@@ -342,6 +377,32 @@ export default function LowVoltageCablingPage() {
                                 <p className="text-blue-100 text-sm">{item.description}</p>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Low Voltage FAQ Section */}
+            <div className="bg-white py-16">
+                <div className="max-w-3xl mx-auto px-4">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8">Low Voltage Wiring FAQ</h2>
+                    <div className="space-y-6">
+                        <div>
+                            <h3 className="text-xl font-semibold mb-2">What is low voltage wiring?</h3>
+                            <p className="text-gray-700">Low voltage wiring carries 50 volts or less for data, video, security, and control signals. It powers the technology in your building without the dangers of high-voltage power.</p>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-semibold mb-2">What is low voltage wiring used for?</h3>
+                            <p className="text-gray-700">It is used for structured cabling, Wi-Fi access points, cameras, speakers, and smart devices—anything that needs reliable communication.</p>
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-semibold mb-2">When should I plan low voltage pre-wiring?</h3>
+                            <p className="text-gray-700">Plan pre-wiring during new construction or remodels before the walls are closed to keep cables hidden and save on labor.</p>
+                        </div>
+                        <p className="pt-4 text-blue-600 font-medium">
+                            <Link href="/blog/low-voltage-wiring-explained-what-homeowners-and-builders-need-to-know">
+                                Learn more about low voltage cabling
+                            </Link>
+                        </p>
                     </div>
                 </div>
             </div>

@@ -80,6 +80,11 @@ export default function RootLayout({
               name: "Brink Design Co.",
               url: "https://www.brinkdesign.co",
               telephone: "605-381-8290",
+              areaServed: [
+                { "@type": "State", name: "South Dakota" },
+                { "@type": "State", name: "Wyoming" },
+                { "@type": "State", name: "Nebraska" },
+              ],
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Rapid City",

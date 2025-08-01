@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Photo Booth Opt-In Policy - Brink Design Co.",
+    title: "Photo Booth Opt-In Policy – Brink Design Western South Dakota",
     description:
-        "Details on how we send your photo booth images via SMS and how to manage your consent and privacy preferences.",
+        "How Brink Design handles photo booth SMS delivery and privacy for events across western South Dakota.",
     openGraph: {
-        title: "Photo Booth Opt-In Policy - Brink Design Co.",
+        title: "Photo Booth Opt-In Policy – Brink Design Western South Dakota",
         description:
-            "Learn about our SMS photo delivery and privacy practices for Brink Design Co.'s photo booth.",
+            "Learn about our SMS photo delivery process and privacy practices for events in the Black Hills.",
         url: "https://www.brinkdesign.co/photo-booth-opt-in",
         type: "article",
         images: [
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     alternates: { canonical: "https://www.brinkdesign.co/photo-booth-opt-in" },
     twitter: {
         card: "summary_large_image",
-        title: "Photo Booth Opt-In Policy - Brink Design Co.",
+        title: "Photo Booth Opt-In Policy – Brink Design Western South Dakota",
         description:
-            "Details on how we send your photo booth images via SMS and how to manage your consent and privacy preferences.",
+            "Information about receiving photos via SMS and controlling your privacy settings.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

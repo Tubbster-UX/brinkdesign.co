@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "South Dakota AV Installer & Systems Integrator - Brink Design Co.",
+    title: "South Dakota AV Installer – Brink Design Western SD",
     description:
-        "Brink Design Co. is the premier AV installer and systems integrator for South Dakota. We design and build audio, video, networking, and security solutions for businesses, churches, and homes statewide.",
+        "Brink Design delivers professional AV installation, security and network cabling solutions across South Dakota from our base in western South Dakota.",
     openGraph: {
-        title: "South Dakota AV Installer & Systems Integrator - Brink Design Co.",
+        title: "South Dakota AV Installer – Brink Design Western SD",
         description:
-            "Brink Design Co. is the premier AV installer and systems integrator for South Dakota. We design and build audio, video, networking, and security solutions for businesses, churches, and homes statewide.",
+            "Comprehensive audio, video and low voltage services for businesses and churches across South Dakota.",
         url: "https://www.brinkdesign.co/south-dakota",
         type: "article",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     alternates: { canonical: "https://www.brinkdesign.co/south-dakota" },
     twitter: {
         card: "summary_large_image",
-        title: "South Dakota AV Installer & Systems Integrator - Brink Design Co.",
+        title: "South Dakota AV Installer – Brink Design Western SD",
         description:
-            "Brink Design Co. is the premier AV installer and systems integrator for South Dakota. We design and build audio, video, networking, and security solutions for businesses, churches, and homes statewide.",
+            "Expert AV and low voltage integration for the entire state of South Dakota.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

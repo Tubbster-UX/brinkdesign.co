@@ -26,20 +26,20 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Professional Low Voltage Cabling Services - Brink Design Co.",
+    title: "Low Voltage Cabling – Brink Design Western South Dakota",
     description:
-        "Expert low voltage cabling installation for data, voice, video, and security systems. Serving South Dakota with professional structured wiring solutions for homes and businesses.",
+        "Expert low voltage cabling for data, voice, video and security systems across the Black Hills region.",
     alternates: { canonical: "https://www.brinkdesign.co/services/low-voltage" },
     openGraph: {
-        title: "Professional Low Voltage Cabling Services - Brink Design Co.",
-        description: "Expert low voltage cabling installation for data, voice, video, and security systems. Serving South Dakota with professional structured wiring solutions.",
+        title: "Low Voltage Cabling – Brink Design Western South Dakota",
+        description: "Professional structured wiring solutions for businesses and homes in western South Dakota.",
         images: ["/og-image.jpg"],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Professional Low Voltage Cabling Services - Brink Design Co.",
+        title: "Low Voltage Cabling – Brink Design Western South Dakota",
         description:
-            "Expert low voltage cabling installation for data, voice, video, and security systems. Serving South Dakota with professional structured wiring solutions.",
+            "High-quality cabling installation for network and security infrastructure in Sturgis and Rapid City.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

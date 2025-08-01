@@ -9,15 +9,15 @@ import { GA_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
   title:
-    "Brink Design Co. | Low Voltage Cabling, AV Installer & Systems Integrator in South Dakota, Wyoming & Nebraska",
+    "Brink Design – Low Voltage AV Installer in Western South Dakota",
   description:
-    "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota, Wyoming & Nebraska.",
+    "Professional low voltage wiring, AV design and security camera installations for churches, businesses and homes across western South Dakota.",
   robots: { index: true, follow: true },
   openGraph: {
     title:
-      "Brink Design Co. | Low Voltage Cabling, AV Installer & Systems Integrator in South Dakota, Wyoming & Nebraska",
+      "Brink Design – Low Voltage AV Installer in Western South Dakota",
     description:
-      "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota, Wyoming & Nebraska.",
+      "Professional low voltage wiring, AV design and security installations for churches, businesses and homes throughout western South Dakota.",
     url: "https://www.brinkdesign.co",
     type: "website",
     images: [
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Brink Design Co. | Low Voltage Cabling, AV Installer & Systems Integrator in South Dakota, Wyoming & Nebraska",
+      "Brink Design – Low Voltage AV Installer in Western South Dakota",
     description:
-      "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota, Wyoming & Nebraska.",
+      "Professional AV and cabling solutions for homes and organizations across western South Dakota.",
     images: ["https://www.brinkdesign.co/og-image.jpg"],
   },
 };
@@ -56,6 +56,12 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link id="favicon" rel="icon" href="/favicon/favicon-light.png" />
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');`
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -102,6 +108,8 @@ export default function RootLayout({
         "min-h-screen bg-background font-sans antialiased",
         fontSans.variable
       )}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
         <ConditionalLayout>
           {children}
         </ConditionalLayout>

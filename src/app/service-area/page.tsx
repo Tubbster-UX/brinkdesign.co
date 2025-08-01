@@ -5,19 +5,20 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Service Area - Brink Design Co.",
-    description: "Brink Design Co. provides professional AV and low voltage installations across South Dakota, Wyoming, and Nebraska. Explore our coverage area and services.",
+    title: "Service Area – Brink Design Western South Dakota",
+    description: "Brink Design provides AV installation and low voltage services throughout western South Dakota and nearby states.",
     openGraph: {
-        title: "Service Area - Brink Design Co.",
-        description: "Professional AV installations and low voltage solutions throughout South Dakota, Wyoming, and Nebraska.",
+        title: "Service Area – Brink Design Western South Dakota",
+        description: "Professional AV and cabling solutions across South Dakota, Wyoming and Nebraska.",
         url: "https://www.brinkdesign.co/service-area",
         type: "website",
+        images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
     alternates: { canonical: "https://www.brinkdesign.co/service-area" },
     twitter: {
         card: "summary_large_image",
-        title: "Service Area - Brink Design Co.",
-        description: "Brink Design Co. provides professional AV and low voltage installations across South Dakota, Wyoming, and Nebraska. Explore our coverage area and services.",
+        title: "Service Area – Brink Design Western South Dakota",
+        description: "Learn where Brink Design offers AV and security installations across the Black Hills region and beyond.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

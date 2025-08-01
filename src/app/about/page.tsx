@@ -25,18 +25,18 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-    title: "About Brink Design Co. - Rapid City AV & Low Voltage Experts",
-    description: "Learn how Brink Design Co. from Rapid City serves homes and businesses across South Dakota with expert low voltage installations and AV solutions.",
+    title: "About Brink Design – Low Voltage Specialists in Western South Dakota",
+    description: "Discover Brink Design, based in Sturgis and serving all of western South Dakota with expert low voltage installations and AV solutions for homes and businesses.",
     alternates: { canonical: "https://www.brinkdesign.co/about" },
     openGraph: {
-        title: "About Brink Design Co. - Rapid City AV & Low Voltage Experts",
-        description: "Learn how Brink Design Co. from Rapid City serves homes and businesses across South Dakota with expert low voltage installations and AV solutions.",
+        title: "About Brink Design – Low Voltage Specialists in Western South Dakota",
+        description: "Learn how Brink Design serves western South Dakota with professional cabling and AV services.",
         images: ["/og-image.jpg"],
     },
     twitter: {
         card: "summary_large_image",
-        title: "About Brink Design Co. - Rapid City AV & Low Voltage Experts",
-        description: "Learn how Brink Design Co. from Rapid City serves homes and businesses across South Dakota with expert low voltage installations and AV solutions.",
+        title: "About Brink Design – Low Voltage Specialists in Western South Dakota",
+        description: "Discover how we help homes and businesses across the Black Hills with expert AV installation.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

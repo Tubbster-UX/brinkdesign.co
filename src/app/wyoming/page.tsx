@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Wyoming AV Installer & Systems Integrator - Brink Design Co.",
+    title: "Wyoming AV Installer – Brink Design Western South Dakota",
     description:
-        "Brink Design Co. provides professional AV installer and systems integrator services across Wyoming. We deliver custom audio, video, security, and networking solutions for organizations and homes.",
+        "Professional AV and low voltage services for organizations and homes throughout Wyoming delivered from nearby western South Dakota.",
     openGraph: {
-        title: "Wyoming AV Installer & Systems Integrator - Brink Design Co.",
+        title: "Wyoming AV Installer – Brink Design Western South Dakota",
         description:
-            "Brink Design Co. provides professional AV installer and systems integrator services across Wyoming. We deliver custom audio, video, security, and networking solutions for organizations and homes.",
+            "Expert audio, video and security solutions for Wyoming churches, businesses and homes.",
         url: "https://www.brinkdesign.co/wyoming",
         type: "article",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     alternates: { canonical: "https://www.brinkdesign.co/wyoming" },
     twitter: {
         card: "summary_large_image",
-        title: "Wyoming AV Installer & Systems Integrator - Brink Design Co.",
+        title: "Wyoming AV Installer – Brink Design Western South Dakota",
         description:
-            "Brink Design Co. provides professional AV installer and systems integrator services across Wyoming. We deliver custom audio, video, security, and networking solutions for organizations and homes.",
+            "Custom AV installation and cabling services available for Wyoming from Brink Design.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

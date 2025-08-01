@@ -29,13 +29,21 @@ async function fetchProjects() {
 }
 
 export const metadata: Metadata = {
-  title: "Projects - Brink Design Co.",
-  description: "Browse our portfolio of AV installations and low voltage projects, including networking, security systems, door access, and more.",
+  title: "AV Projects – Brink Design Western South Dakota",
+  description:
+    "See our portfolio of AV installations, security systems and low voltage projects across western South Dakota.",
   alternates: { canonical: "https://www.brinkdesign.co/projects" },
+  openGraph: {
+    title: "AV Projects – Brink Design Western South Dakota",
+    description:
+      "Browse real-world examples of our cabling and audio/video work throughout the Black Hills region.",
+    images: ["https://www.brinkdesign.co/og-image.jpg"],
+  },
   twitter: {
     card: "summary_large_image",
-    title: "Projects - Brink Design Co.",
-    description: "Browse our portfolio of AV installations and low voltage projects, including networking, security systems, door access, and more.",
+    title: "AV Projects – Brink Design Western South Dakota",
+    description:
+      "View professional AV and low voltage projects completed by Brink Design across South Dakota.",
     images: ["https://www.brinkdesign.co/og-image.jpg"],
   },
 };

@@ -42,19 +42,19 @@ async function fetchBlogPosts() {
 }
 
 export const metadata: Metadata = {
-    title: "Professional AV & Technology Blog | Brink Design Co.",
-    description: "Expert insights on commercial AV systems, network infrastructure, security technology, and smart building solutions from South Dakota's leading AV professionals.",
+    title: "AV & Technology Blog – Brink Design Western South Dakota",
+    description: "Insights on commercial AV, networking and security from the low voltage experts serving Rapid City and all of western South Dakota.",
     alternates: { canonical: "https://www.brinkdesign.co/blog" },
     openGraph: {
-        title: "Professional AV & Technology Blog | Brink Design Co.",
-        description: "Expert insights on commercial AV systems, network infrastructure, security technology, and smart building solutions.",
+        title: "AV & Technology Blog – Brink Design Western South Dakota",
+        description: "Expert tips on AV systems, network infrastructure and security solutions across western South Dakota.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Professional AV & Technology Blog | Brink Design Co.",
-        description: "Expert insights on commercial AV systems, network infrastructure, security technology, and smart building solutions.",
+        title: "AV & Technology Blog – Brink Design Western South Dakota",
+        description: "Latest insights on AV and low voltage installs across the Black Hills region.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

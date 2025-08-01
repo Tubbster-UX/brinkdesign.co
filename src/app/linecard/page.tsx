@@ -5,6 +5,24 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Markdoc from '@markdoc/markdoc';
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'AV Line Card – Brink Design Western South Dakota',
+  description: 'View our preferred audio, video and technology partners for projects across western South Dakota.',
+  openGraph: {
+    title: 'AV Line Card – Brink Design Western South Dakota',
+    description: 'Discover the brands Brink Design trusts for professional AV and low voltage installations.',
+    images: ['https://www.brinkdesign.co/og-image.jpg'],
+  },
+  alternates: { canonical: 'https://www.brinkdesign.co/linecard' },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AV Line Card – Brink Design Western South Dakota',
+    description: 'Our trusted vendors for AV, security and networking equipment in South Dakota.',
+    images: ['https://www.brinkdesign.co/og-image.jpg'],
+  },
+};
 
 export default async function LineCardPage() {
   const reader = createReader(process.cwd(), keystaticConfig);

@@ -5,11 +5,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "FAQ – Brink Design Co.",
-    description: "Frequently asked questions about AV installation, security cameras, networking, and more from Brink Design Co. Serving Rapid City and the Black Hills.",
+    title: "FAQ – Brink Design Western South Dakota",
+    description: "Answers to common questions about AV installation, security cameras and cabling services for businesses and churches across western South Dakota.",
     openGraph: {
-        title: "FAQ – Brink Design Co.",
-        description: "Answers to common questions about our AV and low voltage services, process, support, and more.",
+        title: "FAQ – Brink Design Western South Dakota",
+        description: "Find details about our AV and low voltage process and support across the Black Hills.",
         url: "https://www.brinkdesign.co/faq",
         type: "article",
         images: [
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     alternates: { canonical: "https://www.brinkdesign.co/faq" },
     twitter: {
         card: "summary_large_image",
-        title: "FAQ – Brink Design Co.",
-        description: "Frequently asked questions about AV installation, security cameras, networking, and more from Brink Design Co. Serving Rapid City and the Black Hills.",
+        title: "FAQ – Brink Design Western South Dakota",
+        description: "Your questions answered about our AV and low voltage services in South Dakota.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Nebraska AV Installer & Systems Integrator - Brink Design Co.",
+    title: "Nebraska AV Installer – Brink Design Western South Dakota",
     description:
-        "Brink Design Co. offers expert AV installer and systems integrator services for Nebraska organizations and homes. We handle audio, video, networking, and security installations with professional care.",
+        "Brink Design provides expert audio, video and cabling services for churches and businesses across Nebraska from our base in western South Dakota.",
     openGraph: {
-        title: "Nebraska AV Installer & Systems Integrator - Brink Design Co.",
+        title: "Nebraska AV Installer – Brink Design Western South Dakota",
         description:
-            "Brink Design Co. offers expert AV installer and systems integrator services for Nebraska organizations and homes. We handle audio, video, networking, and security installations with professional care.",
+            "Professional AV integration and low voltage services for Nebraska facilities delivered by Brink Design.",
         url: "https://www.brinkdesign.co/nebraska",
         type: "article",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     alternates: { canonical: "https://www.brinkdesign.co/nebraska" },
     twitter: {
         card: "summary_large_image",
-        title: "Nebraska AV Installer & Systems Integrator - Brink Design Co.",
+        title: "Nebraska AV Installer – Brink Design Western South Dakota",
         description:
-            "Brink Design Co. offers expert AV installer and systems integrator services for Nebraska organizations and homes. We handle audio, video, networking, and security installations with professional care.",
+            "AV installation and structured cabling solutions for Nebraska organizations from Brink Design.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

@@ -79,16 +79,12 @@ const Footer: React.FC = () => {
                                 <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-secondary to-secondary/60"></div>
                             </h3>
                             
-                            <div className="space-y-4 mb-6">
-                                <div className="flex items-center space-x-3">
-                                    <a href="mailto:contact@brinkdesign.co" className="text-gray-300 hover:text-white transition-colors">
-                                        contact@brinkdesign.co
-                                    </a>
-                                </div>
-                                <div className="flex items-center space-x-3">
-                                    <span className="text-gray-400">South Dakota</span>
-                                </div>
-                            </div>
+                            <address className="not-italic space-y-1 mb-6 text-gray-300">
+                                <strong className="text-white block">Brink Design Co.</strong>
+                                <a href="tel:+16053818290" className="block hover:text-white transition-colors">(605) 381-8290</a>
+                                <a href="mailto:contact@brinkdesign.co" className="block hover:text-white transition-colors">contact@brinkdesign.co</a>
+                                <span className="block text-gray-400">Serving western South Dakota</span>
+                            </address>
 
                             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
                                 <p className="text-sm mb-3 text-gray-300 font-medium">Ready to get started?</p>

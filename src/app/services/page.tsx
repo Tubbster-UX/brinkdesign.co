@@ -47,13 +47,18 @@ const services = [
 ];
 
 export const metadata: Metadata = {
-    title: "Low Voltage Services in Rapid City - Brink Design Co.",
-    description: "Explore professional low voltage services for Rapid City and South Dakota, from security installs to network cabling and AV solutions.",
+    title: "Low Voltage Services – Brink Design Western South Dakota",
+    description: "Comprehensive cabling, AV installation and security camera services for businesses and homes across western South Dakota.",
     alternates: { canonical: "https://www.brinkdesign.co/services" },
+    openGraph: {
+        title: "Low Voltage Services – Brink Design Western South Dakota",
+        description: "Explore our cabling and AV solutions for churches, businesses and residences across western South Dakota.",
+        images: ["https://www.brinkdesign.co/og-image.jpg"],
+    },
     twitter: {
         card: "summary_large_image",
-        title: "Low Voltage Services in Rapid City - Brink Design Co.",
-        description: "Explore professional low voltage services for Rapid City and South Dakota, from security installs to network cabling and AV solutions.",
+        title: "Low Voltage Services – Brink Design Western South Dakota",
+        description: "Professional low voltage wiring, security and AV solutions in the Black Hills.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

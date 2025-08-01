@@ -30,13 +30,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Professional Commercial AV Installation - Brink Design Co.",
+    title: "Commercial AV Installation – Brink Design Western South Dakota",
     description:
-        "Expert commercial audio/video installation for businesses, churches, schools, and conference rooms. Custom AV systems designed for South Dakota organizations.",
+        "Professional audio and video systems for churches, schools and businesses across western South Dakota.",
     openGraph: {
-        title: "Professional Commercial AV Installation - Brink Design Co.",
+        title: "Commercial AV Installation – Brink Design Western South Dakota",
         description:
-            "Expert commercial audio/video installation for businesses, churches, schools, and conference rooms. Custom AV systems designed for South Dakota organizations.",
+            "Expert audio/video solutions for organizations in Sturgis, Rapid City and the surrounding area.",
         url: "https://www.brinkdesign.co/services/commercial-av",
         type: "article",
         images: [
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     alternates: { canonical: "https://www.brinkdesign.co/services/commercial-av" },
     twitter: {
         card: "summary_large_image",
-        title: "Professional Commercial AV Installation - Brink Design Co.",
+        title: "Commercial AV Installation – Brink Design Western South Dakota",
         description:
-            "Expert commercial audio/video installation for businesses, churches, schools, and conference rooms. Custom AV systems designed for South Dakota organizations.",
+            "Professional AV systems and integration services for the Black Hills region.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

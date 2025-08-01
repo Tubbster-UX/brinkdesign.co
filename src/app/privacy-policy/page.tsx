@@ -2,13 +2,18 @@ import type { Metadata } from "next";
 import { Shield, Eye, Lock, FileText, Mail, CheckCircle, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Brink Design Co.",
-  description: "Learn how Brink Design Co. handles your information when providing AV installations, networking, and low voltage services.",
+  title: "Privacy Policy – Brink Design Western South Dakota",
+  description: "How Brink Design protects your data when delivering AV and security installations across western South Dakota.",
   alternates: { canonical: "https://www.brinkdesign.co/privacy-policy" },
+  openGraph: {
+    title: "Privacy Policy – Brink Design Western South Dakota",
+    description: "Understand how we safeguard customer information for projects across the Black Hills region.",
+    images: ["https://www.brinkdesign.co/og-image.jpg"],
+  },
   twitter: {
     card: "summary_large_image",
-    title: "Privacy Policy - Brink Design Co.",
-    description: "Learn how Brink Design Co. handles your information when providing AV installations, networking, and low voltage services.",
+    title: "Privacy Policy – Brink Design Western South Dakota",
+    description: "Details on Brink Design's data practices and privacy protections.",
     images: ["https://www.brinkdesign.co/og-image.jpg"],
   },
 };

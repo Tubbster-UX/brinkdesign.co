@@ -29,20 +29,20 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Professional Security Camera Systems - Brink Design Co.",
+    title: "Security Camera Systems – Brink Design Western South Dakota",
     description:
-        "Expert security camera installation and monitoring systems for homes and businesses. Professional surveillance solutions with local recording, remote access, and no monthly fees.",
+        "Professional security camera installation with local recording and remote access for homes and businesses in western South Dakota.",
     alternates: { canonical: "https://www.brinkdesign.co/services/security-cameras" },
     openGraph: {
-        title: "Professional Security Camera Systems - Brink Design Co.",
-        description: "Expert security camera installation and monitoring systems for homes and businesses. Professional surveillance solutions with local recording and remote access.",
+        title: "Security Camera Systems – Brink Design Western South Dakota",
+        description: "Expert surveillance solutions and monitoring services for the Black Hills region.",
         images: ["/og-image.jpg"],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Professional Security Camera Systems - Brink Design Co.",
+        title: "Security Camera Systems – Brink Design Western South Dakota",
         description:
-            "Expert security camera installation and monitoring systems for homes and businesses. Professional surveillance solutions with local recording and remote access.",
+            "Protect your property with professional CCTV installation from Brink Design based in western South Dakota.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };

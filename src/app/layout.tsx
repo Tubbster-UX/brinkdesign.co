@@ -8,14 +8,16 @@ import Analytics from "@/components/Analytics";
 import { GA_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
-  title: "Brink Design Co. | Low Voltage Cabling & AV Specialists in South Dakota",
+  title:
+    "Brink Design Co. | Low Voltage Cabling, AV Installer & Systems Integrator in South Dakota, Wyoming & Nebraska",
   description:
-    "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota.",
+    "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota, Wyoming & Nebraska.",
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Brink Design Co. | Low Voltage Cabling & AV Specialists in South Dakota",
+    title:
+      "Brink Design Co. | Low Voltage Cabling, AV Installer & Systems Integrator in South Dakota, Wyoming & Nebraska",
     description:
-      "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota.",
+      "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota, Wyoming & Nebraska.",
     url: "https://www.brinkdesign.co",
     type: "website",
     images: [
@@ -30,9 +32,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.brinkdesign.co" },
   twitter: {
     card: "summary_large_image",
-    title: "Brink Design Co. | Low Voltage Cabling & AV Specialists in South Dakota",
+    title:
+      "Brink Design Co. | Low Voltage Cabling, AV Installer & Systems Integrator in South Dakota, Wyoming & Nebraska",
     description:
-      "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota.",
+      "Professional low voltage wiring, AV design, and security system installations for churches, businesses, and homes across South Dakota, Wyoming & Nebraska.",
     images: ["https://www.brinkdesign.co/og-image.jpg"],
   },
 };

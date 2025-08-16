@@ -77,7 +77,7 @@ const ContactContainer = () => {
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
             <div className="max-w-xl mx-auto px-4 text-center pt-12 pb-6">
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">Contact Brink Design</h1>
-                <p className="text-base text-gray-600 mb-2">We're here to help with AV, security, and cabling projects—big or small.</p>
+                <p className="text-base text-gray-600 mb-2">We&apos;re here to help with AV, security, and cabling projects—big or small.</p>
                 <p className="text-sm text-gray-500">Fill out the form or reach out directly. No pressure, no spam.</p>
             </div>
 
@@ -109,7 +109,7 @@ const ContactContainer = () => {
             <div className="max-w-xl mx-auto px-4 pb-16">
                 <div className="bg-white rounded-2xl shadow border border-gray-100 p-6">
                     <h2 className="text-xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
-                    <p className="text-gray-600 text-sm mb-4">We'll get back to you soon.</p>
+                    <p className="text-gray-600 text-sm mb-4">We&apos;ll get back to you soon.</p>
                     <ContactForm onSuccess={setSuccessMessage} onError={setErrorMessage} />
                     {/* Feedback Messages */}
                     {successMessage && (

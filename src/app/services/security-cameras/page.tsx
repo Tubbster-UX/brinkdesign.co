@@ -2,10 +2,11 @@ import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-    Shield, 
-    Camera, 
-    Eye, 
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+    Shield,
+    Camera,
+    Eye,
     CheckCircle, 
     Clock, 
     Star, 
@@ -191,6 +192,44 @@ export default function SecurityCamerasPage() {
         }
     ];
 
+    const benefits = [
+        {
+            title: "Crime Deterrence",
+            description: "Visible cameras discourage theft and vandalism before it happens.",
+        },
+        {
+            title: "Remote Monitoring",
+            description: "Check live feeds and recordings from anywhere via secure apps.",
+        },
+        {
+            title: "Clear Evidence",
+            description: "High‑definition video captures critical details when incidents occur.",
+        },
+        {
+            title: "No Monthly Fees",
+            description: "Local recording means you own your system without subscriptions.",
+        },
+    ];
+
+    const faqs = [
+        {
+            question: "Can I view my cameras from my phone?",
+            answer: "Yes, our systems include secure mobile and desktop apps for live view and playback.",
+        },
+        {
+            question: "Do security cameras require internet?",
+            answer: "Recording works without internet, but a connection enables remote access and alerts.",
+        },
+        {
+            question: "How much video storage do I need?",
+            answer: "Most homes use 1–2 TB for 2–3 weeks of history; businesses may require larger drives.",
+        },
+        {
+            question: "What warranty is included?",
+            answer: "We provide a two‑year labor warranty plus manufacturer coverage on all equipment.",
+        },
+    ];
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -327,6 +366,29 @@ export default function SecurityCamerasPage() {
                     </div>
                 </div>
             </div>
+            
+            {/* Benefits Section */}
+            <div className="bg-white py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Benefits of Professional Security</h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Strong protection and easy management for your property.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {benefits.map((benefit, index) => (
+                            <div key={index} className="flex items-start space-x-3">
+                                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
+                                <div>
+                                    <h3 className="font-semibold text-gray-900">{benefit.title}</h3>
+                                    <p className="text-gray-600 text-sm">{benefit.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
 
             {/* Process Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -410,6 +472,34 @@ export default function SecurityCamerasPage() {
                             </div>
                         ))}
                     </div>
+                </div>
+            </div>
+            
+            {/* Quote Section */}
+            <div className="bg-gradient-to-r from-gray-50 to-red-50 py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 className="text-4xl font-bold text-gray-900 mb-6">Request a Quote</h2>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                        Every surveillance need is different—contact us for a personalized estimate.
+                    </p>
+                    <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
+                        <Link href="/contact">Get a Quote</Link>
+                    </Button>
+                </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div className="bg-white py-16">
+                <div className="max-w-3xl mx-auto px-6">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Security Camera FAQ</h2>
+                    <Accordion type="single" collapsible className="w-full">
+                        {faqs.map((faq, index) => (
+                            <AccordionItem key={index} value={`item-${index}`}>
+                                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                                <AccordionContent>{faq.answer}</AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
                 </div>
             </div>
 

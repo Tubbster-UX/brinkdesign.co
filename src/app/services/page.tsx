@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const services = [
     {
@@ -43,6 +45,44 @@ const services = [
         icon: '/icons/maintenance.png',
         features: ['System Diagnostics', 'Preventive Maintenance', 'Emergency Repairs', 'Performance Optimization'],
         color: 'from-amber-500 to-yellow-500',
+    },
+];
+
+const benefits = [
+    {
+        title: 'Expert Guidance',
+        description: 'Work with technicians who design and install systems every day.',
+    },
+    {
+        title: 'Tailored Solutions',
+        description: 'Every project is customized to match your space and technology goals.',
+    },
+    {
+        title: 'Upfront Pricing',
+        description: 'Clear quotes tailored to your project so you can plan with confidence.',
+    },
+    {
+        title: 'Local Support',
+        description: 'Rapid assistance from a South Dakota based team.',
+    },
+];
+
+const faqs = [
+    {
+        question: 'Do you offer free consultations?',
+        answer: 'Yes, we provide complimentary on-site assessments and detailed quotes.',
+    },
+    {
+        question: 'How long does installation take?',
+        answer: 'Most projects are completed in a few days depending on scope and complexity.',
+    },
+    {
+        question: 'Are your systems under warranty?',
+        answer: 'All work includes a two‑year labor warranty plus manufacturer coverage.',
+    },
+    {
+        question: 'Do you work with homes and businesses?',
+        answer: 'We serve residential, commercial and institutional clients across the region.',
     },
 ];
 
@@ -203,6 +243,57 @@ export default function Page() {
                                 <p className="text-gray-400 text-sm">{item.desc}</p>
                             </div>
                         ))}
+                    </div>
+                </div>
+
+                {/* Benefits Section */}
+                <div className="bg-white py-20">
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Benefits of Working With Us</h2>
+                            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                                Professional service backed by years of low voltage expertise.
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {benefits.map((benefit, index) => (
+                                <div key={index} className="flex items-start space-x-3">
+                                    <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
+                                    <div>
+                                        <h3 className="font-semibold text-gray-900">{benefit.title}</h3>
+                                        <p className="text-gray-600 text-sm">{benefit.description}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Quote Section */}
+                <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-20">
+                    <div className="container mx-auto px-6 text-center">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Request a Quote</h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                            Every project is unique—contact us for a personalized estimate.
+                        </p>
+                        <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
+                            <Link href="/contact">Get a Quote</Link>
+                        </Button>
+                    </div>
+                </div>
+
+                {/* FAQ Section */}
+                <div className="bg-white py-16">
+                    <div className="max-w-3xl mx-auto px-6">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Service FAQs</h2>
+                        <Accordion type="single" collapsible className="w-full">
+                            {faqs.map((faq, index) => (
+                                <AccordionItem key={index} value={`item-${index}`}>
+                                    <AccordionTrigger>{faq.question}</AccordionTrigger>
+                                    <AccordionContent>{faq.answer}</AccordionContent>
+                                </AccordionItem>
+                            ))}
+                        </Accordion>
                     </div>
                 </div>
             </div>

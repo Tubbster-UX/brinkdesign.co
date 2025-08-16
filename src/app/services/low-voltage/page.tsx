@@ -2,10 +2,11 @@ import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-    Cable, 
-    Network, 
-    Zap, 
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+    Cable,
+    Network,
+    Zap,
     CheckCircle, 
     Shield, 
     Clock, 
@@ -161,6 +162,44 @@ export default function LowVoltageCablingPage() {
         }
     ];
 
+    const benefits = [
+        {
+            title: "Organized Cabling",
+            description: "Cleanly routed and labeled runs simplify future upgrades.",
+        },
+        {
+            title: "Scalable Infrastructure",
+            description: "Structured wiring that grows with your technology needs.",
+        },
+        {
+            title: "Reduced Downtime",
+            description: "Reliable connections minimize network issues and service calls.",
+        },
+        {
+            title: "Future‑Proof Design",
+            description: "Installations that support emerging standards and devices.",
+        },
+    ];
+
+    const faqs = [
+        {
+            question: "What is low voltage wiring?",
+            answer: "Low voltage wiring carries 50 volts or less and powers technology like networking, security cameras and smart devices.",
+        },
+        {
+            question: "What is low voltage wiring used for?",
+            answer: "It is used for structured cabling, Wi‑Fi access points, cameras and automation controls in homes and businesses.",
+        },
+        {
+            question: "When should I plan low voltage pre-wiring?",
+            answer: "Pre‑wiring is best during new construction or renovations before walls are closed to keep cables hidden and reduce costs.",
+        },
+        {
+            question: "Do you test and certify each cable?",
+            answer: "Yes, every run is tested, labeled and certified to meet TIA/EIA standards.",
+        },
+    ];
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -186,32 +225,11 @@ export default function LowVoltageCablingPage() {
     const faqLd = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: [
-            {
-                "@type": "Question",
-                name: "What is low voltage wiring?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Low voltage wiring carries 50 volts or less and powers technology like networking, security cameras, and smart devices."
-                }
-            },
-            {
-                "@type": "Question",
-                name: "What is low voltage wiring used for?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "It is used for structured cabling, Wi-Fi access points, cameras, and automation controls in homes and businesses."
-                }
-            },
-            {
-                "@type": "Question",
-                name: "When should I plan low voltage pre-wiring?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Pre-wiring is best done during new construction or renovations before the walls are closed to keep cables hidden and reduce costs."
-                }
-            }
-        ]
+        mainEntity: faqs.map(faq => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
     };
 
     return (
@@ -293,6 +311,29 @@ export default function LowVoltageCablingPage() {
                             </div>
                         </div>
                     ))}
+                </div>
+            </div>
+
+            {/* Benefits Section */}
+            <div className="bg-white py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Benefits of Structured Cabling</h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Organized infrastructure that keeps your network reliable and ready for growth.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {benefits.map((benefit, index) => (
+                            <div key={index} className="flex items-start space-x-3">
+                                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
+                                <div>
+                                    <h3 className="font-semibold text-gray-900">{benefit.title}</h3>
+                                    <p className="text-gray-600 text-sm">{benefit.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 
@@ -381,29 +422,31 @@ export default function LowVoltageCablingPage() {
                 </div>
             </div>
 
-            {/* Low Voltage FAQ Section */}
+            {/* Quote Section */}
+            <div className="bg-gradient-to-r from-gray-50 to-blue-50 py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 className="text-4xl font-bold text-gray-900 mb-6">Request a Quote</h2>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                        Each cabling project is unique—contact us for a personalized estimate.
+                    </p>
+                    <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
+                        <Link href="/contact">Get a Quote</Link>
+                    </Button>
+                </div>
+            </div>
+
+            {/* FAQ Section */}
             <div className="bg-white py-16">
-                <div className="max-w-3xl mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8">Low Voltage Wiring FAQ</h2>
-                    <div className="space-y-6">
-                        <div>
-                            <h3 className="text-xl font-semibold mb-2">What is low voltage wiring?</h3>
-                            <p className="text-gray-700">Low voltage wiring carries 50 volts or less for data, video, security, and control signals. It powers the technology in your building without the dangers of high-voltage power.</p>
-                        </div>
-                        <div>
-                            <h3 className="text-xl font-semibold mb-2">What is low voltage wiring used for?</h3>
-                            <p className="text-gray-700">It is used for structured cabling, Wi-Fi access points, cameras, speakers, and smart devices—anything that needs reliable communication.</p>
-                        </div>
-                        <div>
-                            <h3 className="text-xl font-semibold mb-2">When should I plan low voltage pre-wiring?</h3>
-                            <p className="text-gray-700">Plan pre-wiring during new construction or remodels before the walls are closed to keep cables hidden and save on labor.</p>
-                        </div>
-                        <p className="pt-4 text-blue-600 font-medium">
-                            <Link href="/blog/low-voltage-wiring-explained-what-homeowners-and-builders-need-to-know">
-                                Learn more about low voltage cabling
-                            </Link>
-                        </p>
-                    </div>
+                <div className="max-w-3xl mx-auto px-6">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Low Voltage FAQ</h2>
+                    <Accordion type="single" collapsible className="w-full">
+                        {faqs.map((faq, index) => (
+                            <AccordionItem key={index} value={`item-${index}`}>
+                                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                                <AccordionContent>{faq.answer}</AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
                 </div>
             </div>
 
@@ -414,8 +457,8 @@ export default function LowVoltageCablingPage() {
                         Ready to Wire Your Space Right?
                     </h2>
                     <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-                        Get professional low voltage cabling that delivers reliable performance and looks great. 
-                        Free consultation and competitive pricing.
+                        Get professional low voltage cabling that delivers reliable performance and looks great.
+                        Free consultation and detailed quotes.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg transform hover:scale-105">

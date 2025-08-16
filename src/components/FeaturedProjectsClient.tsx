@@ -70,10 +70,6 @@ export default function FeaturedProjectsClient({ projects }: { projects: Project
                       View Project
                     </div>
                     
-                    {/* Bottom Badge */}
-                    <div className="absolute bottom-4 left-4 bg-blue-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      Case Study
-                    </div>
                   </CardContent>
                 </div>
 
@@ -90,22 +86,6 @@ export default function FeaturedProjectsClient({ projects }: { projects: Project
                       {project.entry.description}
                     </div>
                   </CardContent>
-
-                  <CardFooter className="pt-0">
-                    <div className="flex items-center justify-between w-full">
-                      <Link 
-                        href={`/projects/${project.slug}`}
-                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm hover:underline"
-                      >
-                        Read More
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                      </Link>
-                      <div className="flex items-center text-gray-400 text-xs">
-                        <MapPin className="w-3 h-3 mr-1" />
-                        South Dakota
-                      </div>
-                    </div>
-                  </CardFooter>
                 </div>
               </Card>
             </motion.div>

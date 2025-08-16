@@ -6,7 +6,9 @@ import keystaticConfig from '../../../keystatic.config';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Calendar, Clock, ArrowRight, BookOpen, TrendingUp } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
@@ -64,48 +66,54 @@ export default async function BlogPage() {
 
     return (
         <div className="min-h-screen bg-white">
-            {/* Hero Section */}
+            {/* Blog Hero Section - Clarified */}
             <section className="relative bg-primary py-20 lg:py-32">
-                <div className="absolute inset-0 bg-primary"></div>
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 text-blue-100 rounded-full text-sm font-medium mb-6">
-                        <BookOpen className="w-4 h-4 mr-2" />
-                        Knowledge Center
-                    </div>
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                        Expert AV & Technology Insights
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
+                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                        Blog Articles
                     </h1>
-                    <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed">
-                        Stay ahead with professional insights on commercial AV systems, network infrastructure,
-                        security technology, and smart building solutions from South Dakota&apos;s leading experts.
+                    <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
+                        Tips, how-tos, and industry news for smarter AV, security, and networking. Our blog helps businesses, churches, and homeowners stay informed and make better technology decisions in western South Dakota.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-50 transition-colors duration-200 shadow-lg"
-                        >
-                            Get Expert Consultation
-                            <ArrowRight className="w-5 h-5 ml-2" />
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+                        <Link href="/contact">
+                            <Button variant="default" size="lg" className="bg-accent text-secondary-foreground font-bold shadow-md hover:bg-accent/90">
+                                Ask a Blog Question
+                                <ArrowRight className="w-5 h-5 ml-2" />
+                            </Button>
                         </Link>
-                        <Link
-                            href="/services"
-                            className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-xl transition-colors duration-200"
-                        >
-                            Our Services
+                        <Link href="/services">
+                            <Button variant="outline" size="lg">
+                                Explore Our Services
+                            </Button>
                         </Link>
+                    </div>
+                    <div className="mt-10 flex flex-wrap gap-6 justify-center">
+                        <div className="flex items-center gap-2 text-blue-100 text-sm">
+                            <CheckCircle className="w-4 h-4 text-green-400" />
+                            Trusted Local Blog Authors
+                        </div>
+                        <div className="flex items-center gap-2 text-blue-100 text-sm">
+                            <CheckCircle className="w-4 h-4 text-green-400" />
+                            Practical AV & Tech Advice
+                        </div>
+                        <div className="flex items-center gap-2 text-blue-100 text-sm">
+                            <CheckCircle className="w-4 h-4 text-green-400" />
+                            No Sales Pressure, Just Insights
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Articles Section */}
+            {/* Blog Articles Section */}
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            Latest Articles
+                            Latest Blog Posts
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Discover insights, best practices, and industry trends from our team of AV and technology professionals.
+                            Explore tips, tutorials, and technology news from our AV and low voltage experts. Stay up to date and get answers to your questions.
                         </p>
                     </div>
 
@@ -114,49 +122,34 @@ export default async function BlogPage() {
                             {posts.map((post, index) => (
                                 <article key={post.slug} className="group">
                                     <Link href={`/blog/${post.slug}`} className="block">
-                                        <Card className="h-full bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                                        <Card className="h-full bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 hover:border-accent">
                                             {/* Featured Image */}
-                                            <div className="relative overflow-hidden">
+                                            <div className="w-full h-48 overflow-hidden rounded-t-2xl">
                                                 <Image
                                                     src={post.entry.featuredImage || '/images/blog/placeholder.jpg'}
                                                     alt={post.entry.title}
                                                     width={400}
                                                     height={240}
-                                                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-102"
                                                 />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                             </div>
-
                                             <CardContent className="p-6 flex-1 flex flex-col">
                                                 {/* Article Meta */}
-                                                <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
-                                                    <div className="flex items-center">
-                                                        <Calendar className="w-4 h-4 mr-1" />
-                                                        {new Date(post.entry.published).toLocaleDateString('en-US', {
-                                                            month: 'short',
-                                                            day: 'numeric',
-                                                            year: 'numeric'
-                                                        })}
-                                                    </div>
-                                                    <div className="flex items-center">
-                                                        <Clock className="w-4 h-4 mr-1" />
-                                                        {post.readingTime} min read
-                                                    </div>
+                                                <div className="flex items-center space-x-4 text-sm text-gray-500 mb-2">
+                                                    <span className="flex items-center"><Calendar className="w-4 h-4 mr-1" />{new Date(post.entry.published).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                                                    <span className="flex items-center"><Clock className="w-4 h-4 mr-1" />{post.readingTime} min read</span>
                                                 </div>
-
                                                 {/* Title */}
-                                                <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
+                                                <CardTitle className="text-lg md:text-xl font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-accent transition-colors text-left">
                                                     {post.entry.title}
                                                 </CardTitle>
-
-                                                {/* Description */}
-                                                <p className="text-gray-600 line-clamp-3 flex-1 mb-4">
-                                                    Discover professional insights and expert advice on AV technology, networking solutions, and smart building systems.
+                                                {/* Blog Description */}
+                                                <p className="text-gray-600 line-clamp-3 text-sm flex-1 mb-2">
+                                                    Read the latest tips, how-tos, and news on AV, networking, and security technology from our blog experts.
                                                 </p>
-
                                                 {/* Read More Link */}
-                                                <div className="flex items-center text-blue-600 font-medium group-hover:text-blue-700 transition-colors duration-200">
-                                                    <span>Read Article</span>
+                                                <div className="flex items-center text-accent font-medium group-hover:text-primary transition-colors duration-200">
+                                                    <span>Read Blog Post</span>
                                                     <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" />
                                                 </div>
                                             </CardContent>
@@ -171,17 +164,16 @@ export default async function BlogPage() {
                                 <BookOpen className="w-12 h-12 text-gray-400" />
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                                Coming Soon
+                                Blog Content Coming Soon
                             </h3>
                             <p className="text-gray-600 mb-8 max-w-md mx-auto">
-                                We&apos;re preparing valuable content on AV systems, networking, and security technology.
-                                Check back soon for expert insights!
+                                We&apos;re preparing new articles and tips on AV systems, networking, and security technology. Check back soon for fresh blog content!
                             </p>
                             <Link
                                 href="/contact"
                                 className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
                             >
-                                Get Expert Advice Now
+                                Ask a Blog Question
                                 <ArrowRight className="w-4 h-4 ml-2" />
                             </Link>
                         </div>
@@ -193,25 +185,24 @@ export default async function BlogPage() {
             <section className="py-20 bg-primary">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                        Need Expert AV & Technology Guidance?
+                        Have a Blog Topic or Question?
                     </h2>
                     <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                        Get personalized advice from our team of professionals. We&apos;re here to help you make informed
-                        decisions about your AV, networking, and security technology needs.
+                        Our team is here to answer your AV, networking, and security technology questions. Reach out for advice or suggest a topic for our next blog post!
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
                             href="/contact"
                             className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-50 transition-colors duration-200 shadow-lg"
                         >
-                            Schedule Consultation
+                            Ask a Blog Question
                             <ArrowRight className="w-5 h-5 ml-2" />
                         </Link>
                         <Link
-                            href="/projects"
+                            href="/services"
                             className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-xl transition-colors duration-200"
                         >
-                            View Our Work
+                            Explore Our Services
                         </Link>
                     </div>
                 </div>

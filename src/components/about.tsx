@@ -45,7 +45,7 @@ export default async function About() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Button asChild size="lg" className="bg-yellow-500 text-gray-900 hover:bg-yellow-400 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                            <Button asChild size="lg" className="bg-yellow-500 text-gray-900 hover:bg-accent font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                                 <Link href="/about" className="inline-flex items-center">
                                     Learn Our Story
                                     <ArrowRight className="w-5 h-5 ml-2" />
@@ -67,7 +67,7 @@ export default async function About() {
                             <h3 className="text-2xl font-bold mb-6">Why South Dakota Trusts Us</h3>
                             <div className="space-y-4">
                                 <div className="flex items-center">
-                                    <Award className="w-6 h-6 mr-4 text-yellow-400" />
+                                    <Award className="w-6 h-6 mr-4 text-accent" />
                                     <div>
                                         <div className="font-semibold">Professional Quality</div>
                                         <div className="text-sm text-blue-100">Enterprise-grade installations</div>
@@ -93,7 +93,7 @@ export default async function About() {
                         {/* Stats */}
                         <div className="grid grid-cols-2 gap-4">
                             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
-                                <div className="text-3xl font-bold text-yellow-400 mb-2">10+</div>
+                                <div className="text-3xl font-bold text-accent mb-2">10+</div>
                                 <div className="text-sm text-blue-100">Years Experience</div>
                             </div>
                             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">

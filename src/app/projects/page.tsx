@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ReactElement, JSXElementConstructor, ReactNode, Key } from 'react';
+import { Button } from "@/components/ui/button";
 
 
 const reader = createReader(process.cwd(), keystaticConfig);
@@ -53,64 +54,51 @@ export default async function Page() {
     const projects = await fetchProjects();
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
-        {/* Hero Section */}
-        <div className="relative">
-          {/* Background with overlay */}
-          <div className='bg-[url("/hero.avif")] bg-cover bg-center bg-fixed h-[60vh] relative'>
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-          </div>
-
-          {/* Hero Content */}
-          <div className="absolute inset-0 flex items-center">
-            <div className="container mx-auto px-6">
-              <div className="max-w-4xl">
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                  Our <span className="text-secondary">Projects</span>
-                </h1>
-                <p className="text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
-                  Explore our portfolio of successful low voltage installations, from security systems to smart home automation and commercial AV solutions.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200 hover:shadow-lg">
-                    Start Your Project
-                  </Link>
-                  <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
-                    View Services
-                  </Link>
-                </div>
+        {/* Hero Section - Redesigned to match blog hero */}
+        <section className="relative bg-primary py-20 lg:py-32">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Projects Portfolio
+            </h1>
+            <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
+              Explore our portfolio of successful AV, security, and networking installations. See how we help businesses, churches, and homeowners across western South Dakota achieve their technology goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-accent text-gray-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors duration-200 shadow-md"
+              >
+                Start Your Project
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-700 rounded-lg transition-colors duration-200"
+              >
+                View Services
+              </Link>
+            </div>
+            <div className="mt-10 flex flex-wrap gap-6 justify-center">
+              <div className="flex items-center gap-2 text-blue-100 text-sm">
+                {/* Trust Indicator 1 */}
+                <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" /></svg>
+                Local South Dakota Experts
+              </div>
+              <div className="flex items-center gap-2 text-blue-100 text-sm">
+                <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" /></svg>
+                Commercial & Residential Solutions
+              </div>
+              <div className="flex items-center gap-2 text-blue-100 text-sm">
+                <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" /></svg>
+                Satisfaction Guaranteed
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className="bg-primary text-white py-16">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
-              <div className="space-y-2">
-                <div className="text-3xl md:text-4xl font-bold text-secondary">10+</div>
-                <div className="text-gray-300">Years Experience</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-3xl md:text-4xl font-bold text-secondary">24/7</div>
-                <div className="text-gray-300">Support Available</div>
-              </div>
-              <div className="space-y-2">
-                <div className="text-3xl md:text-4xl font-bold text-secondary">100%</div>
-                <div className="text-gray-300">Satisfaction Rate</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
 
         {/* Projects Section */}
         <div className="container mx-auto px-6 py-20">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold text-sm mb-4">
-              Case Studies
-            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Our Success Stories
             </h2>
@@ -123,48 +111,33 @@ export default async function Page() {
           {projects.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
               {projects.map((project: { entry: { title: boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | Promise<ReactNode> | Key | null | undefined; image: any; published: string; }; slug: any; }, index: number) => (
-                <Link key={String(project.entry.title)} href={`/projects/${project.slug}`}>
-                  <Card className="group relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white">
-                    {/* Project Image */}
-                    <div className="relative overflow-hidden">
+                <Link key={String(project.entry.title)} href={`/projects/${project.slug}`} className="block">
+                  <div className="group relative rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                    {/* Project Image with overlay */}
+                    <div className="relative w-full h-64">
                       <Image
                         src={project.entry.image || '/images/placeholder.png'}
                         alt={project.entry.title?.toString() ?? ''}
                         width={450}
                         height={300}
-                        className="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      {/* Overlay on hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                      {/* Read More Button - appears on hover */}
-                      <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                        <div className="bg-white/20 backdrop-blur-sm rounded-full p-3 border border-white/30">
-                          <svg className="w-5 h-5 text-white transition-transform duration-300 group-hover:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        </div>
+                      {/* Overlay for text readability */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                      {/* Info Overlay */}
+                      <div className="absolute bottom-0 left-0 w-full px-6 pb-6 pt-10 flex flex-col gap-2 text-left transition-all duration-300">
+                        <Button variant="outline" className="opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300">
+                          View Project
+                          <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </Button>
+                        <CardTitle className="text-lg md:text-xl font-bold text-white mb-1 line-clamp-2 transition-colors text-left">
+                          {typeof project.entry.title === "string" || typeof project.entry.title === "number"
+                            ? project.entry.title
+                            : ""}
+                        </CardTitle>
                       </div>
                     </div>
-
-                    {/* Project Info */}
-                    <CardContent className="p-6">
-                      <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-                        {typeof project.entry.title === "string" || typeof project.entry.title === "number"
-                          ? project.entry.title
-                          : ""}
-                      </CardTitle>
-
-                      {/* Project Meta */}
-                      <div className="flex items-center justify-between text-sm text-gray-500">
-                        <span>Case Study</span>
-                        <span>{new Date(project.entry.published).getFullYear()}</span>
-                      </div>
-
-                      {/* Bottom border animation */}
-                      <div className="mt-4 h-0.5 bg-gradient-to-r from-secondary to-secondary/60 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                    </CardContent>
-                  </Card>
+                  </div>
                 </Link>
               ))}
             </div>

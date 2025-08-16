@@ -239,42 +239,29 @@ export default function LowVoltageCablingPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-            />
-            {/* Hero Section */}
-            <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:40px_40px] opacity-20"></div>
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        {/* Content */}
-                        <div>
-                            <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 text-blue-200 rounded-full text-sm font-medium mb-6 border border-blue-400/30">
-                                <Cable className="w-4 h-4 mr-2" />
-                                Professional Low Voltage Solutions
-                            </div>
-                            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                                Expert <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">Low Voltage</span> Cabling Services
-                            </h1>
-                            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                                Professional structured wiring for data, voice, video, and security systems. 
-                                Clean installations that deliver reliable performance for years to come.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-xl hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg">
-                                    <Zap className="w-5 h-5 mr-2" />
-                                    Get Free Consultation
-                                </Link>
-                                <Link href="/projects" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white hover:bg-white/10 rounded-xl transition-all duration-300">
-                                    View Our Work
-                                    <ArrowRight className="w-5 h-5 ml-2" />
-                                </Link>
-                            </div>
-                        </div>
+            {/* Hero Section - bg-primary, Shadcn Buttons */}
+            <section className="bg-primary py-20 lg:py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
+                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                        Low Voltage Cabling Services
+                    </h1>
+                    <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
+                        Professional structured wiring for data, voice, video, and security systems. Clean installations that deliver reliable performance for years to come.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+                        <Link href="/contact">
+                            <Button variant="default" size="lg" className="bg-accent text-accent-foreground font-bold shadow-md hover:bg-accent/90">
+                                Get Free Consultation
+                            </Button>
+                        </Link>
+                        <Link href="/projects">
+                            <Button variant="outline" size="lg">
+                                View Our Work
+                            </Button>
+                        </Link>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* Services Grid */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -293,7 +280,6 @@ export default function LowVoltageCablingPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <div key={index} className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <div className="relative">
                                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                                     <service.icon className="w-8 h-8 text-white" />
@@ -314,115 +300,7 @@ export default function LowVoltageCablingPage() {
                 </div>
             </div>
 
-            {/* Benefits Section */}
-            <div className="bg-white py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Benefits of Structured Cabling</h2>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Organized infrastructure that keeps your network reliable and ready for growth.
-                        </p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {benefits.map((benefit, index) => (
-                            <div key={index} className="flex items-start space-x-3">
-                                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
-                                <div>
-                                    <h3 className="font-semibold text-gray-900">{benefit.title}</h3>
-                                    <p className="text-gray-600 text-sm">{benefit.description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* Process Section */}
-            <div className="bg-gradient-to-r from-gray-50 to-blue-50 py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Proven Process</h2>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            From initial consultation to final testing, we follow a systematic approach to ensure flawless installations.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {processSteps.map((step, index) => (
-                            <div key={index} className="relative text-center">
-                                <div className="relative">
-                                    <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg shadow-lg">
-                                        {step.step}
-                                    </div>
-                                    {index < processSteps.length - 1 && (
-                                        <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-blue-300 to-purple-300 transform -translate-y-1/2"></div>
-                                    )}
-                                </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
-                                <p className="text-gray-600 text-sm">{step.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* Project Types */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-6">Projects We Handle</h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Whether residential or commercial, we have the expertise to handle projects of any size and complexity.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    {projectTypes.map((type, index) => (
-                        <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                            <div className="flex items-center mb-6">
-                                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
-                                    <type.icon className="w-8 h-8 text-white" />
-                                </div>
-                                <div>
-                                    <h3 className="text-2xl font-bold text-gray-900">{type.title}</h3>
-                                    <p className="text-gray-600">{type.description}</p>
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                {type.examples.map((example, idx) => (
-                                    <div key={idx} className="flex items-center p-3 bg-gray-50 rounded-lg">
-                                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                                        <span className="text-sm font-medium text-gray-700">{example}</span>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Why Choose Us */}
-            <div className="bg-gradient-to-br from-gray-900 to-blue-900 py-20">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-white mb-6">Why Choose Brink Design Co?</h2>
-                        <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                            Professional expertise, quality installations, and exceptional service that sets us apart.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {whyChooseUs.map((item, index) => (
-                            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                                <item.icon className={`w-8 h-8 ${item.color} mb-4`} />
-                                <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                                <p className="text-blue-100 text-sm">{item.description}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* Quote Section */}
+            {/* Request a Quote CTA */}
             <div className="bg-gradient-to-r from-gray-50 to-blue-50 py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-4xl font-bold text-gray-900 mb-6">Request a Quote</h2>
@@ -432,59 +310,6 @@ export default function LowVoltageCablingPage() {
                     <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
                         <Link href="/contact">Get a Quote</Link>
                     </Button>
-                </div>
-            </div>
-
-            {/* FAQ Section */}
-            <div className="bg-white py-16">
-                <div className="max-w-3xl mx-auto px-6">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Low Voltage FAQ</h2>
-                    <Accordion type="single" collapsible className="w-full">
-                        {faqs.map((faq, index) => (
-                            <AccordionItem key={index} value={`item-${index}`}>
-                                <AccordionTrigger>{faq.question}</AccordionTrigger>
-                                <AccordionContent>{faq.answer}</AccordionContent>
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
-                </div>
-            </div>
-
-            {/* CTA Section */}
-            <div className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 py-20">
-                <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                        Ready to Wire Your Space Right?
-                    </h2>
-                    <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-                        Get professional low voltage cabling that delivers reliable performance and looks great.
-                        Free consultation and detailed quotes.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg transform hover:scale-105">
-                            <Zap className="w-5 h-5 mr-2" />
-                            Schedule Free Walkthrough
-                        </Link>
-                        <Link href="tel:+16051234567" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-orange-600 rounded-xl transition-all duration-300">
-                            <Phone className="w-5 h-5 mr-2" />
-                            Call (605) 123-4567
-                        </Link>
-                    </div>
-                    
-                    <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-orange-100">
-                        <div className="flex items-center justify-center space-x-2">
-                            <CheckCircle className="w-4 h-4 text-white" />
-                            <span>Free On-Site Consultation</span>
-                        </div>
-                        <div className="flex items-center justify-center space-x-2">
-                            <CheckCircle className="w-4 h-4 text-white" />
-                            <span>Licensed & Insured</span>
-                        </div>
-                        <div className="flex items-center justify-center space-x-2">
-                            <CheckCircle className="w-4 h-4 text-white" />
-                            <span>Lifetime Workmanship Warranty</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -236,7 +236,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
                                         key={i}
                                         className={`w-4 h-4 ${
                                             i < testimonial.rating
-                                                ? "text-yellow-400 fill-current"
+                                                ? "text-accent fill-current"
                                                 : "text-gray-300"
                                         }`}
                                     />

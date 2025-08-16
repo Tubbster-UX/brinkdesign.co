@@ -9,6 +9,7 @@ import { Phone, MapPin, Clock, Menu, X, ChevronDown } from "lucide-react";
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [servicesDropdownAnchor, setServicesDropdownAnchor] = useState<HTMLButtonElement | null>(null);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isProjectsPage, setIsProjectsPage] = useState(false);
     const path = usePathname();
@@ -46,6 +47,23 @@ export default function Header() {
             return () => document.removeEventListener('click', handleClickOutside);
         }
     }, [isMobileMenuOpen]);
+
+    // Close services dropdown when clicking outside
+    useEffect(() => {
+        if (isServicesOpen) {
+            const handleClickOutside = (event: MouseEvent) => {
+                if (
+                    servicesDropdownAnchor &&
+                    !servicesDropdownAnchor.contains(event.target as Node) &&
+                    !(document.getElementById('services-dropdown')?.contains(event.target as Node))
+                ) {
+                    setIsServicesOpen(false);
+                }
+            };
+            document.addEventListener('mousedown', handleClickOutside);
+            return () => document.removeEventListener('mousedown', handleClickOutside);
+        }
+    }, [isServicesOpen, servicesDropdownAnchor]);
 
     const serviceLinks = [
         { href: "/services/commercial-av", label: "Commercial AV" },
@@ -104,25 +122,34 @@ export default function Header() {
                                 About
                             </Link>
                             
-                            {/* Services Dropdown */}
-                            <div 
-                                className="relative"
-                                onMouseEnter={() => setIsServicesOpen(true)}
-                                onMouseLeave={() => setIsServicesOpen(false)}
-                            >
-                                <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+                            {/* Services Dropdown - open on hover or click */}
+                            <div className="relative">
+                                <button
+                                    ref={setServicesDropdownAnchor}
+                                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                                    onMouseEnter={() => setIsServicesOpen(true)}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        setIsServicesOpen((open) => !open);
+                                    }}
+                                    aria-haspopup="true"
+                                    aria-expanded={isServicesOpen}
+                                >
                                     <span>Services</span>
                                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
                                 </button>
-                                
                                 {isServicesOpen && (
-                                    <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200">
+                                    <div
+                                        id="services-dropdown"
+                                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200"
+                                    >
                                         <div className="p-2">
                                             {serviceLinks.map((service) => (
                                                 <Link
                                                     key={service.href}
                                                     href={service.href}
                                                     className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
+                                                    onClick={() => setIsServicesOpen(false)}
                                                 >
                                                     {service.label}
                                                 </Link>
@@ -130,6 +157,7 @@ export default function Header() {
                                             <Link
                                                 href="/services"
                                                 className="block px-4 py-3 text-blue-600 font-medium hover:bg-gray-50 rounded-md transition-colors duration-200 border-t border-gray-100 mt-2"
+                                                onClick={() => setIsServicesOpen(false)}
                                             >
                                                 View All Services →
                                             </Link>
@@ -170,7 +198,7 @@ export default function Header() {
                                 <span className="font-medium">(605) 381-8290</span>
                             </a>
                             <Button asChild >
-                                <Link href="/contact">Free Site Visit</Link>
+                                <Link href="/contact">Contact Us</Link>
                             </Button>
                         </div>
 

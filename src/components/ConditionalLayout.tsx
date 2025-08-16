@@ -17,7 +17,6 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
       ) : (
         <>
           <Header />
-          <StickyHeaderCTA />
           {children}
           <LogoCloud />
           <Footer />

@@ -2,10 +2,11 @@ import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-    Volume2, 
-    Monitor, 
-    Mic, 
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+    Volume2,
+    Monitor,
+    Mic,
     CheckCircle, 
     Clock, 
     Star, 
@@ -214,6 +215,44 @@ export default function CommercialAVPage() {
         }
     ];
 
+    const benefits = [
+        {
+            title: "Engaging Communication",
+            description: "Deliver clear sound and vivid video for meetings, worship and events.",
+        },
+        {
+            title: "Scalable Systems",
+            description: "Designs that grow with your organization and future technology.",
+        },
+        {
+            title: "Simplified Control",
+            description: "Intuitive interfaces make complex setups easy for any user.",
+        },
+        {
+            title: "Ongoing Support",
+            description: "Local technicians ready to assist long after installation.",
+        },
+    ];
+
+    const faqs = [
+        {
+            question: "Can you integrate with my existing equipment?",
+            answer: "Yes, we often reuse projectors, speakers and cabling when practical to maximize your budget.",
+        },
+        {
+            question: "Do you provide training after installation?",
+            answer: "Every project includes hands‑on training and easy reference guides for your team.",
+        },
+        {
+            question: "What brands do you recommend?",
+            answer: "We work with trusted manufacturers like Shure, Epson and BirdDog based on performance and value.",
+        },
+        {
+            question: "How long do AV projects take?",
+            answer: "Most installations are completed in 1–3 weeks depending on scope and equipment availability.",
+        },
+    ];
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -314,7 +353,7 @@ export default function CommercialAVPage() {
                     ))}
                 </div>
             </div>
-
+            
             {/* Project Highlights */}
             <div className="bg-gradient-to-r from-gray-50 to-purple-50 py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -338,6 +377,29 @@ export default function CommercialAVPage() {
                                     </div>
                                 </div>
                                 <p className="text-gray-700 text-sm leading-relaxed">{project.details}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Benefits Section */}
+            <div className="bg-white py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Key Benefits</h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Why organizations choose Brink Design for AV integration.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {benefits.map((benefit, index) => (
+                            <div key={index} className="flex items-start space-x-3">
+                                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
+                                <div>
+                                    <h3 className="font-semibold text-gray-900">{benefit.title}</h3>
+                                    <p className="text-gray-600 text-sm">{benefit.description}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -426,6 +488,34 @@ export default function CommercialAVPage() {
                             </div>
                         ))}
                     </div>
+                </div>
+            </div>
+            
+            {/* Quote Section */}
+            <div className="bg-gradient-to-r from-gray-50 to-purple-50 py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 className="text-4xl font-bold text-gray-900 mb-6">Request a Quote</h2>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                        Every AV project is different—contact us for a custom estimate.
+                    </p>
+                    <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
+                        <Link href="/contact">Get a Quote</Link>
+                    </Button>
+                </div>
+            </div>
+
+            {/* FAQ Section */}
+            <div className="bg-white py-16">
+                <div className="max-w-3xl mx-auto px-6">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Commercial AV FAQ</h2>
+                    <Accordion type="single" collapsible className="w-full">
+                        {faqs.map((faq, index) => (
+                            <AccordionItem key={index} value={`item-${index}`}>
+                                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                                <AccordionContent>{faq.answer}</AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
                 </div>
             </div>
 

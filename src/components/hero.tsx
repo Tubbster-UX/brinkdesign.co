@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { Button } from './ui/button';
 import Link from 'next/link'
 import { ArrowRight, CheckCircle, Users, Star, Phone } from 'lucide-react';
@@ -9,7 +10,14 @@ export default function Hero() {
     return (
         <section className='relative min-h-screen flex items-center justify-center bg-primary overflow-hidden'>
             {/* Background Image with Overlay */}
-            <div className='absolute inset-0 bg-[url("/hero.avif")] bg-cover bg-center bg-fixed opacity-30'></div>
+            <Image
+                src="/hero.avif"
+                alt=""
+                fill
+                sizes="100vw"
+                loading="lazy"
+                className="object-cover object-center opacity-30"
+            />
             <div className='absolute inset-0 bg-primary/80'></div>
             
             {/* Grid Pattern Overlay */}

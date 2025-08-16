@@ -1,10 +1,10 @@
 export default function Head() {
   return (
     <>
-      <title>Brink Design – Low Voltage AV Installers in Western South Dakota</title>
+      <title>Brink Design Co. | AV & Low Voltage Services in Rapid City, SD</title>
       <meta
         name="description"
-        content="Professional AV installation, low-voltage wiring and security systems serving the greater Rapid City area and all of western South Dakota."
+        content="Brink Design provides professional audio/video installations, network cabling and security systems for businesses, churches and homes across Rapid City and western South Dakota."
       />
     </>
   );

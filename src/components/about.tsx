@@ -46,15 +46,15 @@ export default async function About() {
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Button asChild size="lg" className="bg-yellow-500 text-gray-900 hover:bg-accent font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                                <Link href="/about" className="inline-flex items-center">
-                                    Learn Our Story
+                                <Link href="/contact" className="inline-flex items-center">
+                                    Get a Quote
                                     <ArrowRight className="w-5 h-5 ml-2" />
                                 </Link>
                             </Button>
                             <Button asChild variant="ghost" size="lg">
-                                <Link href="/contact" className="inline-flex items-center">
+                                <Link href="/about" className="inline-flex items-center">
                                     <Users className="w-5 h-5 mr-2" />
-                                    Work With Us
+                                    About Our Team
                                 </Link>
                             </Button>
                         </div>

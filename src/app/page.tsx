@@ -6,21 +6,21 @@ import FeaturedProjectsServer from "@/components/FeaturedProjectsServer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Brink Design Co. – AV Installation, Network Cabling & Security Cameras in Rapid City",
+  title: "Brink Design Co. – AV, Security & Cabling in Rapid City, SD",
   description:
-    "Professional audio/video setups, structured cabling and security camera systems for businesses, churches and homes across Rapid City and western South Dakota.",
+    "Security cameras, WiFi, network cabling, and AV systems for homes, churches, and businesses in Rapid City and western South Dakota. Local team. Quality installs. No monthly fees.",
   alternates: { canonical: "https://www.brinkdesign.co/" },
   openGraph: {
-    title: "Brink Design Co. – AV Installation, Network Cabling & Security Cameras in Rapid City",
+    title: "Brink Design Co. – AV, Security & Cabling in Rapid City, SD",
     description:
-      "Professional AV installation, network cabling and security system integration serving Rapid City and the Black Hills.",
+      "Security cameras, WiFi, cabling, and AV installations for South Dakota. Local experts, quality work.",
     images: ["https://www.brinkdesign.co/og-image.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Brink Design Co. – AV Installation, Network Cabling & Security Cameras in Rapid City",
+    title: "Brink Design Co. – AV, Security & Cabling in Rapid City, SD",
     description:
-      "Professional AV, cabling and security solutions for homes and businesses across western South Dakota.",
+      "Security cameras, WiFi, and AV installations for homes, churches, and businesses in western South Dakota.",
     images: ["https://www.brinkdesign.co/og-image.jpg"],
   },
 };

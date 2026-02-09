@@ -178,10 +178,10 @@ export default function TestimonialsClient({ testimonials }: TestimonialsClientP
                                 Start Your Project
                             </a>
                             <a
-                                href="tel:6053818290"
+                                href="tel:6053893261"
                                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 rounded-xl transition-all duration-300"
                             >
-                                Call (605) 381-8290
+                                Call (605) 389-3261
                             </a>
                         </div>
                     </div>

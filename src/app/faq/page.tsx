@@ -5,11 +5,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "FAQ – Brink Design Western South Dakota",
-    description: "Answers to common questions about AV installation, security cameras and cabling services for businesses and churches across western South Dakota.",
+    title: "FAQ | Brink Design Co.",
+    description: "Answers about security cameras, WiFi, cabling, AV, and smart home installs in western South Dakota.",
     openGraph: {
-        title: "FAQ – Brink Design Western South Dakota",
-        description: "Find details about our AV and low voltage process and support across the Black Hills.",
+        title: "FAQ | Brink Design Co.",
+        description: "Details on our security, WiFi, cabling, and AV installation process in the Black Hills.",
         url: "https://www.brinkdesign.co/faq",
         type: "article",
         images: [
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     alternates: { canonical: "https://www.brinkdesign.co/faq" },
     twitter: {
         card: "summary_large_image",
-        title: "FAQ – Brink Design Western South Dakota",
-        description: "Your questions answered about our AV and low voltage services in South Dakota.",
+        title: "FAQ | Brink Design Co.",
+        description: "Your questions answered about cameras, WiFi, cabling, and AV services in South Dakota.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };
@@ -35,7 +35,7 @@ export default function FAQPage() {
         {
             title: "Getting Started",
             icon: MessageCircle,
-            description: "Initial consultation and project setup",
+            description: "Site visit and project setup",
             color: "from-blue-500 to-blue-600"
         },
         {
@@ -63,16 +63,16 @@ export default function FAQPage() {
             category: "Getting Started",
             questions: [
                 {
-                    q: "Do you offer free consultations?",
-                    a: "Yes — we provide comprehensive free on-site consultations to assess your space, understand your needs, and recommend the best solution. During this visit, we'll create a detailed proposal with no hidden fees or surprises."
+                    q: "Do you offer site visits or quotes?",
+                    a: "Yes. We start with a site visit to understand the space and provide a written quote. If you need detailed design work beyond the visit, we can scope that separately."
                 },
                 {
                     q: "How do I get started with a project?",
-                    a: "Simply call us at (605) 381-8290 or fill out our contact form. We'll schedule a free consultation within 24-48 hours to discuss your project and provide a detailed quote."
+                    a: "Call us at (605) 389-3261 or use the contact form. We'll schedule a site visit or phone call and walk you through next steps."
                 },
                 {
                     q: "What's included in your consultation?",
-                    a: "Our consultation includes a thorough site assessment, needs analysis, equipment recommendations, installation timeline, and a detailed written proposal. We'll also answer all your questions about the process."
+                    a: "We walk the site, ask the right questions, recommend options, and provide a clear scope, timeline, and quote."
                 }
             ]
         },
@@ -81,7 +81,7 @@ export default function FAQPage() {
             questions: [
                 {
                     q: "What systems do you install?",
-                    a: "We specialize in security camera systems, Wi-Fi networks, door access control, audio/video systems, live streaming setups, smart home automation, and structured cabling. Every installation is customized to your specific needs."
+                    a: "We install security cameras, WiFi networks, door access control, audio/video systems, live streaming setups, smart home automation, and structured cabling. We'll recommend the right level for your space and budget."
                 },
                 {
                     q: "How long does a typical installation take?",
@@ -102,7 +102,7 @@ export default function FAQPage() {
             questions: [
                 {
                     q: "Do you provide ongoing support?",
-                    a: "Yes — we offer free remote support for all installations plus optional on-site service visits. We also provide comprehensive service plans for larger commercial systems with priority response times."
+                    a: "Yes — we provide remote support and can schedule on-site service visits when needed. We also offer service plans for larger commercial systems with priority response times."
                 },
                 {
                     q: "What warranty do you provide?",
@@ -114,7 +114,7 @@ export default function FAQPage() {
                 },
                 {
                     q: "What if I need help after installation?",
-                    a: "We provide free phone and remote support for all customers. For complex issues or on-site needs, we offer affordable service calls with same-day or next-day availability."
+                    a: "Phone and remote support are available for all customers. For complex issues or on-site needs, we offer service calls with quick scheduling when possible."
                 }
             ]
         },
@@ -162,17 +162,17 @@ export default function FAQPage() {
                         </h1>
 
                         <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-                            Everything you need to know about our AV installation process, services, and support. Get instant answers to common questions.
+                            Answers about cameras, WiFi, cabling, AV, and smart home installs. Clear info, no fluff.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200 hover:shadow-lg">
                                 <MessageCircle className="mr-2" size={20} />
-                                Ask a Question
+                                Request a Quote
                             </Link>
-                            <Link href="tel:6053818290" className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <Link href="tel:6053893261" className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <Phone className="mr-2" size={20} />
-                                Call (605) 381-8290
+                                Call (605) 389-3261
                             </Link>
                         </div>
                     </div>
@@ -189,7 +189,7 @@ export default function FAQPage() {
                         </div>
                         <div className="space-y-2">
                             <div className="text-3xl md:text-4xl font-bold text-secondary">100%</div>
-                            <div className="text-gray-300">Free Consultations</div>
+                            <div className="text-gray-300">Licensed &amp; Insured</div>
                         </div>
                         <div className="space-y-2">
                             <div className="text-3xl md:text-4xl font-bold text-secondary">2yr</div>
@@ -327,21 +327,21 @@ export default function FAQPage() {
                             <Link href="/contact" className="group bg-primary text-secondary p-6 rounded-2xl hover:bg-primary/90 transition-all duration-200 hover:shadow-lg">
                                 <Mail className="w-8 h-8 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                                 <h3 className="font-bold text-lg mb-2">Send a Message</h3>
-                                <p className="text-sm opacity-80">Get a detailed response within 4 hours</p>
+                                <p className="text-sm opacity-80">Get a clear answer and next steps</p>
                                 <ArrowRight className="w-5 h-5 mx-auto mt-3 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             
-                            <Link href="tel:6053818290" className="group bg-primary text-secondary p-6 rounded-2xl hover:bg-primary/90 transition-all duration-200 hover:shadow-lg">
+                            <Link href="tel:6053893261" className="group bg-primary text-secondary p-6 rounded-2xl hover:bg-primary/90 transition-all duration-200 hover:shadow-lg">
                                 <Phone className="w-8 h-8 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                                 <h3 className="font-bold text-lg mb-2">Call Directly</h3>
-                                <p className="text-sm opacity-80">(605) 381-8290 - Local support</p>
+                                <p className="text-sm opacity-80">(605) 389-3261 - Local support</p>
                                 <ArrowRight className="w-5 h-5 mx-auto mt-3 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             
                             <Link href="/contact" className="group bg-primary text-secondary p-6 rounded-2xl hover:bg-primary/90 transition-all duration-200 hover:shadow-lg">
                                 <MessageCircle className="w-8 h-8 mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                                <h3 className="font-bold text-lg mb-2">Schedule Consultation</h3>
-                                <p className="text-sm opacity-80">Free on-site assessment available</p>
+                                <h3 className="font-bold text-lg mb-2">Book a Site Visit</h3>
+                                <p className="text-sm opacity-80">On-site assessment and quote</p>
                                 <ArrowRight className="w-5 h-5 mx-auto mt-3 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </div>
@@ -353,7 +353,7 @@ export default function FAQPage() {
                             </div>
                             <div className="flex items-center justify-center space-x-2">
                                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                <span>Free Consultations</span>
+                                <span>2-Year Labor Warranty</span>
                             </div>
                             <div className="flex items-center justify-center space-x-2">
                                 <div className="w-2 h-2 bg-primary rounded-full"></div>

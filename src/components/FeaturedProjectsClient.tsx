@@ -102,25 +102,25 @@ export default function FeaturedProjectsClient({ projects }: { projects: Project
         >
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Explore All Our Projects
+              Ready for Your Installation?
             </h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Discover more examples of our professional installations across churches, 
-              businesses, and homes throughout South Dakota.
+              Whether it's cameras, WiFi, or a full AV system—we'll walk your property, 
+              give you options, and get it installed right.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/projects"
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
-                View All Projects
+                Request a Quote
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link 
-                href="/contact"
+                href="/projects"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 rounded-xl transition-all duration-300"
               >
-                Start Your Project
+                View All Projects
               </Link>
             </div>
           </div>

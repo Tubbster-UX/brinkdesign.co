@@ -125,7 +125,7 @@ export default async function BlogPost(props: { params: Promise<{ slug: string }
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-605-381-8290",
+        "telephone": "+1-605-389-3261",
         "contactType": "customer service",
         "availableLanguage": "English"
       }

@@ -19,7 +19,7 @@ export default function StickyHeaderCTA() {
     }, []);
 
     const handleCallClick = () => {
-        window.location.href = "tel:+16053818290"; // Replace with your actual phone number
+        window.location.href = "tel:+16053893261"; // Replace with your actual phone number
     };
 
     if (isDismissed || !isVisible) {

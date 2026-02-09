@@ -19,10 +19,10 @@ const Footer: React.FC = () => {
                         <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left">
                             <Logo className="w-36 mb-6 transition-transform hover:scale-105" />
                             <p className="text-lg font-medium text-gray-200 mb-4 max-w-sm">
-                                Low Voltage Done Right.
+                                Smart Home & AV Done Right.
                             </p>
                             <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
-                                Professional low voltage solutions for homes and businesses across South Dakota. Quality installations, expert service.
+                                Smart home automation, whole-home WiFi, and professional AV installs for South Dakota homes and businesses.
                             </p>
                         </div>
 
@@ -36,14 +36,17 @@ const Footer: React.FC = () => {
                                 <Link href="/services" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
                                     All Services
                                 </Link>
+                                <Link href="/services/smart-home" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
+                                    Smart Home & Automation
+                                </Link>
+                                <Link href="/services/commercial-av" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
+                                    Audio/Video Systems
+                                </Link>
                                 <Link href="/services/low-voltage" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
-                                    Low Voltage Cabling
+                                    WiFi & Wiring
                                 </Link>
                                 <Link href="/services/security-cameras" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
                                     Security Systems
-                                </Link>
-                                <Link href="/services/commercial-av" className="block text-gray-300 hover:text-white hover:translate-x-1 transition-all duration-200">
-                                    Commercial AV
                                 </Link>
                             </nav>
                         </div>
@@ -81,7 +84,7 @@ const Footer: React.FC = () => {
                             
                             <address className="not-italic space-y-1 mb-6 text-gray-300">
                                 <strong className="text-white block">Brink Design Co.</strong>
-                                <a href="tel:+16053818290" className="block hover:text-white transition-colors">(605) 381-8290</a>
+                                <a href="tel:+16053893261" className="block hover:text-white transition-colors">(605) 389-3261</a>
                                 <a href="mailto:contact@brinkdesign.co" className="block hover:text-white transition-colors">contact@brinkdesign.co</a>
                                 <span className="block text-gray-400">Serving western South Dakota</span>
                             </address>

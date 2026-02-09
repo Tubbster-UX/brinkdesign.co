@@ -9,42 +9,44 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 
 const services = [
     {
-        title: 'Security System Installation',
-        description: 'Professional installation of CCTV, alarm systems, and access control for homes and businesses. Advanced monitoring and 24/7 protection.',
-        icon: '/icons/security-system.png',
-        features: ['CCTV Systems', 'Access Control', 'Alarm Systems', '24/7 Monitoring'],
-        color: 'from-red-500 to-orange-500',
-        href: '/services/security-cameras',
+        title: 'Smart Home & Automation',
+        description: 'Lighting, shades, climate, entry, and audio that work together in one app with local support.',
+        icon: '/icons/smart-home.png',
+        features: ['Lighting & Shades', 'Climate & Energy', 'Voice/App Control', 'Scenes & Schedules'],
+        color: 'from-green-500 to-emerald-500',
+        href: '/services/smart-home',
     },
     {
-        title: 'Network Cabling',
-        description: 'Structured cabling solutions for reliable and high-speed data, voice, and video networks. Future-proof infrastructure for growing businesses.',
-        icon: '/icons/network-cabling.png',
-        features: ['Cat6/Cat6a Installation', 'Fiber Optic', 'Network Design', 'Testing & Certification'],
-        color: 'from-blue-500 to-cyan-500',
-        href: '/services/low-voltage',
-    },
-    {
-        title: 'Audio/Video Solutions',
-        description: 'Custom audio and video system setup for conference rooms, home theaters, and commercial spaces. Crystal clear communication and entertainment.',
+        title: 'Audio/Video Systems',
+        description: 'Whole-home audio, media rooms, and commercial AV designed for clarity and simplicity.',
         icon: '/icons/audio-video.png',
-        features: ['Conference Rooms', 'Home Theaters', 'Digital Signage', 'Live Streaming'],
+        features: ['Media/Theater Rooms', 'Distributed Audio', 'Conference AV', 'Livestream/Recording'],
         color: 'from-purple-500 to-pink-500',
         href: '/services/commercial-av',
     },
     {
-        title: 'Smart Home Integration',
-        description: 'Seamless integration of smart devices for automation, security, and energy efficiency. Control your entire home from anywhere.',
-        icon: '/icons/smart-home.png',
-        features: ['Home Automation', 'Voice Control', 'Energy Management', 'Remote Monitoring'],
-        color: 'from-green-500 to-emerald-500',
+        title: 'WiFi & Wiring',
+        description: 'Controller-based WiFi and structured wiring so every room gets fast, reliable coverage.',
+        icon: '/icons/network-cabling.png',
+        features: ['Whole-Home WiFi', 'Structured Cabling', 'Fiber Runs', 'Network Security'],
+        color: 'from-blue-500 to-cyan-500',
+        href: '/services/low-voltage',
     },
     {
-        title: 'Troubleshooting & Maintenance',
-        description: 'Expert diagnostics, repairs, and ongoing maintenance for all low voltage systems. Keep your technology running smoothly.',
+        title: 'Security Systems',
+        description: 'Pro-grade cameras, access, and alerts with local recording and remote access.',
+        icon: '/icons/security-system.png',
+        features: ['IP Cameras', 'Access Control', 'Motion/Perimeter Alerts', 'Remote Monitoring'],
+        color: 'from-red-500 to-orange-500',
+        href: '/services/security-cameras',
+    },
+    {
+        title: 'Care & Support',
+        description: 'Diagnostics, optimization, and maintenance to keep every system running smoothly.',
         icon: '/icons/maintenance.png',
-        features: ['System Diagnostics', 'Preventive Maintenance', 'Emergency Repairs', 'Performance Optimization'],
+        features: ['System Health Checks', 'Firmware & Security', 'Performance Tuning', 'Scheduled Maintenance'],
         color: 'from-amber-500 to-yellow-500',
+        href: '/contact',
     },
 ];
 
@@ -87,18 +89,18 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-    title: "Low Voltage Services – Brink Design Western South Dakota",
-    description: "Comprehensive cabling, AV installation and security camera services for businesses and homes across western South Dakota.",
+    title: "Smart Home & AV Services – Brink Design Co.",
+    description: "Smart home automation, WiFi, audio/video, and security installations for homes, churches, and businesses across western South Dakota.",
     alternates: { canonical: "https://www.brinkdesign.co/services" },
     openGraph: {
-        title: "Low Voltage Services – Brink Design Western South Dakota",
-        description: "Explore our cabling and AV solutions for churches, businesses and residences across western South Dakota.",
+        title: "Smart Home & AV Services – Brink Design Co.",
+        description: "Explore our smart home, WiFi, AV, and security solutions for Rapid City and the Black Hills.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Low Voltage Services – Brink Design Western South Dakota",
-        description: "Professional low voltage wiring, security and AV solutions in the Black Hills.",
+        title: "Smart Home & AV Services – Brink Design Co.",
+        description: "Smart home, WiFi, AV, and security installations with local design and support.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };
@@ -122,7 +124,7 @@ export default function Page() {
                                 Services
                             </h1>
                             <p className="text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
-                                From security systems to smart home automation, we deliver cutting-edge low voltage solutions that power your modern lifestyle.
+                                Smart home automation, WiFi, audio/video, and security installs—designed, programmed, and supported locally.
                             </p>
                         </div>
                     </div>
@@ -159,7 +161,7 @@ export default function Page() {
                         What We Specialize In
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Comprehensive low voltage solutions designed to meet the evolving needs of modern homes and businesses across South Dakota.
+                        Smart home, WiFi, AV, and security solutions tailored for homes, churches, and businesses across South Dakota.
                     </p>
                 </div>
 
@@ -252,7 +254,7 @@ export default function Page() {
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Benefits of Working With Us</h2>
                             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                                Professional service backed by years of low voltage expertise.
+                                Professional service backed by years of smart home, networking, and AV integration work.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -306,7 +308,7 @@ export default function Page() {
                             Ready to Transform Your Space?
                         </h2>
                         <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                            Get a free consultation and see how our expert low voltage solutions can enhance your property&apos;s functionality and value.
+                            Get a free consultation and see how Smart Home and AV upgrades can make your spaces simpler, safer, and more impressive.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>

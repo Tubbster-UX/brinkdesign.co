@@ -88,7 +88,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "Brink Design Co.",
               url: "https://www.brinkdesign.co",
-              telephone: "605-381-8290",
+              telephone: "605-389-3261",
               areaServed: [
                 { "@type": "State", name: "South Dakota" },
                 { "@type": "State", name: "Wyoming" },

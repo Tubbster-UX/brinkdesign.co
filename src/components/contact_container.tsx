@@ -26,8 +26,8 @@ const ContactContainer = () => {
             icon: Phone,
             title: "Call Us",
             description: "Speak directly with our team",
-            value: "(605) 381-8290",
-            href: "tel:+16053818290",
+            value: "(605) 389-3261",
+            href: "tel:+16053893261",
             color: "bg-blue-500"
         },
         {

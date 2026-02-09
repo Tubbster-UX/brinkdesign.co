@@ -20,6 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: 'https://www.brinkdesign.co/south-dakota', lastModified: now },
     { url: 'https://www.brinkdesign.co/nebraska', lastModified: now },
     { url: 'https://www.brinkdesign.co/services/commercial-av', lastModified: now },
+    { url: 'https://www.brinkdesign.co/services/smart-home', lastModified: now },
     { url: 'https://www.brinkdesign.co/services/low-voltage', lastModified: now },
     { url: 'https://www.brinkdesign.co/services/security-cameras', lastModified: now },
     { url: 'https://www.brinkdesign.co/privacy-policy', lastModified: now },

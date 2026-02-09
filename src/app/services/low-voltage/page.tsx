@@ -27,20 +27,20 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Low Voltage Cabling – Brink Design Western South Dakota",
+    title: "WiFi & Network Cabling | Brink Design Co.",
     description:
-        "Expert low voltage cabling for data, voice, video and security systems across the Black Hills region.",
+        "Fix WiFi dead zones and run clean network cables. Structured wiring for homes and businesses in Rapid City and western South Dakota.",
     alternates: { canonical: "https://www.brinkdesign.co/services/low-voltage" },
     openGraph: {
-        title: "Low Voltage Cabling – Brink Design Western South Dakota",
-        description: "Professional structured wiring solutions for businesses and homes in western South Dakota.",
+        title: "WiFi & Network Cabling | Brink Design Co.",
+        description: "Fast, reliable WiFi and clean cable runs for homes and businesses in western South Dakota.",
         images: ["/og-image.jpg"],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Low Voltage Cabling – Brink Design Western South Dakota",
+        title: "WiFi & Network Cabling | Brink Design Co.",
         description:
-            "High-quality cabling installation for network and security infrastructure in Sturgis and Rapid City.",
+            "WiFi that works in every room. Professional cabling for Rapid City and the Black Hills.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };
@@ -210,7 +210,7 @@ export default function LowVoltageCablingPage() {
             "@type": "LocalBusiness",
             name: "Brink Design Co.",
             url: "https://www.brinkdesign.co",
-            telephone: "605-381-8290",
+            telephone: "605-389-3261",
             email: "contact@brinkdesign.co",
             address: {
                 "@type": "PostalAddress",
@@ -243,20 +243,20 @@ export default function LowVoltageCablingPage() {
             <section className="bg-primary py-20 lg:py-32">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                        Low Voltage Cabling Services
+                        WiFi & Network Cabling
                     </h1>
                     <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-                        Professional structured wiring for data, voice, video, and security systems. Clean installations that deliver reliable performance for years to come.
+                        Fast, reliable internet in every room. We run the cables, set up access points, and make sure your network just works.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
                         <Link href="/contact">
                             <Button variant="default" size="lg" className="bg-accent text-accent-foreground font-bold shadow-md hover:bg-accent/90">
-                                Get Free Consultation
+                                Request a Quote
                             </Button>
                         </Link>
-                        <Link href="/projects">
+                        <Link href="tel:6053893261">
                             <Button variant="outline" size="lg">
-                                View Our Work
+                                Call (605) 389-3261
                             </Button>
                         </Link>
                     </div>
@@ -267,13 +267,13 @@ export default function LowVoltageCablingPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div className="text-center mb-16">
                     <div className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
-                        Complete Solutions
+                        What We Install
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Low Voltage Services We Provide
+                        Cabling & WiFi Done Right
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        From simple data runs to complete structured cabling systems, we handle all your low voltage needs with precision and professionalism.
+                        From one ethernet drop to a whole building, we handle it cleanly and test everything before we leave.
                     </p>
                 </div>
 
@@ -281,9 +281,6 @@ export default function LowVoltageCablingPage() {
                     {services.map((service, index) => (
                         <div key={index} className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                             <div className="relative">
-                                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <service.icon className="w-8 h-8 text-white" />
-                                </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                                 <p className="text-gray-600 mb-4">{service.description}</p>
                                 <ul className="space-y-2">

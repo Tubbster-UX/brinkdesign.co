@@ -30,20 +30,20 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Security Camera Systems – Brink Design Western South Dakota",
+    title: "Security Cameras – No Monthly Fees | Brink Design Co.",
     description:
-        "Professional security camera installation with local recording and remote access for homes and businesses in western South Dakota.",
+        "Security camera installation with local recording and phone access. No monthly fees. Serving homes and businesses in Rapid City and western South Dakota.",
     alternates: { canonical: "https://www.brinkdesign.co/services/security-cameras" },
     openGraph: {
-        title: "Security Camera Systems – Brink Design Western South Dakota",
-        description: "Expert surveillance solutions and monitoring services for the Black Hills region.",
+        title: "Security Cameras – No Monthly Fees | Brink Design Co.",
+        description: "Professional camera systems with local recording and remote access. No subscriptions.",
         images: ["/og-image.jpg"],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Security Camera Systems – Brink Design Western South Dakota",
+        title: "Security Cameras – No Monthly Fees | Brink Design Co.",
         description:
-            "Protect your property with professional CCTV installation from Brink Design based in western South Dakota.",
+            "Security cameras for homes and businesses. Local recording, phone alerts, no monthly fees.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };
@@ -240,7 +240,7 @@ export default function SecurityCamerasPage() {
             "@type": "LocalBusiness",
             name: "Brink Design Co.",
             url: "https://www.brinkdesign.co",
-            telephone: "605-381-8290",
+            telephone: "605-389-3261",
             email: "contact@brinkdesign.co",
             address: {
                 "@type": "PostalAddress",
@@ -263,20 +263,20 @@ export default function SecurityCamerasPage() {
             <section className="bg-primary py-20 lg:py-32">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                        Security Camera Systems
+                        Security Cameras That Work
                     </h1>
                     <p className="text-lg md:text-xl text-red-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-                        Protect what matters most with professional-grade surveillance systems. Local recording, remote access, and intelligent monitoring without monthly fees.
+                        See your property from anywhere. Local recording, phone alerts, and no monthly fees. Installed by a local team that stands behind every job.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
                         <Link href="/contact">
                             <Button variant="default" size="lg" className="bg-accent text-accent-foreground font-bold shadow-md hover:bg-accent/90">
-                                Get Free Security Assessment
+                                Request a Quote
                             </Button>
                         </Link>
-                        <Link href="/projects">
+                        <Link href="tel:6053893261">
                             <Button variant="outline" size="lg">
-                                View Installations
+                                Call (605) 389-3261
                             </Button>
                         </Link>
                     </div>
@@ -287,13 +287,13 @@ export default function SecurityCamerasPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div className="text-center mb-16">
                     <div className="inline-block px-4 py-2 bg-red-100 text-red-800 rounded-full text-sm font-medium mb-6">
-                        Camera Solutions
+                        Camera Options
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Professional Camera Types
+                        We'll Match the Right Cameras to Your Property
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Choose from our comprehensive selection of commercial-grade cameras designed for every security need and environment.
+                        Not sure which type you need? We'll walk your property and recommend the right setup for your situation.
                     </p>
                 </div>
 
@@ -301,9 +301,6 @@ export default function SecurityCamerasPage() {
                     {cameraTypes.map((camera, index) => (
                         <div key={index} className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                             <div className="relative">
-                                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <camera.icon className="w-8 h-8 text-white" />
-                                </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">{camera.title}</h3>
                                 <p className="text-gray-600 mb-4">{camera.description}</p>
                                 <ul className="space-y-2">

@@ -31,13 +31,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Commercial AV Installation – Brink Design Western South Dakota",
+    title: "Church & Commercial AV Installation | Brink Design Co.",
     description:
-        "Professional audio and video systems for churches, schools and businesses across western South Dakota.",
+        "Sound systems, projectors, and livestreaming for churches, schools, and businesses. Clear audio, simple controls, training included. Rapid City and western South Dakota.",
     openGraph: {
-        title: "Commercial AV Installation – Brink Design Western South Dakota",
+        title: "Church & Commercial AV Installation | Brink Design Co.",
         description:
-            "Expert audio/video solutions for organizations in Sturgis, Rapid City and the surrounding area.",
+            "Professional AV for churches and businesses. Sound, video, livestreaming with training included.",
         url: "https://www.brinkdesign.co/services/commercial-av",
         type: "article",
         images: [
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
     alternates: { canonical: "https://www.brinkdesign.co/services/commercial-av" },
     twitter: {
         card: "summary_large_image",
-        title: "Commercial AV Installation – Brink Design Western South Dakota",
+        title: "Church & Commercial AV Installation | Brink Design Co.",
         description:
-            "Professional AV systems and integration services for the Black Hills region.",
+            "Sound, video, and livestreaming that your team can run. Training included.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };
@@ -263,7 +263,7 @@ export default function CommercialAVPage() {
             "@type": "LocalBusiness",
             name: "Brink Design Co.",
             url: "https://www.brinkdesign.co",
-            telephone: "605-381-8290",
+            telephone: "605-389-3261",
             email: "contact@brinkdesign.co",
             address: {
                 "@type": "PostalAddress",
@@ -286,20 +286,20 @@ export default function CommercialAVPage() {
             <section className="bg-primary py-20 lg:py-32">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                        Commercial AV Installation
+                        Church & Commercial AV
                     </h1>
                     <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-                        Professional audio and video systems for churches, schools, and businesses across western South Dakota. Custom AV design and installation for exceptional performance.
+                        Sound systems, projectors, and livestreaming that your team can actually run. Clear audio, simple controls, and training so volunteers aren't guessing.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
                         <Link href="/contact">
                             <Button variant="default" size="lg" className="bg-accent text-accent-foreground font-bold shadow-md hover:bg-accent/90">
-                                Start Your AV Project
+                                Request a Quote
                             </Button>
                         </Link>
-                        <Link href="/projects">
+                        <Link href="tel:6053893261">
                             <Button variant="outline" size="lg">
-                                View Our Work
+                                Call (605) 389-3261
                             </Button>
                         </Link>
                     </div>
@@ -310,13 +310,13 @@ export default function CommercialAVPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div className="text-center mb-16">
                     <div className="inline-block px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium mb-6">
-                        AV Solutions
+                        What We Install
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Professional AV Services
+                        Sound, Video & Streaming Done Right
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        From simple conference room setups to complex multi-zone systems, we deliver AV solutions that work flawlessly.
+                        From a simple projector setup to a full sanctuary sound system, we install it, train your team, and support it after.
                     </p>
                 </div>
 
@@ -324,9 +324,6 @@ export default function CommercialAVPage() {
                     {avServices.map((service, index) => (
                         <div key={index} className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                             <div className="relative">
-                                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                    <service.icon className="w-8 h-8 text-white" />
-                                </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                                 <p className="text-gray-600 mb-4">{service.description}</p>
                                 <ul className="space-y-2">

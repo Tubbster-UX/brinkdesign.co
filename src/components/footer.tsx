@@ -19,10 +19,10 @@ const Footer: React.FC = () => {
                         <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left">
                             <Logo className="w-36 mb-6 transition-transform hover:scale-105" />
                             <p className="text-lg font-medium text-gray-200 mb-4 max-w-sm">
-                                Smart Home & AV Done Right.
+                                Low Voltage Done Right.
                             </p>
                             <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
-                                Smart home automation, whole-home WiFi, and professional AV installs for South Dakota homes and businesses.
+                                Security cameras, WiFi, cabling, and AV systems—installed for homes, churches, and businesses across western South Dakota.
                             </p>
                         </div>
 
@@ -91,10 +91,10 @@ const Footer: React.FC = () => {
 
                             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
                                 <p className="text-sm mb-3 text-gray-300 font-medium">Ready to get started?</p>
-                                <p className="text-xs mb-4 text-gray-400">Free consultation • No pressure • Expert advice</p>
+                                <p className="text-xs mb-4 text-gray-400">Licensed & Insured • No pressure • 2-Year Labor Warranty</p>
                                 <Link href="/contact">
                                     <Button className="w-full bg-secondary hover:bg-secondary/90 text-primary font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-secondary/20">
-                                        Book Free Site Visit
+                                        Book a Site Visit & Quote
                                     </Button>
                                 </Link>
                             </div>

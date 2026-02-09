@@ -233,11 +233,11 @@ export default async function LineCardPage() {
               Ready to Work with the Best?
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Leverage our partnerships with industry leaders to get the highest quality solutions for your project.
+              We install equipment from the brands listed below. Need help choosing? We’ll recommend the right gear for your space.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-secondary font-bold rounded-lg hover:bg-primary/90 transition-all duration-200 hover:shadow-lg">
-                Start Your Project
+                Book a Site Visit & Quote
               </Link>
               <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-secondary rounded-lg transition-all duration-200">
                 View Our Services

@@ -195,7 +195,7 @@ export default function Header() {
                                 <span className="font-medium">(605) 389-3261</span>
                             </a>
                             <Button asChild >
-                                <Link href="/contact">Contact Us</Link>
+                                <Link href="/contact">Book a Site Visit & Quote</Link>
                             </Button>
                         </div>
 
@@ -313,7 +313,7 @@ export default function Header() {
                             <div className="pt-4 border-t border-gray-200">
                                 <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-sm">
                                     <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                                        Schedule Free Site Visit
+                                        Book a Site Visit & Quote
                                     </Link>
                                 </Button>
                             </div>

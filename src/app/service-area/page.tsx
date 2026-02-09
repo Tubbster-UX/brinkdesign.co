@@ -105,7 +105,7 @@ export default function ServiceArea() {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200 hover:shadow-lg">
-                                Schedule Site Visit
+                                Book a Site Visit & Quote
                             </Link>
                             <Link href="tel:6053893261" className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <Phone className="mr-2" size={20} />
@@ -279,13 +279,13 @@ export default function ServiceArea() {
                             Ready to Get Started?
                         </h2>
                         <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                            Whether you&apos;re in downtown Rapid City or the remote Black Hills, we&apos;re here to help with expert technology solutions.
+                            Whether you&apos;re in downtown Rapid City or the remote Black Hills, we&apos;ll walk your site and give you a clear plan.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-8">
                             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-primary text-secondary font-bold rounded-lg hover:bg-primary/90 transition-all duration-200 hover:shadow-lg">
                                 <Mail className="mr-2" size={20} />
-                                Schedule Consultation
+                                Book a Site Visit & Quote
                             </Link>
                             <Link href="tel:6053893261" className="inline-flex items-center justify-center px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-secondary rounded-lg transition-all duration-200">
                                 <Phone className="mr-2" size={20} />
@@ -296,7 +296,7 @@ export default function ServiceArea() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
                             <div className="flex items-center justify-center space-x-2">
                                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                <span>Free Site Visits</span>
+                                <span>On-Site Visits Available</span>
                             </div>
                             <div className="flex items-center justify-center space-x-2">
                                 <div className="w-2 h-2 bg-primary rounded-full"></div>
@@ -304,7 +304,7 @@ export default function ServiceArea() {
                             </div>
                             <div className="flex items-center justify-center space-x-2">
                                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                <span>Same-Day Service</span>
+                                <span>Same-Day Response</span>
                             </div>
                         </div>
                     </div>

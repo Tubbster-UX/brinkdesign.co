@@ -93,7 +93,7 @@ const AboutPage: React.FC = () => {
                     No pressure. No overcomplication. Just a plan you can move forward with.
                 </p>
                 <Link href="/contact" className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                    Request a Quote
+                    Book a Site Visit & Quote
                 </Link>
             </section>
         </main>

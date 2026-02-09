@@ -39,7 +39,7 @@ export default function NebraskaPage() {
                             Nebraska AV Installation
                         </h1>
                         <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-                            Brink Design Co. brings professional AV installation and integrated system expertise to Nebraska. Our team installs custom solutions for conference rooms, schools, houses of worship, and residential projects.
+                            Brink Design Co. brings professional AV installation to Nebraska. Our team installs cameras, WiFi, cabling, and AV systems for conference rooms, schools, houses of worship, and residential projects.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200">

@@ -322,7 +322,7 @@ export default async function BlogPost(props: { params: Promise<{ slug: string }
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200">
-                  Schedule Consultation
+                  Book a Site Visit & Quote
                 </Link>
                 <Link href="/services" className="inline-flex items-center justify-center px-6 py-3 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                   View Services
@@ -365,11 +365,11 @@ export default async function BlogPost(props: { params: Promise<{ slug: string }
                   <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
                     <span className="flex items-center space-x-1">
                       <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
-                      <span>Free consultation</span>
+                      <span>Site visits available</span>
                     </span>
                     <span className="flex items-center space-x-1">
                       <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
-                      <span>Expert advice</span>
+                      <span>Expert installs</span>
                     </span>
                   </div>
                 </div>

@@ -185,7 +185,7 @@ export default function SmartHomePage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact">
               <Button size="lg" className="bg-accent text-accent-foreground font-bold shadow-md hover:bg-accent/90">
-                Request a Quote
+                Book a Site Visit & Quote
               </Button>
             </Link>
             <Link href="tel:6053893261">
@@ -295,7 +295,7 @@ export default function SmartHomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-primary text-secondary hover:bg-primary/90 px-8 py-4 text-lg">
-              <Link href="/contact">Request a Quote</Link>
+              <Link href="/contact">Book a Site Visit & Quote</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-secondary px-8 py-4 text-lg">
               <Link href="tel:6053893261">Call (605) 389-3261</Link>

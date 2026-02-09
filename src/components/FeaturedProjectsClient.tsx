@@ -113,7 +113,7 @@ export default function FeaturedProjectsClient({ projects }: { projects: Project
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
-                Request a Quote
+                Book a Site Visit & Quote
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link 

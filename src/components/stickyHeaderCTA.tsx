@@ -32,11 +32,11 @@ export default function StickyHeaderCTA() {
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                         <div className="hidden sm:block">
-                            <span className="font-semibold">Book a Free Site Assessment</span>
+                            <span className="font-semibold">Need Cameras, WiFi, or AV Installed?</span>
                             <span className="ml-2 text-primary-foreground/80">Same-Day Quotes Available</span>
                         </div>
                         <div className="sm:hidden">
-                            <span className="font-semibold">Free Site Visit + Quote</span>
+                            <span className="font-semibold">Site Visit + Quote</span>
 
                         </div>
                     </div>

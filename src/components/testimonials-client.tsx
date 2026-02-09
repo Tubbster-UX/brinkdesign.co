@@ -164,18 +164,17 @@ export default function TestimonialsClient({ testimonials }: TestimonialsClientP
                 >
                     <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                            Ready to Join Our Happy Clients?
+                            Need Something Installed?
                         </h3>
                         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                            Experience the same professional service and quality installations
-                            that have earned us these amazing reviews.
+                            We&rsquo;ll walk your site, figure out what you need, and give you a clear quote.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
                                 href="/contact"
                                 className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
                             >
-                                Start Your Project
+                                Book a Site Visit & Quote
                             </a>
                             <a
                                 href="tel:6053893261"

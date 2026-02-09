@@ -251,7 +251,7 @@ export default function LowVoltageCablingPage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
                         <Link href="/contact">
                             <Button variant="default" size="lg" className="bg-accent text-accent-foreground font-bold shadow-md hover:bg-accent/90">
-                                Request a Quote
+                                Book a Site Visit & Quote
                             </Button>
                         </Link>
                         <Link href="tel:6053893261">
@@ -300,12 +300,12 @@ export default function LowVoltageCablingPage() {
             {/* Request a Quote CTA */}
             <div className="bg-gradient-to-r from-gray-50 to-blue-50 py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-6">Request a Quote</h2>
+                    <h2 className="text-4xl font-bold text-gray-900 mb-6">Get a Quote</h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
                         Each cabling project is unique—contact us for a personalized estimate.
                     </p>
                     <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
-                        <Link href="/contact">Get a Quote</Link>
+                        <Link href="/contact">Book a Site Visit & Quote</Link>
                     </Button>
                 </div>
             </div>

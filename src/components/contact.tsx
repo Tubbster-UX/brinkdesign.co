@@ -146,15 +146,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                         onBlur={() => setFocusedField(null)}
                         required
                     >
-                        <option value="">Select your project type</option>
-                        <option value="AV Installation">AV Installation & Integration</option>
-                        <option value="Network Cabling">Network Cabling & Infrastructure</option>
-                        <option value="Security Systems">Security Systems & Cameras</option>
+                        <option value="">What do you need installed?</option>
+                        <option value="Security Cameras">Security Cameras</option>
+                        <option value="WiFi & Networking">WiFi & Network Cabling</option>
+                        <option value="Church & Commercial AV">Church & Commercial AV</option>
                         <option value="Smart Home">Smart Home Automation</option>
-                        <option value="Commercial AV">Commercial AV Solutions</option>
+                        <option value="Structured Cabling">Structured Cabling & Wiring</option>
                         <option value="Maintenance">System Maintenance & Support</option>
-                        <option value="Consultation">Free Consultation</option>
-                        <option value="Other">Other / Custom Project</option>
+                        <option value="Other">Other / Not Sure Yet</option>
                     </select>
                 </div>
             </div>

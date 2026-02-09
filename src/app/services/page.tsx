@@ -56,8 +56,8 @@ const benefits = [
         description: 'Work with technicians who design and install systems every day.',
     },
     {
-        title: 'Tailored Solutions',
-        description: 'Every project is customized to match your space and technology goals.',
+        title: 'Built for Your Space',
+        description: 'Every project is designed around your building, not a one-size template.',
     },
     {
         title: 'Upfront Pricing',
@@ -71,8 +71,8 @@ const benefits = [
 
 const faqs = [
     {
-        question: 'Do you offer free consultations?',
-        answer: 'Yes, we provide complimentary on-site assessments and detailed quotes.',
+        question: 'How do I get started?',
+        answer: 'Call us or fill out the contact form. We\'ll schedule a site visit to understand your space and give you a clear quote.',
     },
     {
         question: 'How long does installation take?',
@@ -140,12 +140,12 @@ export default function Page() {
                             <div className="text-gray-300">Years Experience</div>
                         </div>
                         <div className="space-y-2">
-                            <div className="text-3xl md:text-4xl font-bold text-secondary">24/7</div>
-                            <div className="text-gray-300">Support Available</div>
+                            <div className="text-3xl md:text-4xl font-bold text-secondary">2yr</div>
+                            <div className="text-gray-300">Labor Warranty</div>
                         </div>
                         <div className="space-y-2">
                             <div className="text-3xl md:text-4xl font-bold text-secondary">100%</div>
-                            <div className="text-gray-300">Satisfaction Rate</div>
+                            <div className="text-gray-300">Licensed & Insured</div>
                         </div>
                     </div>
                 </div>
@@ -232,10 +232,10 @@ export default function Page() {
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {[
-                            { step: '01', title: 'Consultation', desc: 'Free on-site assessment of your needs' },
-                            { step: '02', title: 'Design', desc: 'Custom solution tailored to your space' },
-                            { step: '03', title: 'Installation', desc: 'Professional implementation by experts' },
-                            { step: '04', title: 'Support', desc: 'Ongoing maintenance and support' },
+                            { step: '01', title: 'Site Visit', desc: 'On-site assessment of your space and needs' },
+                            { step: '02', title: 'Design', desc: 'Custom plan tailored to your space' },
+                            { step: '03', title: 'Installation', desc: 'Professional implementation by our team' },
+                            { step: '04', title: 'Support', desc: 'Training, handover, and ongoing support' },
                         ].map((item, index) => (
                             <div key={index} className="text-center group">
                                 <div className="bg-secondary text-primary rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -274,12 +274,12 @@ export default function Page() {
                 {/* Quote Section */}
                 <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-20">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Request a Quote</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Get a Quote</h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
                             Every project is unique—contact us for a personalized estimate.
                         </p>
                         <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
-                            <Link href="/contact">Get a Quote</Link>
+                            <Link href="/contact">Book a Site Visit & Quote</Link>
                         </Button>
                     </div>
                 </div>
@@ -305,14 +305,14 @@ export default function Page() {
                 <div className="container mx-auto px-6 text-center">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                            Ready to Transform Your Space?
+                            Ready to Get Started?
                         </h2>
                         <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                            Get a free consultation and see how Smart Home and AV upgrades can make your spaces simpler, safer, and more impressive.
+                            We’ll walk your property, figure out what you need, and give you a clear plan with honest pricing.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
-                                <Link href="/contact">Schedule Free Consultation</Link>
+                                <Link href="/contact">Book a Site Visit & Quote</Link>
                             </Button>
                             <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-secondary px-8 py-4 text-lg" asChild>
                                 <Link href="/projects">View Our Work</Link>
@@ -322,15 +322,15 @@ export default function Page() {
                         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
                             <div className="flex items-center justify-center space-x-2">
                                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                <span>Free Site Evaluation</span>
+                                <span>On-Site Assessment</span>
                             </div>
                             <div className="flex items-center justify-center space-x-2">
                                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                <span>No Pressure Consultation</span>
+                                <span>No Pressure Quoting</span>
                             </div>
                             <div className="flex items-center justify-center space-x-2">
                                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                <span>Expert Recommendations</span>
+                                <span>2-Year Labor Warranty</span>
                             </div>
                         </div>
                     </div>

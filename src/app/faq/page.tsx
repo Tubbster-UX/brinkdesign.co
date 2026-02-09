@@ -168,7 +168,7 @@ export default function FAQPage() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200 hover:shadow-lg">
                                 <MessageCircle className="mr-2" size={20} />
-                                Request a Quote
+                                Book a Site Visit & Quote
                             </Link>
                             <Link href="tel:6053893261" className="inline-flex items-center justify-center px-8 py-4 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <Phone className="mr-2" size={20} />

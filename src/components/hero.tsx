@@ -34,7 +34,7 @@ export default function Hero() {
                     <div className="flex flex-col sm:flex-row gap-3 mb-8">
                         <Button asChild size="lg" className="bg-accent text-gray-900 hover:bg-yellow-300 font-bold px-8 py-4 text-base">
                             <Link href="/contact" className="inline-flex items-center">
-                                Request a Quote
+                                Book a Site Visit & Quote
                                 <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
                         </Button>

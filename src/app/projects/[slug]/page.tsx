@@ -161,7 +161,7 @@ export default async function Project(props: { params: Promise<{ slug: string }>
               </h1>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-accent text-gray-900 font-bold rounded-lg hover:bg-yellow-300 transition-colors">
-                  Request a Quote
+                  Book a Site Visit & Quote
                 </Link>
                 <Link href="/projects" className="inline-flex items-center justify-center px-6 py-3 border border-white/30 text-white hover:bg-white/10 rounded-lg transition-colors">
                   All Projects
@@ -209,7 +209,7 @@ export default async function Project(props: { params: Promise<{ slug: string }>
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">
-                  Request a Quote
+                  Book a Site Visit & Quote
                 </Link>
                 <Link href="tel:6053893261" className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-semibold">
                   Call (605) 389-3261

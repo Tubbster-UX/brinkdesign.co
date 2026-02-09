@@ -63,11 +63,10 @@ export default function Services() {
             What We Install
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Low Voltage Done Right
+            What We Install
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Cameras, WiFi, cabling, and AV systems—installed by a local team 
-            that shows up on time and stands behind every job.
+            Cameras, WiFi, cabling, and AV installed by a local team that shows up on time and stands behind every job.
           </p>
         </motion.div>
 
@@ -128,11 +127,11 @@ export default function Services() {
         >
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Not Sure Where to Start?
+              Not Sure What You Need?
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Tell us what you're trying to solve—cameras, WiFi dead zones, better sound—and 
-              we'll recommend the right approach. No pressure, just straight answers.
+              Tell us what&rsquo;s not working dead zones, bad cameras, messy wiring and 
+              we&rsquo;ll walk the site and give you clear options.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

@@ -26,15 +26,15 @@ export default function Hero() {
                         Rapid City &bull; Black Hills &bull; Western SD
                     </p>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 leading-[1.1]">
-                        Security Cameras, Wi-Fi & AV — Installed Right
+                        Cameras, Wi-Fi & AV — Installed Right
                     </h1>
                     <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl leading-relaxed">
-                        We install low-voltage systems for homes, churches, and businesses across western South Dakota. Clean work, honest pricing, no subscriptions.
+                        We install and service low-voltage systems for homes, churches, and businesses across western South Dakota. Licensed, insured, no subscriptions.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3 mb-8">
                         <Button asChild size="lg" className="bg-accent text-gray-900 hover:bg-yellow-300 font-bold px-8 py-4 text-base">
                             <Link href="/contact" className="inline-flex items-center">
-                                Book a Site Visit & Quote
+                                Book a Site Visit &amp; Quote
                                 <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
                         </Button>
@@ -46,10 +46,10 @@ export default function Hero() {
                         </Button>
                     </div>
                     <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-blue-200">
-                        <span>Licensed & Insured</span>
-                        <span className="text-blue-400">•</span>
+                        <span>Licensed &amp; Insured</span>
+                        <span className="text-blue-400">&bull;</span>
                         <span>2-Year Labor Warranty</span>
-                        <span className="text-blue-400">•</span>
+                        <span className="text-blue-400">&bull;</span>
                         <span>No Monthly Fees</span>
                     </div>
                 </div>

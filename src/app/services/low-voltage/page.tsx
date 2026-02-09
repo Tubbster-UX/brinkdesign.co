@@ -88,8 +88,8 @@ export default function LowVoltageCablingPage() {
     const whyChooseUs = [
         {
             icon: Shield,
-            title: "Clean, Professional Installs",
-            description: "Meticulous wire management and organization for lasting performance",
+            title: "Clean, Solid Installs",
+            description: "Organized runs, labeled cables, and tidy racks",
             color: "text-green-600"
         },
         {
@@ -106,8 +106,8 @@ export default function LowVoltageCablingPage() {
         },
         {
             icon: Users,
-            title: "Experienced Team",
-            description: "Certified technicians with years of low voltage expertise",
+            title: "Local Crew",
+            description: "Based in Rapid City with years of hands-on cabling work",
             color: "text-purple-600"
         },
         {
@@ -118,8 +118,8 @@ export default function LowVoltageCablingPage() {
         },
         {
             icon: Star,
-            title: "Local Expertise",
-            description: "South Dakota owned with deep understanding of local needs",
+            title: "Local Knowledge",
+            description: "South Dakota owned — we know the area and the building codes",
             color: "text-yellow-500"
         }
     ];
@@ -142,23 +142,23 @@ export default function LowVoltageCablingPage() {
     const processSteps = [
         {
             step: "01",
-            title: "Site Assessment",
-            description: "Comprehensive evaluation of your space and requirements"
+            title: "Site Walk",
+            description: "We look at your space and figure out what needs to be run"
         },
         {
             step: "02",
-            title: "Custom Design",
-            description: "Tailored wiring plan optimized for your specific needs"
+            title: "Plan & Quote",
+            description: "Wiring plan with a clear, written quote"
         },
         {
             step: "03",
-            title: "Professional Install",
-            description: "Clean, organized installation by certified technicians"
+            title: "Installation",
+            description: "Clean, organized runs by our crew"
         },
         {
             step: "04",
-            title: "Testing & Documentation",
-            description: "Complete testing, labeling, and project documentation"
+            title: "Testing & Labels",
+            description: "Every cable tested, labeled, and documented"
         }
     ];
 
@@ -302,7 +302,7 @@ export default function LowVoltageCablingPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-4xl font-bold text-gray-900 mb-6">Get a Quote</h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-                        Each cabling project is unique—contact us for a personalized estimate.
+                        Tell us what you need wired — we’ll give you a written quote.
                     </p>
                     <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
                         <Link href="/contact">Book a Site Visit & Quote</Link>

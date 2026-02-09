@@ -205,7 +205,7 @@ export default async function Project(props: { params: Promise<{ slug: string }>
             <div className="flex-1">
               <h2 className="text-2xl font-bold text-gray-900 mb-3">Need something similar?</h2>
               <p className="text-base text-gray-600 mb-6">
-                We&apos;ll walk your site, figure out what you need, and give you a clear plan with real pricing. No pressure, no fluff.
+                We&apos;ll walk your site, figure out what you need, and give you a clear quote.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">

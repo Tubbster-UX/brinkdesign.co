@@ -92,7 +92,7 @@ export default async function LineCardPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
             <Link href="/contact">
               <Button variant="default" size="lg" className="bg-accent text-secondary-foreground font-bold shadow-md hover:bg-accent/90">
-                Get Expert Consultation
+                Book a Site Visit & Quote
               </Button>
             </Link>
             <Link href="/services">

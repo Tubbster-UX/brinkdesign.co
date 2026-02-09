@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
 
                             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
                                 <p className="text-sm mb-3 text-gray-300 font-medium">Ready to get started?</p>
-                                <p className="text-xs mb-4 text-gray-400">Licensed & Insured • No pressure • 2-Year Labor Warranty</p>
+                                <p className="text-xs mb-4 text-gray-400">Licensed &amp; Insured &bull; 2-Year Labor Warranty &bull; No Monthly Fees</p>
                                 <Link href="/contact">
                                     <Button className="w-full bg-secondary hover:bg-secondary/90 text-primary font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-secondary/20">
                                         Book a Site Visit & Quote

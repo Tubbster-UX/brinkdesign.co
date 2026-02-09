@@ -89,8 +89,7 @@ export default function TestimonialsClient({ testimonials }: TestimonialsClientP
                         What Our Clients Say
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Don&rsquo;t just take our word for it. Here&rsquo;s what South Dakota businesses
-                        and homeowners say about working with Brink Design Co.
+                        Real reviews from South Dakota homeowners and businesses we&rsquo;ve worked with.
                     </p>
                 </motion.div>
 
@@ -164,10 +163,10 @@ export default function TestimonialsClient({ testimonials }: TestimonialsClientP
                 >
                     <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                            Need Something Installed?
+                            Ready to Get Started?
                         </h3>
                         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                            We&rsquo;ll walk your site, figure out what you need, and give you a clear quote.
+                            Tell us what you need — we&rsquo;ll walk the site and give you a clear quote.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a

@@ -44,31 +44,31 @@ const ContactContainer = () => {
         {
             icon: ShieldCheck,
             title: "No Hidden Fees",
-            description: "Transparent pricing, no subscriptions",
+            description: "Clear pricing, no subscriptions",
             color: "text-green-600"
         },
         {
             icon: Home,
-            title: "Local Experts",
-            description: "South Dakota owned & operated",
+            title: "Local Crew",
+            description: "Based in Rapid City, SD",
             color: "text-blue-600"
         },
         {
             icon: Star,
             title: "5-Star Rated",
-            description: "Trusted by satisfied clients",
+            description: "Trusted by real clients",
             color: "text-yellow-500"
         },
         {
             icon: Zap,
-            title: "Fast Response",
-            description: "Same-day replies guaranteed",
+            title: "24hr Response",
+            description: "We get back to you fast",
             color: "text-orange-500"
         },
         {
             icon: Award,
-            title: "Expert Team",
-            description: "Certified professionals",
+            title: "Licensed & Insured",
+            description: "Full coverage on every job",
             color: "text-indigo-600"
         }
     ];
@@ -78,7 +78,7 @@ const ContactContainer = () => {
             <div className="max-w-xl mx-auto px-4 text-center pt-12 pb-6">
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">Contact Brink Design</h1>
                 <p className="text-base text-gray-600 mb-2">We&apos;re here to help with AV, security, and cabling projects—big or small.</p>
-                <p className="text-sm text-gray-500">Fill out the form or reach out directly. No pressure, no spam.</p>
+                <p className="text-sm text-gray-500">Fill out the form or reach out directly. We respond within 24 hours.</p>
             </div>
 
             {/* Contact Methods */}

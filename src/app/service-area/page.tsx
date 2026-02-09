@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Brink Design provides AV installation and low voltage services throughout western South Dakota and nearby states.",
     openGraph: {
         title: "Service Area – Brink Design Western South Dakota",
-        description: "Professional AV and cabling solutions across South Dakota, Wyoming and Nebraska.",
+        description: "AV, security, and cabling installs across South Dakota, Wyoming, and Nebraska.",
         url: "https://www.brinkdesign.co/service-area",
         type: "website",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
@@ -27,56 +27,56 @@ export const metadata: Metadata = {
 
 export default function ServiceArea() {
     const serviceAreas = [
-        { name: "Rapid City", description: "Main service hub with fastest response times", isMain: true },
-        { name: "Box Elder", description: "Military housing and residential services", isMain: false },
-        { name: "Sturgis", description: "Event venues and commercial installations", isMain: false },
-        { name: "Spearfish", description: "Educational and business technology", isMain: false },
-        { name: "Hill City", description: "Tourism and hospitality solutions", isMain: false },
-        { name: "Custer", description: "Remote location specialists", isMain: false },
-        { name: "Hot Springs", description: "Healthcare and senior facilities", isMain: false },
-        { name: "Deadwood", description: "Gaming and entertainment venues", isMain: false },
-        { name: "Keystone", description: "Tourist destination tech solutions", isMain: false },
-        { name: "Black Hawk", description: "Gaming industry expertise", isMain: false },
-        { name: "Piedmont", description: "Rural connectivity solutions", isMain: false },
-        { name: "Hermosa", description: "Agricultural and residential", isMain: false },
+        { name: "Rapid City", description: "Home base — fastest response times", isMain: true },
+        { name: "Box Elder", description: "Residential and military housing", isMain: false },
+        { name: "Sturgis", description: "Commercial and event venues", isMain: false },
+        { name: "Spearfish", description: "Businesses and schools", isMain: false },
+        { name: "Hill City", description: "Lodges, shops, and homes", isMain: false },
+        { name: "Custer", description: "Rural homes and businesses", isMain: false },
+        { name: "Hot Springs", description: "Facilities and residences", isMain: false },
+        { name: "Deadwood", description: "Casinos and entertainment", isMain: false },
+        { name: "Keystone", description: "Tourism and hospitality", isMain: false },
+        { name: "Black Hawk", description: "Casinos and commercial", isMain: false },
+        { name: "Piedmont", description: "Rural and residential", isMain: false },
+        { name: "Hermosa", description: "Ag properties and homes", isMain: false },
     ];
 
     const services = [
         {
-            title: "Security Camera Installation",
+            title: "Security Cameras",
             icon: "🔒",
-            description: "Professional CCTV systems for homes and businesses",
+            description: "Local recording, phone alerts, no monthly fees",
             areas: "All service areas"
         },
         {
-            title: "Sound System Setup",
+            title: "Sound & AV Systems",
             icon: "🔊",
-            description: "Crystal clear audio for every space",
-            areas: "Churches, venues, homes"
+            description: "Church audio, conference rooms, and livestreaming",
+            areas: "Churches, venues, businesses"
         },
         {
-            title: "Wi-Fi & Network Installation",
+            title: "Wi-Fi & Cabling",
             icon: "📶",
-            description: "High-speed connectivity solutions",
-            areas: "Rural and urban locations"
+            description: "Reliable coverage and clean cable runs",
+            areas: "Homes and businesses"
         },
         {
             title: "Door Access Control",
             icon: "🚪",
-            description: "Smart entry and security management",
+            description: "Keycard, fob, and smart lock systems",
             areas: "Commercial and residential"
         },
         {
-            title: "Live Stream & Broadcast",
+            title: "Livestreaming",
             icon: "📹",
-            description: "Professional streaming and recording",
+            description: "Multi-camera streaming and recording",
             areas: "Churches, events, businesses"
         },
         {
-            title: "Smart Home Integration",
+            title: "Smart Home",
             icon: "🏠",
-            description: "Complete home automation solutions",
-            areas: "Residential properties"
+            description: "Lighting, shades, audio, and control in one app",
+            areas: "Residential"
         },
     ];
 
@@ -100,7 +100,7 @@ export default function ServiceArea() {
                         </h1>
 
                         <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-                            Professional low voltage solutions across South Dakota&apos;s Black Hills region. From Rapid City to remote locations, we bring expert technology services to your doorstep.
+                            Cameras, Wi-Fi, cabling, and AV for homes and businesses across the Black Hills. Based in Rapid City, serving the whole region.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -150,7 +150,7 @@ export default function ServiceArea() {
                         Areas We Serve
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Comprehensive coverage across the Black Hills region with specialized expertise for each community&apos;s unique needs.
+                        We serve the Black Hills and surrounding communities from our home base in Rapid City.
                     </p>
                 </div>
 
@@ -190,7 +190,7 @@ export default function ServiceArea() {
                             Explore Service in Your State
                         </h2>
                         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Your trusted AV installer and systems integrator for South Dakota, Wyoming, and Nebraska.
+                            We also travel to Wyoming and Nebraska for larger projects.
                         </p>
                     </div>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">

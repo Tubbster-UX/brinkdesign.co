@@ -4,11 +4,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "South Dakota AV Installer – Brink Design Western SD",
     description:
-        "Brink Design delivers professional AV installation, security and network cabling solutions across South Dakota from our base in western South Dakota.",
+        "Brink Design installs AV, security cameras, and network cabling across South Dakota from our base in western SD.",
     openGraph: {
         title: "South Dakota AV Installer – Brink Design Western SD",
         description:
-            "Comprehensive audio, video and low voltage services for businesses and churches across South Dakota.",
+            "Audio, video, and low-voltage installs for businesses and churches across South Dakota.",
         url: "https://www.brinkdesign.co/south-dakota",
         type: "article",
         images: ["https://www.brinkdesign.co/og-image.jpg"],

@@ -118,8 +118,8 @@ export default function SecurityCamerasPage() {
     const whyChooseUs = [
         {
             icon: Shield,
-            title: "Professional Installation",
-            description: "Expert placement and configuration for optimal coverage and performance",
+            title: "Proper Installation",
+            description: "Solid mounts, clean runs, and camera placement that actually covers what matters",
             color: "text-red-600"
         },
         {
@@ -136,8 +136,8 @@ export default function SecurityCamerasPage() {
         },
         {
             icon: Users,
-            title: "Local Support",
-            description: "South Dakota based team providing ongoing support and service",
+            title: "Local & Reachable",
+            description: "Based in Rapid City — we pick up the phone and show up when needed",
             color: "text-purple-600"
         },
         {
@@ -158,13 +158,13 @@ export default function SecurityCamerasPage() {
         {
             icon: Home,
             title: "Residential Security",
-            description: "Protect your family and property with comprehensive home surveillance",
+            description: "Cameras for your home — driveways, doors, yards, and packages",
             scenarios: ["Front Door Monitoring", "Driveway & Garage Coverage", "Backyard Protection", "Package Delivery Monitoring"]
         },
         {
             icon: Building,
             title: "Business Security",
-            description: "Commercial surveillance solutions for retail, office, and industrial facilities",
+            description: "Cameras for retail, offices, warehouses, and parking lots",
             scenarios: ["Entrance & Exit Monitoring", "Cash Register Coverage", "Parking Lot Security", "Warehouse Surveillance"]
         }
     ];
@@ -172,23 +172,23 @@ export default function SecurityCamerasPage() {
     const processSteps = [
         {
             step: "01",
-            title: "Security Assessment",
-            description: "Comprehensive evaluation of your property's vulnerabilities and coverage needs"
+            title: "Site Walk",
+            description: "We walk your property and identify coverage areas and blind spots"
         },
         {
             step: "02",
-            title: "Custom Design",
-            description: "Tailored camera placement plan optimized for maximum coverage and effectiveness"
+            title: "Plan & Quote",
+            description: "Camera placement plan with a clear, written quote"
         },
         {
             step: "03",
-            title: "Professional Installation",
-            description: "Expert installation with clean cable runs and proper weatherproofing"
+            title: "Installation",
+            description: "Clean cable runs, solid mounts, and proper weatherproofing"
         },
         {
             step: "04",
-            title: "System Training",
-            description: "Complete training on system operation, mobile apps, and playback features"
+            title: "Training",
+            description: "We show you how to use the app, check recordings, and set alerts"
         }
     ];
 
@@ -322,7 +322,7 @@ export default function SecurityCamerasPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-4xl font-bold text-gray-900 mb-6">Get a Quote</h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-                        Every surveillance need is different—contact us for a personalized estimate.
+                        Tell us what you need covered — we’ll give you a written quote.
                     </p>
                     <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
                         <Link href="/contact">Book a Site Visit & Quote</Link>

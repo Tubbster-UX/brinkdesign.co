@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Wyoming AV Installer – Brink Design Western South Dakota",
         description:
-            "Expert audio, video and security solutions for Wyoming churches, businesses and homes.",
+            "Audio, video, and security installs for Wyoming churches, businesses, and homes.",
         url: "https://www.brinkdesign.co/wyoming",
         type: "article",
         images: ["https://www.brinkdesign.co/og-image.jpg"],

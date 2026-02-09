@@ -64,13 +64,13 @@ export default function CommercialAVPage() {
         {
             icon: Volume2,
             title: "Professional Sound Systems",
-            description: "Crystal-clear audio solutions for any space or application",
+            description: "Clear audio for any room or venue",
             features: ["Distributed Audio Systems", "Wireless Microphone Systems", "Sound Reinforcement", "Audio DSP & Control"]
         },
         {
             icon: Monitor,
             title: "Display & Video Solutions",
-            description: "High-impact visual displays for presentations and digital signage",
+            description: "Projectors, displays, video walls, and signage",
             features: ["Large Format Displays", "Video Walls", "Projector Systems", "Digital Signage"]
         },
         {
@@ -82,19 +82,19 @@ export default function CommercialAVPage() {
         {
             icon: Settings,
             title: "Control & Automation",
-            description: "Intuitive control systems that make complex AV simple to operate",
+            description: "Room controls that make complex AV simple to operate",
             features: ["Touch Panel Control", "Room Automation", "Lighting Integration", "Climate Control"]
         },
         {
             icon: Presentation,
             title: "Conference Room Solutions",
-            description: "Complete meeting room technology for productive collaboration",
+            description: "Video conferencing, wireless presentation, and meeting room tech",
             features: ["Video Conferencing", "Wireless Presentation", "Room Scheduling", "Collaboration Tools"]
         },
         {
             icon: Radio,
             title: "Wireless Technologies",
-            description: "Wireless audio and screen mirroring for flexible AV setups",
+            description: "Wireless audio and screen sharing for flexible setups",
             features: ["Wireless Audio", "Screen Mirroring", "Portable Systems", "BYOD Integration"]
         }
     ];
@@ -103,25 +103,25 @@ export default function CommercialAVPage() {
         {
             icon: Building,
             title: "Corporate & Business",
-            description: "Professional AV solutions for modern workplaces",
+            description: "AV for conference rooms, offices, and meeting spaces",
             scenarios: ["Conference Rooms", "Training Centers", "Reception Areas", "Executive Boardrooms"]
         },
         {
             icon: Home,
             title: "Houses of Worship",
-            description: "Inspiring audio and video systems for religious services",
+            description: "Sound, video, and streaming your volunteers can run",
             scenarios: ["Sanctuary Sound Systems", "Live Streaming", "Stage Lighting", "Overflow Rooms"]
         },
         {
             icon: Users,
-            title: "Educational Facilities",
-            description: "Interactive learning environments with modern AV technology",
+            title: "Schools & Training",
+            description: "Classrooms and auditoriums with AV that works every time",
             scenarios: ["Classroom Displays", "Auditorium Systems", "Distance Learning", "Campus-wide Audio"]
         },
         {
             icon: Star,
             title: "Entertainment Venues",
-            description: "High-performance AV for events and entertainment",
+            description: "Sound and video for events, concerts, and community spaces",
             scenarios: ["Concert Venues", "Sports Facilities", "Community Centers", "Event Spaces"]
         }
     ];
@@ -129,8 +129,8 @@ export default function CommercialAVPage() {
     const whyChooseUs = [
         {
             icon: Award,
-            title: "Expert Design & Engineering",
-            description: "Custom AV solutions designed specifically for your space and needs",
+            title: "Designed for Your Room",
+            description: "Every system is planned around your space, not a template",
             color: "text-purple-600"
         },
         {
@@ -153,8 +153,8 @@ export default function CommercialAVPage() {
         },
         {
             icon: Star,
-            title: "Local Expertise",
-            description: "South Dakota based with deep understanding of local needs",
+            title: "Local & Reachable",
+            description: "Based in Rapid City — we pick up the phone",
             color: "text-yellow-500"
         },
         {
@@ -168,23 +168,23 @@ export default function CommercialAVPage() {
     const processSteps = [
         {
             step: "01",
-            title: "Consultation & Needs Assessment",
-            description: "Understanding your goals, space requirements, and usage patterns"
+            title: "Site Walk & Goals",
+            description: "We visit your space and understand how you use it"
         },
         {
             step: "02",
-            title: "Custom System Design",
-            description: "Detailed AV design with equipment specifications and layout plans"
+            title: "Plan & Quote",
+            description: "Equipment list, layout, and a clear written quote"
         },
         {
             step: "03",
-            title: "Professional Installation",
-            description: "Expert installation with clean integration and testing"
+            title: "Installation",
+            description: "Clean install with proper wiring and testing"
         },
         {
             step: "04",
             title: "Training & Handover",
-            description: "Complete user training and system documentation"
+            description: "Hands-on training so your team can run the system"
         }
     ];
 
@@ -345,7 +345,7 @@ export default function CommercialAVPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-4xl font-bold text-gray-900 mb-6">Get a Quote</h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-                        Every AV project is different—contact us for a custom estimate.
+                        Tell us about your space — we’ll give you a written quote.
                     </p>
                     <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
                         <Link href="/contact">Book a Site Visit & Quote</Link>

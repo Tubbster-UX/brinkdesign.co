@@ -71,7 +71,7 @@ export default function FAQPage() {
                     a: "Call us at (605) 389-3261 or use the contact form. We'll schedule a site visit or phone call and walk you through next steps."
                 },
                 {
-                    q: "What's included in your consultation?",
+                    q: "What's included in the site visit?",
                     a: "We walk the site, ask the right questions, recommend options, and provide a clear scope, timeline, and quote."
                 }
             ]
@@ -85,7 +85,7 @@ export default function FAQPage() {
                 },
                 {
                     q: "How long does a typical installation take?",
-                    a: "Most residential projects are completed within 1-3 days, while commercial installations typically take 3-7 days. Complex projects may take longer, but we'll provide a detailed timeline during consultation."
+                    a: "Most residential projects take 1–3 days. Commercial installs typically run 3–7 days. Larger jobs may take longer — we’ll give you a timeline with your quote."
                 },
                 {
                     q: "Can you upgrade or expand existing systems?",
@@ -131,11 +131,11 @@ export default function FAQPage() {
                 },
                 {
                     q: "Can you work with my existing IT team?",
-                    a: "Absolutely. We collaborate seamlessly with internal IT teams, providing technical documentation, network diagrams, and ongoing coordination to ensure smooth integration with your existing infrastructure."
+                    a: "Yes. We coordinate with internal IT teams, provide network diagrams, and make sure everything integrates with your existing setup."
                 },
                 {
                     q: "What about future scalability?",
-                    a: "We design all systems with growth in mind. Whether you need to add more cameras, expand your network, or integrate new technologies, our installations are built to scale efficiently."
+                    a: "We plan for growth. Whether you need more cameras, a bigger network, or new systems down the road, our installs are built to expand."
                 }
             ]
         }
@@ -210,7 +210,7 @@ export default function FAQPage() {
                         Browse by Category
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Find answers quickly by exploring our organized FAQ categories
+                        Jump to the section that fits your question
                     </p>
                 </div>
 
@@ -273,9 +273,9 @@ export default function FAQPage() {
                 {/* Trust Indicators */}
                 <div className="mt-20 bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 md:p-16 text-white">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Brink Design?</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Work With Us</h2>
                         <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-                            10+ years of proven expertise in the Black Hills region
+                            Licensed, insured, and local for 10+ years
                         </p>
                     </div>
 
@@ -283,17 +283,17 @@ export default function FAQPage() {
                         {[
                             {
                                 title: 'Licensed & Insured',
-                                desc: 'Fully licensed low voltage contractor with comprehensive insurance coverage',
+                                desc: 'Fully licensed low-voltage contractor with full insurance coverage',
                                 icon: Shield
                             },
                             {
-                                title: 'Local Experts',
-                                desc: 'Black Hills natives with deep understanding of local needs and challenges',
+                                title: 'Local Crew',
+                                desc: 'Based in the Black Hills with 10+ years of hands-on install work',
                                 icon: Award
                             },
                             {
-                                title: 'Guaranteed Work',
-                                desc: '2-year labor warranty and 100% satisfaction guarantee on all installations',
+                                title: '2-Year Labor Warranty',
+                                desc: 'We stand behind every install with a written warranty',
                                 icon: CheckCircle
                             },
                         ].map((benefit, index) => {
@@ -320,7 +320,7 @@ export default function FAQPage() {
                             Still Have Questions?
                         </h2>
                         <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                            Our team is standing by to help. Get personalized answers and expert guidance for your specific project.
+                            Reach out and we’ll get you a straight answer.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">

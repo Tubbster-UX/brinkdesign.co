@@ -116,7 +116,7 @@ export default async function Page() {
               Need something similar?
             </h2>
             <p className="text-base text-gray-600 mb-8 max-w-xl mx-auto">
-              Whether it&apos;s cameras, Wi-Fi, cabling, or AV — we&apos;ll walk your site, map out what you need, and give you clear options.
+              Tell us what you need — we&apos;ll walk your site and give you a clear quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">

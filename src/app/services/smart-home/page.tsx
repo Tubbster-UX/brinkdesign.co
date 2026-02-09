@@ -235,7 +235,7 @@ export default function SmartHomePage() {
             </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Choose Your Starting Point</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We tailor every project—these tiers show how we typically bundle smart home systems. Pricing is custom after a walkthrough.
+              Every project is different — these tiers show how we typically bundle smart home systems. Pricing is based on a walkthrough.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

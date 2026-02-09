@@ -32,11 +32,10 @@ export default function FeaturedProjectsClient({ projects }: { projects: Project
             Our Work
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Featured Projects
+            Recent Installs
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            See how we&rsquo;ve transformed spaces across South Dakota with professional AV, 
-            security, and low voltage installations.
+            Real jobs for homes, churches, and businesses across South Dakota.
           </p>
         </motion.div>
 
@@ -102,11 +101,10 @@ export default function FeaturedProjectsClient({ projects }: { projects: Project
         >
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready for Your Installation?
+              Want a Similar Setup?
             </h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Whether it's cameras, WiFi, or a full AV system—we'll walk your property, 
-              give you options, and get it installed right.
+              We&rsquo;ll walk your property, show you options, and give you a clear quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

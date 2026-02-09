@@ -47,14 +47,8 @@ export default async function About() {
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Button asChild size="lg" className="bg-yellow-500 text-gray-900 hover:bg-accent font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                                 <Link href="/contact" className="inline-flex items-center">
-                                    Book a Site Visit & Quote
+                                    Book a Site Visit &amp; Quote
                                     <ArrowRight className="w-5 h-5 ml-2" />
-                                </Link>
-                            </Button>
-                            <Button asChild variant="ghost" size="lg">
-                                <Link href="/about" className="inline-flex items-center">
-                                    <Users className="w-5 h-5 mr-2" />
-                                    About Our Team
                                 </Link>
                             </Button>
                         </div>
@@ -70,14 +64,14 @@ export default async function About() {
                                     <Award className="w-6 h-6 mr-4 text-accent" />
                                     <div>
                                         <div className="font-semibold">Clean, Tested Work</div>
-                                        <div className="text-sm text-blue-100">Labeled cables, organized racks, no loose ends</div>
+                                        <div className="text-sm text-blue-100">Labeled cables, organized racks, tested before we leave</div>
                                     </div>
                                 </div>
                                 <div className="flex items-center">
                                     <MapPin className="w-6 h-6 mr-4 text-green-400" />
                                     <div>
-                                        <div className="font-semibold">Local Team</div>
-                                        <div className="text-sm text-blue-100">Based in Rapid City, we answer the phone</div>
+                                        <div className="font-semibold">Local &amp; Reachable</div>
+                                        <div className="text-sm text-blue-100">Based in Rapid City — we pick up the phone</div>
                                     </div>
                                 </div>
                                 <div className="flex items-center">

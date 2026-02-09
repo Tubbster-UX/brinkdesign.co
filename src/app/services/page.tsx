@@ -42,7 +42,7 @@ const services = [
     },
     {
         title: 'Care & Support',
-        description: 'Diagnostics, optimization, and maintenance to keep every system running smoothly.',
+        description: 'Firmware updates, network tuning, and system checks to keep everything running right.',
         icon: '/icons/maintenance.png',
         features: ['System Health Checks', 'Firmware & Security', 'Performance Tuning', 'Scheduled Maintenance'],
         color: 'from-amber-500 to-yellow-500',
@@ -52,20 +52,20 @@ const services = [
 
 const benefits = [
     {
-        title: 'Expert Guidance',
-        description: 'Work with technicians who design and install systems every day.',
+        title: 'Hands-On Knowledge',
+        description: 'Our techs design and install systems every day — not just spec them.',
     },
     {
-        title: 'Built for Your Space',
-        description: 'Every project is designed around your building, not a one-size template.',
+        title: 'Designed for Your Space',
+        description: 'Every project is planned around your building, not a one-size template.',
     },
     {
-        title: 'Upfront Pricing',
-        description: 'Clear quotes tailored to your project so you can plan with confidence.',
+        title: 'Clear Pricing',
+        description: 'You get a written quote before any work starts. No surprises.',
     },
     {
         title: 'Local Support',
-        description: 'Rapid assistance from a South Dakota based team.',
+        description: 'Based in Rapid City. If something needs attention, we\'re a phone call away.',
     },
 ];
 
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     alternates: { canonical: "https://www.brinkdesign.co/services" },
     openGraph: {
         title: "Smart Home & AV Services – Brink Design Co.",
-        description: "Explore our smart home, WiFi, AV, and security solutions for Rapid City and the Black Hills.",
+        description: "Smart home, WiFi, AV, and security installs for Rapid City and the Black Hills.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
     twitter: {
@@ -155,13 +155,13 @@ export default function Page() {
             <div id="services" className="container mx-auto px-6 py-20">
                 <div className="text-center mb-16">
                     <div className="inline-block px-4 py-2 bg-primary/10 rounded-full font-semibold text-sm mb-4">
-                        Our Expertise
+                        What We Install
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        What We Specialize In
+                        What We Install
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Smart home, WiFi, AV, and security solutions tailored for homes, churches, and businesses across South Dakota.
+                        Cameras, WiFi, cabling, and AV for homes, churches, and businesses across South Dakota.
                     </p>
                 </div>
 
@@ -226,16 +226,16 @@ export default function Page() {
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
                         <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-                            A streamlined approach that ensures quality results every time
+                            Every job follows the same four steps
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {[
-                            { step: '01', title: 'Site Visit', desc: 'On-site assessment of your space and needs' },
-                            { step: '02', title: 'Design', desc: 'Custom plan tailored to your space' },
-                            { step: '03', title: 'Installation', desc: 'Professional implementation by our team' },
-                            { step: '04', title: 'Support', desc: 'Training, handover, and ongoing support' },
+                            { step: '01', title: 'Site Visit', desc: 'We walk your space and understand what you need' },
+                            { step: '02', title: 'Design', desc: 'You get a plan and a clear quote' },
+                            { step: '03', title: 'Installation', desc: 'Our crew installs everything clean and tested' },
+                            { step: '04', title: 'Support', desc: 'Training, handover, and ongoing service' },
                         ].map((item, index) => (
                             <div key={index} className="text-center group">
                                 <div className="bg-secondary text-primary rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -252,9 +252,9 @@ export default function Page() {
                 <div className="bg-white py-20">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Benefits of Working With Us</h2>
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Work With Us</h2>
                             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                                Professional service backed by years of smart home, networking, and AV integration work.
+                                Licensed, insured, and backed by years of hands-on install work.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -276,7 +276,7 @@ export default function Page() {
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Get a Quote</h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-                            Every project is unique—contact us for a personalized estimate.
+                            Tell us what you need — we&apos;ll give you a written quote.
                         </p>
                         <Button size="lg" className="bg-primary text-secondary hover:bg-primary/90 font-bold px-8 py-4 text-lg" asChild>
                             <Link href="/contact">Book a Site Visit & Quote</Link>
@@ -326,7 +326,7 @@ export default function Page() {
                             </div>
                             <div className="flex items-center justify-center space-x-2">
                                 <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                <span>No Pressure Quoting</span>
+                                <span>Clear, Written Quotes</span>
                             </div>
                             <div className="flex items-center justify-center space-x-2">
                                 <div className="w-2 h-2 bg-primary rounded-full"></div>

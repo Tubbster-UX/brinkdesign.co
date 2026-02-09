@@ -171,7 +171,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                         className={`${inputClasses('message')} min-h-[120px] resize-y`}
                         id="message"
                         rows={5}
-                        placeholder="Tell us about your project... What are your goals? Timeline? Any specific requirements?"
+                        placeholder="Tell us what you need — cameras, WiFi, AV, cabling? Include the city and any relevant details."
                         value={formData.message}
                         onChange={handleChange}
                         onFocus={() => setFocusedField('message')}
@@ -180,7 +180,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                     />
                 </div>
                 <div className="mt-2 text-xs text-gray-500">
-                    The more details you provide, the better we can help you!
+                    Include your city and building type so we can give you a better answer.
                 </div>
             </div>
 

@@ -318,7 +318,7 @@ export default async function BlogPost(props: { params: Promise<{ slug: string }
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="mb-6 md:mb-0">
                 <h3 className="text-xl font-bold mb-2">Found this helpful?</h3>
-                <p className="text-gray-300">Get personalized advice for your specific needs.</p>
+                <p className="text-gray-300">Tell us what you need — we’ll point you in the right direction.</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-primary font-bold rounded-lg hover:bg-secondary/90 transition-all duration-200">

@@ -90,7 +90,7 @@ const AboutPage: React.FC = () => {
                     <li>Give you clear options</li>
                 </ol>
                 <p className="text-base text-gray-600 mb-6">
-                    No pressure. No overcomplication. Just a plan you can move forward with.
+                    Straightforward options. Clear pricing. A plan you can move forward with.
                 </p>
                 <Link href="/contact" className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                     Book a Site Visit & Quote

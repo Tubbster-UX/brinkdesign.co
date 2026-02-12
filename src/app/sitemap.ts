@@ -23,6 +23,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: 'https://www.brinkdesign.co/services/smart-home', lastModified: now },
     { url: 'https://www.brinkdesign.co/services/low-voltage', lastModified: now },
     { url: 'https://www.brinkdesign.co/services/security-cameras', lastModified: now },
+    { url: 'https://www.brinkdesign.co/commercial-security-cameras-rapid-city', lastModified: now },
+    { url: 'https://www.brinkdesign.co/business-wifi-networks-rapid-city', lastModified: now },
+    { url: 'https://www.brinkdesign.co/home-network-installation-rapid-city', lastModified: now },
+    { url: 'https://www.brinkdesign.co/whole-home-audio-rapid-city', lastModified: now },
+    { url: 'https://www.brinkdesign.co/church-av-installation-south-dakota', lastModified: now },
     { url: 'https://www.brinkdesign.co/privacy-policy', lastModified: now },
   ];
 

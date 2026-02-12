@@ -252,12 +252,29 @@ export default function SecurityCamerasPage() {
         url: "https://www.brinkdesign.co/services/security-cameras",
     };
 
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+            },
+        })),
+    };
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-red-50">
             {/* JSON-LD Structured Data */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
             />
             {/* Hero Section - bg-primary, Shadcn Buttons */}
             <section className="bg-primary py-20 lg:py-32">

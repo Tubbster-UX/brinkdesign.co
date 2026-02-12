@@ -6,6 +6,8 @@ const logos = [
     { src: "/logos/shure.svg", alt: "Shure" },
     { src: "/logos/logitech.svg", alt: "Logitech" },
     { src: "/logos/BirdDog_LOGO.svg", alt: "BirdDog" },
+    { src: "/logos/sonos.svg", alt: "Sonos" },
+    { src: "/logos/omada.svg", alt: "Omada" },
 ];
 
 export default function LogoCloud() {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import ReCAPTCHA from "react-google-recaptcha";
-import { User, Mail, MessageSquare, FileText, Send, Loader2 } from 'lucide-react';
+import { User, Mail, MessageSquare, FileText, Send, Loader2, Phone, Building } from 'lucide-react';
 import { trackEvent } from '@/lib/analytics';
 
 interface ContactFormProps {
@@ -13,6 +13,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        phone: '',
+        propertyType: '',
         subject: '',
         message: '',
     });
@@ -56,6 +58,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                 setFormData({
                     name: '',
                     email: '',
+                    phone: '',
+                    propertyType: '',
                     subject: '',
                     message: '',
                 });
@@ -125,6 +129,56 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess, onError }) => {
                         onBlur={() => setFocusedField(null)}
                         required
                     />
+                </div>
+            </div>
+
+            {/* Phone Field */}
+            <div className="relative">
+                <label className={labelClasses} htmlFor="phone">
+                    Phone Number *
+                </label>
+                <div className="relative">
+                    <Phone className={`absolute left-4 top-3.5 w-5 h-5 transition-colors duration-300 ${
+                        focusedField === 'phone' ? 'text-blue-500' : 'text-gray-400'
+                    }`} />
+                    <input
+                        className={inputClasses('phone')}
+                        id="phone"
+                        type="tel"
+                        placeholder="(605) 555-1234"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('phone')}
+                        onBlur={() => setFocusedField(null)}
+                        required
+                    />
+                </div>
+            </div>
+
+            {/* Property Type Field */}
+            <div className="relative">
+                <label className={labelClasses} htmlFor="propertyType">
+                    Property Type *
+                </label>
+                <div className="relative">
+                    <Building className={`absolute left-4 top-3.5 w-5 h-5 transition-colors duration-300 ${
+                        focusedField === 'propertyType' ? 'text-blue-500' : 'text-gray-400'
+                    }`} />
+                    <select
+                        className={inputClasses('propertyType')}
+                        id="propertyType"
+                        value={formData.propertyType}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('propertyType')}
+                        onBlur={() => setFocusedField(null)}
+                        required
+                    >
+                        <option value="">Select property type</option>
+                        <option value="Business / Commercial">Business / Commercial</option>
+                        <option value="Home / Residential">Home / Residential</option>
+                        <option value="Church / Nonprofit">Church / Nonprofit</option>
+                        <option value="New Construction">New Construction</option>
+                    </select>
                 </div>
             </div>
 

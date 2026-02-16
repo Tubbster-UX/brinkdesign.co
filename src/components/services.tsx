@@ -10,7 +10,7 @@ const services = [
     title: 'Security Cameras',
     description: 'See your property from anywhere. Local recording, no monthly fees, and remote access on your phone.',
     features: ['No Monthly Fees', '4K Night Vision', 'Phone Alerts', 'Local Recording'],
-    href: '/services/security-cameras',
+    href: '/commercial-security-cameras-rapid-city',
     color: 'from-red-500 to-orange-500',
     bgColor: 'bg-red-50',
     textColor: 'text-red-600'
@@ -20,7 +20,7 @@ const services = [
     title: 'WiFi & Cabling',
     description: 'Fast, reliable coverage in every room. We run the wires and set up access points so your network just works.',
     features: ['Whole-Home WiFi', 'Structured Cabling', 'Dead Zone Fixes', 'Business Networks'],
-    href: '/services/low-voltage',
+    href: '/business-wifi-networks-rapid-city',
     color: 'from-blue-500 to-cyan-500',
     bgColor: 'bg-blue-50',
     textColor: 'text-blue-600'
@@ -30,7 +30,7 @@ const services = [
     title: 'Church & Commercial AV',
     description: 'Sound systems, projectors, and livestreaming that your team can actually run. Clear audio, simple controls.',
     features: ['Worship Audio', 'Livestreaming', 'Conference Rooms', 'Training Provided'],
-    href: '/services/commercial-av',
+    href: '/church-av-installation-south-dakota',
     color: 'from-purple-500 to-pink-500',
     bgColor: 'bg-purple-50',
     textColor: 'text-purple-600'
@@ -40,7 +40,7 @@ const services = [
     title: 'Smart Home',
     description: 'Lighting, shades, thermostats, and audio that work together—controlled from one app or your voice.',
     features: ['Lighting Control', 'Motorized Shades', 'Whole-Home Audio', 'Simple App Control'],
-    href: '/services/smart-home',
+    href: '/smart-home-automation-black-hills',
     color: 'from-green-500 to-emerald-500',
     bgColor: 'bg-green-50',
     textColor: 'text-green-600'

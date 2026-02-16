@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Phone, Calendar, X } from "lucide-react";
+import { Phone, Calendar, X, ArrowRight } from "lucide-react";
 
 export default function StickyHeaderCTA() {
     const [isVisible, setIsVisible] = useState(false);
@@ -10,56 +11,52 @@ export default function StickyHeaderCTA() {
 
     useEffect(() => {
         const handleScroll = () => {
-            // Show the sticky CTA after scrolling 200px
-            setIsVisible(window.scrollY > 200);
+            setIsVisible(window.scrollY > 220);
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const handleCallClick = () => {
-        window.location.href = "tel:+16053893261"; // Replace with your actual phone number
-    };
-
     if (isDismissed || !isVisible) {
         return null;
     }
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground shadow-lg animate-in slide-in-from-top duration-300">
-            <div className="container mx-auto px-4 py-3">
-                <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                        <div className="hidden sm:block">
-                            <span className="font-semibold">Need Cameras, WiFi, or AV Installed?</span>
-                            <span className="ml-2 text-primary-foreground/80">Same-Day Quotes Available</span>
-                        </div>
-                        <div className="sm:hidden">
-                            <span className="font-semibold">Site Visit + Quote</span>
+        <div className="fixed bottom-0 left-0 right-0 z-[60] border-t border-primary/20 bg-white/95 shadow-2xl backdrop-blur">
+            <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <p className="text-sm font-semibold text-primary">
+                        Ready for Cameras, WiFi, AV, or Smart Home?
+                    </p>
+                    <p className="text-xs text-gray-600 sm:text-sm">
+                        Free site walkthrough + clear scope + no-pressure quote.
+                    </p>
+                </div>
 
-                        </div>
-                    </div>
-
-                    <div className="flex items-center gap-2">
-                        <Button
-                            onClick={handleCallClick}
-                            variant="secondary"
-                            size="sm"
-                        >
-                            <Phone className="w-4 h-4 mr-1" />
-                            <span className="hidden sm:inline">Call Now</span>
-                            <span className="sm:hidden">Call</span>
-                        </Button>
-                        <Button
-                            onClick={() => setIsDismissed(true)}
-                            variant="ghost"
-                            size="sm"
-                            className="text-white hover:bg-white/20 p-1"
-                        >
-                            <X className="w-4 h-4" />
-                        </Button>
-                    </div>
+                <div className="flex items-center gap-2">
+                    <Button asChild size="sm" className="font-semibold">
+                        <Link href="/contact" className="inline-flex items-center gap-1">
+                            <Calendar className="h-4 w-4" />
+                            Book Free Walkthrough
+                        </Link>
+                    </Button>
+                    <Button asChild size="sm" variant="outline" className="font-semibold">
+                        <a href="tel:+16053893261" className="inline-flex items-center gap-1">
+                            <Phone className="h-4 w-4" />
+                            Call Now
+                            <ArrowRight className="h-3.5 w-3.5" />
+                        </a>
+                    </Button>
+                    <Button
+                        onClick={() => setIsDismissed(true)}
+                        variant="ghost"
+                        size="sm"
+                        className="p-1 text-gray-500 hover:bg-gray-100"
+                        aria-label="Dismiss call-to-action"
+                    >
+                        <X className="h-4 w-4" />
+                    </Button>
                 </div>
             </div>
         </div>

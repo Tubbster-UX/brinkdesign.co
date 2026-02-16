@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title:
     "Church AV Installation South Dakota | Audio, Video & Live Streaming",
   description:
-    "Professional church AV installation in South Dakota. Sound systems, video walls, live streaming, and stage lighting for churches of all sizes. Free consultation—call (605) 299-5020.",
+    "Professional church AV installation in South Dakota. Sound systems, video walls, live streaming, and stage lighting for churches of all sizes. Free consultation—call (605) 389-3261.",
   keywords: [
     "church AV installation South Dakota",
     "church sound system installation",
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
     title: "Church AV Installation South Dakota | Worship Technology Experts",
     description:
       "Professional church AV installation in South Dakota. Sound systems, video walls, live streaming, and stage lighting.",
-    url: "https://brinkdesign.co/church-av-installation-south-dakota",
+    url: "https://www.brinkdesign.co/church-av-installation-south-dakota",
   },
   alternates: {
-    canonical: "https://brinkdesign.co/church-av-installation-south-dakota",
+    canonical: "https://www.brinkdesign.co/church-av-installation-south-dakota",
   },
 };
 
@@ -166,7 +166,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Brink Design Co.",
-    telephone: "+1-605-299-5020",
+    telephone: "+1-605-389-3261",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Rapid City",
@@ -229,9 +229,9 @@ export default function ChurchAVInstallationSouthDakota() {
                 variant="outline"
                 className="border-white/20 bg-white/5 text-white hover:bg-white/10"
               >
-                <a href="tel:+16052995020" className="flex items-center gap-2">
+                <a href="tel:+16053893261" className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  (605) 299-5020
+                  (605) 389-3261
                 </a>
               </Button>
             </div>
@@ -475,9 +475,9 @@ export default function ChurchAVInstallationSouthDakota() {
                 variant="outline"
                 className="border-white text-white hover:bg-orange-600"
               >
-                <a href="tel:+16052995020" className="flex items-center gap-2">
+                <a href="tel:+16053893261" className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  (605) 299-5020
+                  (605) 389-3261
                 </a>
               </Button>
             </div>

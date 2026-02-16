@@ -89,17 +89,17 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-    title: "Smart Home & AV Services – Brink Design Co.",
-    description: "Smart home automation, WiFi, audio/video, and security installations for homes, churches, and businesses across western South Dakota.",
+    title: "Low-Voltage Installation Services in Rapid City | Brink Design",
+    description: "Low-voltage installation in Rapid City and the Black Hills: commercial security cameras, business WiFi, AV systems, and smart home automation.",
     alternates: { canonical: "https://www.brinkdesign.co/services" },
     openGraph: {
-        title: "Smart Home & AV Services – Brink Design Co.",
+        title: "Low-Voltage Installation Services in Rapid City | Brink Design",
         description: "Smart home, WiFi, AV, and security installs for Rapid City and the Black Hills.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Smart Home & AV Services – Brink Design Co.",
+        title: "Low-Voltage Installation Services in Rapid City | Brink Design",
         description: "Smart home, WiFi, AV, and security installations with local design and support.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
@@ -121,7 +121,7 @@ export default function Page() {
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl">
                             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                                Services
+                                Low-Voltage Installation Services in Rapid City
                             </h1>
                             <p className="text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
                                 Smart home automation, WiFi, audio/video, and security installs—designed, programmed, and supported locally.

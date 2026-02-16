@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title:
     "Whole-Home Audio Installation Rapid City | Sonos & Distributed Audio",
   description:
-    "Professional whole-home audio installation in Rapid City, SD. Sonos, in-ceiling speakers, outdoor audio, and multi-room systems. Free consultation—call (605) 299-5020.",
+    "Professional whole-home audio installation in Rapid City, SD. Sonos, in-ceiling speakers, outdoor audio, and multi-room systems. Free consultation—call (605) 389-3261.",
   keywords: [
     "whole home audio Rapid City",
     "Sonos installation Rapid City",
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
     title: "Whole-Home Audio Installation Rapid City | Sonos Experts",
     description:
       "Professional whole-home audio installation in Rapid City. Sonos, distributed audio, and multi-room systems.",
-    url: "https://brinkdesign.co/whole-home-audio-rapid-city",
+    url: "https://www.brinkdesign.co/whole-home-audio-rapid-city",
   },
   alternates: {
-    canonical: "https://brinkdesign.co/whole-home-audio-rapid-city",
+    canonical: "https://www.brinkdesign.co/whole-home-audio-rapid-city",
   },
 };
 
@@ -148,7 +148,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Brink Design Co.",
-    telephone: "+1-605-299-5020",
+    telephone: "+1-605-389-3261",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Rapid City",
@@ -215,9 +215,9 @@ export default function WholeHomeAudioRapidCity() {
                 variant="outline"
                 className="border-white/20 bg-white/5 text-white hover:bg-white/10"
               >
-                <a href="tel:+16052995020" className="flex items-center gap-2">
+                <a href="tel:+16053893261" className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  (605) 299-5020
+                  (605) 389-3261
                 </a>
               </Button>
             </div>
@@ -453,9 +453,9 @@ export default function WholeHomeAudioRapidCity() {
                 variant="outline"
                 className="border-white text-white hover:bg-orange-600"
               >
-                <a href="tel:+16052995020" className="flex items-center gap-2">
+                <a href="tel:+16053893261" className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  (605) 299-5020
+                  (605) 389-3261
                 </a>
               </Button>
             </div>

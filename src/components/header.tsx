@@ -66,10 +66,10 @@ export default function Header() {
     }, [isServicesOpen, servicesDropdownAnchor]);
 
     const serviceLinks = [
-        { href: "/services/smart-home", label: "Smart Home & Automation" },
-        { href: "/services/commercial-av", label: "Audio/Video" },
-        { href: "/services/low-voltage", label: "WiFi & Wiring" },
-        { href: "/services/security-cameras", label: "Security Systems" },
+        { href: "/smart-home-automation-black-hills", label: "Smart Home & Automation" },
+        { href: "/church-av-installation-south-dakota", label: "Audio/Video" },
+        { href: "/business-wifi-networks-rapid-city", label: "WiFi & Wiring" },
+        { href: "/commercial-security-cameras-rapid-city", label: "Security Systems" },
     ];
 
     if (isProjectsPage) return null;
@@ -77,20 +77,24 @@ export default function Header() {
     return (
         <>
             {/* Top Info Bar */}
-            <div className="bg-primary text-white py-2 px-4 text-sm hidden lg:block">
-                <div className="max-w-7xl mx-auto flex justify-between items-center">
+            <div className="hidden bg-primary px-4 py-2 text-sm text-white lg:block">
+                <div className="mx-auto flex max-w-7xl items-center justify-between">
                     <div className="flex items-center space-x-6">
-                        <div className="flex items-center space-x-2">
-                            <Phone className="w-4 h-4" />
+                        <a href="tel:6053893261" className="flex items-center space-x-2 hover:text-blue-100">
+                            <Phone className="h-4 w-4" />
                             <span>(605) 389-3261</span>
-                        </div>
+                        </a>
                         <div className="flex items-center space-x-2">
-                            <MapPin className="w-4 h-4" />
-                            <span>Serving South Dakota</span>
+                            <MapPin className="h-4 w-4" />
+                            <span>Serving Rapid City & the Black Hills</span>
                         </div>
                     </div>
-                    <div className="text-sm">
+                    <div className="flex items-center gap-4">
                         <span className="font-medium">Licensed & Insured • 2-Year Labor Warranty</span>
+                        <Link href="/contact" className="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1 text-xs font-semibold text-primary hover:bg-blue-50">
+                            <Clock className="h-3.5 w-3.5" />
+                            Free Walkthroughs This Week
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -186,16 +190,15 @@ export default function Header() {
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className="hidden lg:flex items-center space-x-4">
-                            <a
-                                href="tel:6053893261"
-                                className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
-                            >
-                                <Phone className="w-4 h-4" />
-                                <span className="font-medium">(605) 389-3261</span>
-                            </a>
-                            <Button asChild >
-                                <Link href="/contact">Book a Site Visit & Quote</Link>
+                        <div className="hidden lg:flex items-center space-x-3">
+                            <Button asChild variant="outline" className="font-semibold">
+                                <a href="tel:6053893261" className="inline-flex items-center gap-2">
+                                    <Phone className="h-4 w-4" />
+                                    Call (605) 389-3261
+                                </a>
+                            </Button>
+                            <Button asChild className="font-semibold">
+                                <Link href="/contact">Book Free Walkthrough</Link>
                             </Button>
                         </div>
 
@@ -310,11 +313,16 @@ export default function Header() {
                             </nav>
 
                             {/* Mobile CTA */}
-                            <div className="pt-4 border-t border-gray-200">
-                                <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-sm">
+                            <div className="space-y-2 border-t border-gray-200 pt-4">
+                                <Button asChild className="w-full bg-blue-600 py-3 font-semibold text-white hover:bg-blue-700 rounded-lg shadow-sm">
                                     <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                                        Book a Site Visit & Quote
+                                        Book Free Walkthrough
                                     </Link>
+                                </Button>
+                                <Button asChild variant="outline" className="w-full font-semibold">
+                                    <a href="tel:6053893261" onClick={() => setIsMobileMenuOpen(false)}>
+                                        Call (605) 389-3261
+                                    </a>
                                 </Button>
                             </div>
                         </div>

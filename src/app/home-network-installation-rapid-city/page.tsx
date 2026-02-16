@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title:
     "Home Network Installation Rapid City | UniFi & Omada Whole-Home WiFi",
   description:
-    "Professional home network installation in Rapid City, SD. We install UniFi and TP-Link Omada systems for reliable WiFi in every room. Free consultation—call (605) 299-5020.",
+    "Professional home network installation in Rapid City, SD. We install UniFi and TP-Link Omada systems for reliable WiFi in every room. Free consultation—call (605) 389-3261.",
   keywords: [
     "home network installation Rapid City",
     "whole home WiFi Rapid City",
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
     title: "Home Network Installation Rapid City | UniFi & Omada Experts",
     description:
       "Professional home network installation in Rapid City. UniFi and Omada systems for reliable WiFi throughout your home.",
-    url: "https://brinkdesign.co/home-network-installation-rapid-city",
+    url: "https://www.brinkdesign.co/home-network-installation-rapid-city",
   },
   alternates: {
-    canonical: "https://brinkdesign.co/home-network-installation-rapid-city",
+    canonical: "https://www.brinkdesign.co/home-network-installation-rapid-city",
   },
 };
 
@@ -149,7 +149,7 @@ const serviceSchema = {
   provider: {
     "@type": "LocalBusiness",
     name: "Brink Design Co.",
-    telephone: "+1-605-299-5020",
+    telephone: "+1-605-389-3261",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Rapid City",
@@ -216,9 +216,9 @@ export default function HomeNetworkInstallationRapidCity() {
                 variant="outline"
                 className="border-white/20 bg-white/5 text-white hover:bg-white/10"
               >
-                <a href="tel:+16052995020" className="flex items-center gap-2">
+                <a href="tel:+16053893261" className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  (605) 299-5020
+                  (605) 389-3261
                 </a>
               </Button>
             </div>
@@ -414,9 +414,9 @@ export default function HomeNetworkInstallationRapidCity() {
                 variant="outline"
                 className="border-white text-white hover:bg-orange-600"
               >
-                <a href="tel:+16052995020" className="flex items-center gap-2">
+                <a href="tel:+16053893261" className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  (605) 299-5020
+                  (605) 389-3261
                 </a>
               </Button>
             </div>

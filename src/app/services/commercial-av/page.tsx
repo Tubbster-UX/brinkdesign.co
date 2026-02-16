@@ -31,13 +31,13 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Church & Commercial AV Installation | Brink Design Co.",
+    title: "Commercial AV Installation for Businesses | Brink Design Co.",
     description:
-        "Sound systems, projectors, and livestreaming for churches, schools, and businesses. Clear audio, simple controls, training included. Rapid City and western South Dakota.",
+        "Commercial AV installation for conference rooms, offices, schools, and event spaces in Rapid City and western South Dakota. Clear audio, simple controls, and training included.",
     openGraph: {
-        title: "Church & Commercial AV Installation | Brink Design Co.",
+        title: "Commercial AV Installation for Businesses | Brink Design Co.",
         description:
-            "Professional AV for churches and businesses. Sound, video, livestreaming with training included.",
+            "Professional AV for businesses and organizations. Sound, video, conferencing, and control systems with training included.",
         url: "https://www.brinkdesign.co/services/commercial-av",
         type: "article",
         images: [
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
     alternates: { canonical: "https://www.brinkdesign.co/services/commercial-av" },
     twitter: {
         card: "summary_large_image",
-        title: "Church & Commercial AV Installation | Brink Design Co.",
+        title: "Commercial AV Installation for Businesses | Brink Design Co.",
         description:
-            "Sound, video, and livestreaming that your team can run. Training included.",
+            "Conference rooms, presentations, and business AV that your team can run. Training included.",
         images: ["https://www.brinkdesign.co/og-image.jpg"],
     },
 };
@@ -303,10 +303,13 @@ export default function CommercialAVPage() {
             <section className="bg-primary py-20 lg:py-32">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                        Church & Commercial AV
+                        Commercial AV for Businesses & Organizations
                     </h1>
                     <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-                        Sound systems, projectors, and livestreaming that your team can actually run. Clear audio, simple controls, and training so volunteers aren't guessing.
+                        Sound systems, projectors, conferencing, and control systems your team can actually run. Clear audio, simple controls, and training included.
+                    </p>
+                    <p className="text-sm text-blue-200 mb-6">
+                        Need church-specific design and livestream help? <Link href="/church-av-installation-south-dakota" className="underline font-semibold">See our church AV installation page</Link>.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
                         <Link href="/contact">

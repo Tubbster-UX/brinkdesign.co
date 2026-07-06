@@ -188,7 +188,7 @@ export default function HomeNetworkInstallationRapidCity() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 lg:py-28">
-        <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-wider text-orange-400">

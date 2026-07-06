@@ -126,7 +126,7 @@ export default async function BlogPage() {
                                             {/* Featured Image */}
                                             <div className="w-full h-48 overflow-hidden rounded-t-2xl">
                                                 <Image
-                                                    src={post.entry.featuredImage || '/images/blog/placeholder.jpg'}
+                                                    src={post.entry.featuredImage || '/images/placeholder.png'}
                                                     alt={post.entry.title}
                                                     width={400}
                                                     height={240}

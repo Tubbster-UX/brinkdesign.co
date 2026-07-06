@@ -8,6 +8,7 @@ import Analytics from "@/components/Analytics";
 import { GA_ID } from "@/lib/analytics";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.brinkdesign.co"),
   title:
     "Brink Design – Low Voltage AV Installer in Western South Dakota",
   description:
@@ -109,7 +110,7 @@ export default function RootLayout({
         fontSans.variable
       )}>
         {/* Google Tag Manager (noscript) */}
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDQGJJM8" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
         <ConditionalLayout>
           {children}
         </ConditionalLayout>

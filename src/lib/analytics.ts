@@ -2,7 +2,7 @@
 
 import { sendGAEvent } from '@next/third-parties/google';
 
-export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-K6VB75FMGH';
+export const GA_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-WENBWZS6Z8';
 
 export function trackPageView(path: string) {
   if (!GA_ID) return;
